@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SkiierControl_bb : MonoBehaviour {
 
-    private const float YAW_SCALE = 5.0f;
-    private const float ACCEL_SCALE = 25.0f;
+    public float yawScale;
+    public float accelScale;
+
+    public Suspension_bb suspensionFwd;
+    public Suspension_bb suspensionRear;
 
     private Rigidbody physics;
 	void Start () {
@@ -19,9 +22,14 @@ public class SkiierControl_bb : MonoBehaviour {
         // we cannot ski backwards!
         accel = Mathf.Max(0, accel);
 
-        physics.AddTorque(0, yaw * YAW_SCALE, 0, ForceMode.Acceleration);
+        physics.AddTorque(0, yaw * yawScale, 0, ForceMode.Acceleration);
 
-        Vector3 moveForce = transform.rotation * (new Vector3(0, 0, accel) * ACCEL_SCALE);
+        // cant apply acceleration if in the air
+        if (!(suspensionFwd.isGrounded || suspensionRear.isGrounded)) {
+            return;
+        }
+
+        Vector3 moveForce = transform.rotation * (new Vector3(0, 0, accel) * accelScale);
         physics.AddForce(moveForce, ForceMode.Acceleration);
 	}
 }

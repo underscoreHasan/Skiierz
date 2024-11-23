@@ -8,8 +8,12 @@ public class Suspension_bb : MonoBehaviour {
     public float neutralOffset;
     public float spring;
     public float damper;
+    public bool isGrounded {
+        get { return _isGrounded; }
+    }
 
     private float _currentOffset;
+    private bool _isGrounded;
 
 	// Use this for initialization
 	void Start () {
@@ -61,7 +65,8 @@ public class Suspension_bb : MonoBehaviour {
 
         // handle suspension touching the ground
         RaycastHit hitOut;
-        if (Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut, neutralOffset)) {
+        _isGrounded = Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut, neutralOffset);
+        if (_isGrounded) {
             _currentOffset = (hitOut.distance - neutralOffset); 
         } else {
             _currentOffset = 0.0f; // this ensures no forces are applied
