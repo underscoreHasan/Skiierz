@@ -1,13 +1,13 @@
 # these will be specific to your computer so we dont want to clog github with
 # all this junk
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Tt]emp
-/[Uu]serSettings/
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+/Logs/
+/Temp
+/UserSettings/
 
 # unity will generate a bunch of meta files which we need not bother with
 # backing up
