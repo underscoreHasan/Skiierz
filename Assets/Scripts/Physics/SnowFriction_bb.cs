@@ -7,6 +7,8 @@ public class SnowFriction_bb : MonoBehaviour {
     public Suspension_bb suspFwd;
     public Suspension_bb suspRear;
     public float sideFrictionFactor;
+    public float sideTorqueFactor;
+    public float sideTorqueMaxOrthagonality;
 
     private Rigidbody _phys;
 
@@ -61,5 +63,11 @@ public class SnowFriction_bb : MonoBehaviour {
         // depending on velocity's similarity to side vector, apply friction
         Vector3 sideVelocity = Vector3.Project(planarVel, lookSideVector);
         _phys.AddForce(-sideVelocity * sideFrictionFactor, ForceMode.Acceleration);
+
+        // also apply a rotational force based on how similar the forward look vector is to planar veclocity
+        // we calculate how "orthogonal" it is by dotting it with the side vector
+        float velocityOrthogonality = Vector3.Dot(planarVel.normalized, lookSideVector);
+        velocityOrthogonality = Mathf.Clamp(velocityOrthogonality, -sideTorqueMaxOrthagonality, sideTorqueMaxOrthagonality);
+        _phys.AddTorque(lookUpVector * velocityOrthogonality * sideTorqueFactor, ForceMode.Acceleration);
     }
 }

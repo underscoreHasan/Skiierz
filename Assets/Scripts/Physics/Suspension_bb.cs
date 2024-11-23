@@ -6,8 +6,10 @@ public class Suspension_bb : MonoBehaviour {
 
     public Rigidbody parentPhys;
     public float neutralOffset;
+    public float maxOffset;
     public float spring;
     public float damper;
+
     public bool isGrounded {
         get { return _isGrounded; }
     }
@@ -30,7 +32,7 @@ public class Suspension_bb : MonoBehaviour {
 
         // draw suspension "slider" line
         Vector3 localSpringNeutral = Vector3.down * neutralOffset;
-        Vector3 localSpringTop = Vector3.zero;
+        Vector3 localSpringTop = Vector3.down * (neutralOffset - maxOffset);
         // Vector3 localSpringBottom = Vector3.down * (neutralOffset + maxOffset);
 
         Vector3 globalSpringNeutral = transform.TransformPoint(localSpringNeutral);
@@ -67,20 +69,29 @@ public class Suspension_bb : MonoBehaviour {
         RaycastHit hitOut;
         _isGrounded = Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut, neutralOffset);
         if (_isGrounded) {
-            _currentOffset = (hitOut.distance - neutralOffset); 
+            _currentOffset = Mathf.Max(-maxOffset, (hitOut.distance - neutralOffset)); 
         } else {
             _currentOffset = 0.0f; // this ensures no forces are applied
         }
 
+        // we could be raycasting the ground at an angle, the higher the angle, the less force we apply
+        Vector3 upVector = transform.rotation * Vector3.up;
+        float angledForceFactor = Vector3.Dot(hitOut.normal, upVector);
+
         Vector3 globalSpringAnchor = transform.TransformPoint(Vector3.down * neutralOffset);
 
-        // apply suspension forces
-        Vector3 localSpringForce = Vector3.up * spring * -_currentOffset; // F = -kx
+        // apply spring forces
+        Vector3 localSpringForce = Vector3.up * spring * -_currentOffset;
         parentPhys.AddForceAtPosition(transform.rotation * localSpringForce, globalSpringAnchor, ForceMode.Acceleration);
+
+        // if NOT grounded, no dampening forces required
+        if (!_isGrounded) {
+            return;
+        }
 
         // apply dampening forces
         Vector3 axialVelocity = Vector3.Project(parentPhys.velocity, transform.TransformVector(Vector3.up));
-        Vector3 damperForce = -axialVelocity * damper * -_currentOffset;
+        Vector3 damperForce = -axialVelocity * damper;
         parentPhys.AddForceAtPosition(transform.rotation * damperForce, globalSpringAnchor, ForceMode.Acceleration);
 	}
 
