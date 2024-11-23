@@ -74,6 +74,11 @@ public class Suspension_bb : MonoBehaviour {
             _currentOffset = 0.0f; // this ensures no forces are applied
         }
 
+        // if NOT grounded, no forces required
+        if (!_isGrounded) {
+            return;
+        }
+
         // we could be raycasting the ground at an angle, the higher the angle, the less force we apply
         Vector3 upVector = transform.rotation * Vector3.up;
         float angledForceFactor = Vector3.Dot(hitOut.normal, upVector);
@@ -82,13 +87,9 @@ public class Suspension_bb : MonoBehaviour {
 
         // apply spring forces
         Vector3 localSpringForce = Vector3.up * spring * -_currentOffset;
-        parentPhys.AddForceAtPosition(transform.rotation * localSpringForce, globalSpringAnchor, ForceMode.Acceleration);
+        parentPhys.AddForceAtPosition(transform.rotation * localSpringForce * angledForceFactor, globalSpringAnchor, ForceMode.Acceleration);
 
-        // if NOT grounded, no dampening forces required
-        if (!_isGrounded) {
-            return;
-        }
-
+ 
         // apply dampening forces
         Vector3 axialVelocity = Vector3.Project(parentPhys.velocity, transform.TransformVector(Vector3.up));
         Vector3 damperForce = -axialVelocity * damper;
