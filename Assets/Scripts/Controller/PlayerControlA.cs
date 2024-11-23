@@ -22,7 +22,6 @@ public class PlayerControlA : MonoBehaviour {
         physics.AddTorque(0, yaw * YAW_SCALE, 0, ForceMode.Acceleration);
 
         Vector3 moveForce = transform.rotation * (new Vector3(0, 0, accel) * ACCEL_SCALE);
-        print(moveForce);
         physics.AddForce(moveForce, ForceMode.Acceleration);
 	}
 }
