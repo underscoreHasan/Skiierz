@@ -1,31 +1,14 @@
 fileFormatVersion: 2
-guid: 1d3c14857b254ab4d821f3db5e3207c6
+guid: 4bcd432eca7b7994bb6872a469cc3db8
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Ramp
-    100002: Ramp Block
-    100004: Slope
-    100006: //RootNode
-    100008: Slope with Curve
-    400000: Ramp
-    400002: Ramp Block
-    400004: Slope
-    400006: //RootNode
-    400008: Slope with Curve
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: Ramp
-    2300002: Ramp Block
-    2300004: Slope
-    2300006: Slope with Curve
-    3300000: Ramp
-    3300002: Ramp Block
-    3300004: Slope
-    3300006: Slope with Curve
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Slope
-    4300002: Slope with Curve
-    4300004: Ramp
-    4300006: Ramp Block
   externalObjects: {}
   materials:
     importMaterials: 1
