@@ -1,0 +1,51 @@
+# these will be specific to your computer so we dont want to clog github with
+# all this junk
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+
+# we especially do not need to be keeping any builds of this project
+/Build/
+/Builds/
+
+# we dont want to save the package cache but there are a few files worth keeping
+/Packages/*
+!Packages/manifest.json
+!Packages/packages-lock.json
+
+# unity will generate a bunch of meta files which we need not bother with
+# backing up
+*.pidb.meta
+*.pidb
+
+# there is a bunch of other misc junk that can be regenerated on the user side
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unityproj
+*.sln
+.vscode/
+.idea/
+*.sln.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+.gradle/
+/Assets/Plugins/*.dll
+/Assets/Plugins/*.pdb
+/Assets/Plugins/*.mdb
+*.tmp
+*.temp
+*.cache
+*.bak
+*.backup
+*.generated.cs
+sysinfo.txt
+crashlytics-build.log
+*.swp
+*.lock
