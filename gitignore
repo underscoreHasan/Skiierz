@@ -12,11 +12,6 @@ UserSettings/
 /Build/
 /Builds/
 
-# we dont want to save the package cache but there are a few files worth keeping
-/Packages/*
-!Packages/manifest.json
-!Packages/packages-lock.json
-
 # unity will generate a bunch of meta files which we need not bother with
 # backing up
 *.pidb.meta
