@@ -6,6 +6,8 @@ public class SnowFriction_bb : MonoBehaviour {
 
     public Suspension_bb suspFwd;
     public Suspension_bb suspRear;
+    public float staticFrictionFactor;
+    public float dynamicFrictionFactor;
     public float sideFrictionFactor;
     public float sideTorqueFactor;
     public float sideTorqueMaxOrthagonality;
@@ -49,10 +51,19 @@ public class SnowFriction_bb : MonoBehaviour {
 
     // Update is called in a fixed manner
     void FixedUpdate() {
-        
+
         // snowphysics only applies when a character is grounded
         if (!(suspFwd.isGrounded || suspRear.isGrounded)) {
             return;
+        }
+
+        // there is always a static friction factor applied to the snow
+        float velMag = _phys.velocity.magnitude;
+        if (velMag <= staticFrictionFactor) {
+            float staticFactor = Mathf.Min(velMag, staticFrictionFactor);
+            _phys.AddForce(_phys.velocity * -staticFactor, ForceMode.Acceleration);
+        } else {
+            _phys.AddForce(_phys.velocity * -dynamicFrictionFactor, ForceMode.Acceleration);
         }
 
         // generate relevant axis vectors and project velocity onto horizontal plane

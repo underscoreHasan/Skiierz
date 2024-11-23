@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114251357915262774, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
+        type: 2}
+      propertyPath: staticFrictionFactor
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114251357915262774, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
+        type: 2}
+      propertyPath: dynamicFrictionFactor
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
   m_IsPrefabParent: 0
