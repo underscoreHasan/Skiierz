@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControlA : MonoBehaviour {
+public class SkiierControl_bb : MonoBehaviour {
 
     private const float YAW_SCALE = 5.0f;
     private const float ACCEL_SCALE = 25.0f;
