@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Suspension_bb : MonoBehaviour {
+public class Suspension : MonoBehaviour {
 
     public Rigidbody parentPhys;
     public float neutralOffset;

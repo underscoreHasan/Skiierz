@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkiierControl_bb : MonoBehaviour {
+public class SkiierControl : MonoBehaviour {
 
     public float yawScale;
     public float accelScale;
     public float jumpChargeDownforce;
 
-    public Suspension_bb suspensionFwd;
-    public Suspension_bb suspensionRear;
+    public Suspension suspensionFwd;
+    public Suspension suspensionRear;
 
     private Rigidbody physics;
 	void Start () {
