@@ -6,6 +6,7 @@ public class SkiierControl_bb : MonoBehaviour {
 
     public float yawScale;
     public float accelScale;
+    public float jumpChargeDownforce;
 
     public Suspension_bb suspensionFwd;
     public Suspension_bb suspensionRear;
@@ -14,10 +15,11 @@ public class SkiierControl_bb : MonoBehaviour {
 	void Start () {
         physics = GetComponent<Rigidbody>();
 	}
-	
-	void FixedUpdate () {
+
+    void FixedUpdate() {
         float yaw = Input.GetAxis("Horizontal");
         float accel = Input.GetAxis("Vertical");
+
 
         // we cannot ski backwards!
         accel = Mathf.Max(0, accel);
@@ -31,5 +33,13 @@ public class SkiierControl_bb : MonoBehaviour {
 
         Vector3 moveForce = transform.rotation * (new Vector3(0, 0, accel) * accelScale);
         physics.AddForce(moveForce, ForceMode.Acceleration);
+
+        // jumping will spring the character down
+        // TODO: make this work
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            Vector3 downForce = transform.rotation * Vector3.down * jumpChargeDownforce;
+            print(downForce);
+            physics.AddForce(downForce, ForceMode.Acceleration);
+        }
 	}
 }

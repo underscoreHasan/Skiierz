@@ -152,6 +152,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
+        type: 2}
+      propertyPath: jumpChargeDownforce
+      value: 6000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
   m_IsPrefabParent: 0
