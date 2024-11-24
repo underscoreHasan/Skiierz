@@ -15,7 +15,7 @@
 *.pidb
 
 # there is a bunch of other misc junk that can be regenerated on the user side
-.vs/Skiierz/v15/sqlite
+/.vs/
 *.suo
 *.user
 *.userprefs
