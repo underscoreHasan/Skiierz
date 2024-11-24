@@ -9,6 +9,7 @@ public class Suspension_bb : MonoBehaviour {
     public float maxOffset;
     public float spring;
     public float damper;
+    public float minAngledForceFactor;
 
     public bool isGrounded {
         get { return _isGrounded; }
@@ -81,7 +82,7 @@ public class Suspension_bb : MonoBehaviour {
 
         // we could be raycasting the ground at an angle, the higher the angle, the less force we apply
         Vector3 upVector = transform.rotation * Vector3.up;
-        float angledForceFactor = Vector3.Dot(hitOut.normal, upVector);
+        float angledForceFactor = Mathf.Max(minAngledForceFactor, Vector3.Dot(hitOut.normal, upVector));
 
         Vector3 globalSpringAnchor = transform.TransformPoint(Vector3.down * neutralOffset);
 

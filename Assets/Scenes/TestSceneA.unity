@@ -182,6 +182,26 @@ Prefab:
       propertyPath: damper
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114395157718747636, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
+        type: 2}
+      propertyPath: minAngledForceFactor
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114656479176301498, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
+        type: 2}
+      propertyPath: minAngledForceFactor
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367966497548086, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
+        type: 2}
+      propertyPath: minAngledForceFactor
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114254036399554948, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
+        type: 2}
+      propertyPath: staticFrictionFactor
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
   m_IsPrefabParent: 0
