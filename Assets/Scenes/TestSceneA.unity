@@ -120,97 +120,37 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4150357834868996, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
+    - target: {fileID: 4076303565827312, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
       propertyPath: m_LocalPosition.x
       value: -160
       objectReference: {fileID: 0}
-    - target: {fileID: 4150357834868996, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
+    - target: {fileID: 4076303565827312, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
       propertyPath: m_LocalPosition.y
       value: 56
       objectReference: {fileID: 0}
-    - target: {fileID: 4150357834868996, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
+    - target: {fileID: 4076303565827312, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
       propertyPath: m_LocalPosition.z
       value: -95
       objectReference: {fileID: 0}
-    - target: {fileID: 4150357834868996, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
+    - target: {fileID: 4076303565827312, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4150357834868996, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
+    - target: {fileID: 4076303565827312, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0.70710677
       objectReference: {fileID: 0}
-    - target: {fileID: 4150357834868996, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
+    - target: {fileID: 4076303565827312, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4150357834868996, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
+    - target: {fileID: 4076303565827312, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 4150357834868996, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
+    - target: {fileID: 4076303565827312, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114395157718747636, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: spring
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 114656479176301498, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: spring
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 114367966497548086, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: spring
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 114395157718747636, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: damper
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114656479176301498, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: damper
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114367966497548086, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: damper
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114395157718747636, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: minAngledForceFactor
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114656479176301498, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: minAngledForceFactor
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114367966497548086, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: minAngledForceFactor
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114254036399554948, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: staticFrictionFactor
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114254036399554948, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: sideTorqueMinVelEase
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114254036399554948, guid: 170d244e5bfbe4d47b9e998e2f8a7cec,
-        type: 2}
-      propertyPath: sideTorqueMaxVelEase
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 170d244e5bfbe4d47b9e998e2f8a7cec, type: 2}
