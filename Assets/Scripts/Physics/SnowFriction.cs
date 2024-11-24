@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnowFriction_bb : MonoBehaviour {
+public class SnowFriction : MonoBehaviour {
 
-    public Suspension_bb suspFwd;
-    public Suspension_bb suspRear;
+    public Suspension suspFwd;
+    public Suspension suspRear;
     public float staticFrictionFactor;
     public float dynamicFrictionFactor;
     public float sideFrictionFactor;
