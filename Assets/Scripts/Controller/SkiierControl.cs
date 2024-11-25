@@ -7,6 +7,9 @@ public class SkiierControl : MonoBehaviour {
     public float yawScale;
     public float accelScale;
     public float jumpChargeDownforce;
+    private float minChargeDownforce = 250f; //change for minimum jump force
+    private float maxChargeDownforce = 2000f; //change for maximum jump force
+    private float chargeSpeed = 800f;  //change for speed of jump force charging
 
     public Suspension suspensionFwd;
     public Suspension suspensionRear;
@@ -14,6 +17,7 @@ public class SkiierControl : MonoBehaviour {
     private Rigidbody physics;
 	void Start () {
         physics = GetComponent<Rigidbody>();
+        jumpChargeDownforce = 0;
 	}
 
     void FixedUpdate() {
@@ -35,11 +39,19 @@ public class SkiierControl : MonoBehaviour {
         physics.AddForce(moveForce, ForceMode.Acceleration);
 
         // jumping will spring the character down
-        // TODO: make this work
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Vector3 downForce = transform.rotation * Vector3.down * jumpChargeDownforce;
+        // TODO: fine tune jump force and speed
+        if (Input.GetKey(KeyCode.Space)) { //check if space is held
+            if (jumpChargeDownforce < maxChargeDownforce) { //charge force if less than max
+                jumpChargeDownforce += Time.deltaTime * chargeSpeed;
+            } else { 
+                jumpChargeDownforce = maxChargeDownforce;
+            }
+            
+        } else if (jumpChargeDownforce > 0f) { //apply at least min force if charge is > 0
+            Vector3 downForce = transform.rotation * Vector3.down * (jumpChargeDownforce + minChargeDownforce);
             print(downForce);
             physics.AddForce(downForce, ForceMode.Acceleration);
+            jumpChargeDownforce = 0;
         }
-	}
+    }
 }
