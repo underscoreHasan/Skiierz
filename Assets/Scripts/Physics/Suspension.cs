@@ -11,7 +11,6 @@ public class Suspension : MonoBehaviour {
     public float damper;
     public float minAngledForceFactor;
 
-    ahsgdjasgjsjsgdj
     public bool isGrounded {
         get { return _isGrounded; }
     }
