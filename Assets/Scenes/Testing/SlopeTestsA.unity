@@ -177,6 +177,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: releaseUpForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: chargeTimeSeconds
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: maxChargeDownforce
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: minChargeDownforce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974225026435204, guid: 9e3015ece32af414a99edf071dbc7ab3,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e3015ece32af414a99edf071dbc7ab3, type: 3}
 --- !u!1 &1154866442
