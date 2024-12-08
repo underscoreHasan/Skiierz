@@ -7,6 +7,12 @@ public class SkiierControl : MonoBehaviour {
     public float yawScale;
     public float accelScale;
     public float jumpChargeDownforce;
+    public AnimationCurve chargeCurve;
+    public float minChargeDownforce = 20.0f; // change for minimum jump force
+    public float maxChargeDownforce = 300.0f; // change for maximum jump force
+    public float chargeTimeSecondsElapsed = 0.0f; // time that player has charged jump
+    public float chargeTimeSeconds = 1.0f; // time until reach max jump force
+    public float releaseUpForce = 30.0f; // on release, we do give an upwards push
 
     public Suspension suspensionFwd;
     public Suspension suspensionRear;
@@ -14,6 +20,7 @@ public class SkiierControl : MonoBehaviour {
     private Rigidbody physics;
 	void Start () {
         physics = GetComponent<Rigidbody>();
+        jumpChargeDownforce = 0;
 	}
 
     void FixedUpdate() {
@@ -35,11 +42,28 @@ public class SkiierControl : MonoBehaviour {
         physics.AddForce(moveForce, ForceMode.Acceleration);
 
         // jumping will spring the character down
-        // TODO: make this work
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        // TODO: fine tune jump force and speed
+        if (Input.GetKey(KeyCode.Space)) { //check if space is held
+            chargeTimeSecondsElapsed += Time.deltaTime;
+
+            jumpChargeDownforce = 
+                minChargeDownforce + 
+                chargeCurve.Evaluate(chargeTimeSecondsElapsed / chargeTimeSeconds) * 
+                (maxChargeDownforce - minChargeDownforce);
+
             Vector3 downForce = transform.rotation * Vector3.down * jumpChargeDownforce;
-            print(downForce);
             physics.AddForce(downForce, ForceMode.Acceleration);
+        } else {
+            chargeTimeSecondsElapsed = 0.0f;
+            jumpChargeDownforce = 0.0f;
         }
-	}
+
+        // on release space
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            // up push depends on how long player has charged
+            float upFactor = Mathf.Min(1.0f, chargeTimeSecondsElapsed / chargeTimeSeconds);
+            Vector3 upForce = transform.rotation * Vector3.up * upFactor;
+            physics.AddForce(upForce, ForceMode.Impulse);
+        }
+    }
 }
