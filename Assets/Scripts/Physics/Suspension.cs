@@ -15,11 +15,16 @@ public class Suspension : MonoBehaviour {
         get { return _isGrounded; }
     }
 
+    public Vector3 normal {
+        get { return _normal; }
+    }
+
     private float _currentOffset;
     private bool _isGrounded;
+    private Vector3 _normal;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		if (parentPhys == null) {
             Debug.LogError("missing parentPhys!");
         }
@@ -69,6 +74,7 @@ public class Suspension : MonoBehaviour {
         // handle suspension touching the ground
         RaycastHit hitOut;
         _isGrounded = Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut, neutralOffset);
+        _normal = hitOut.normal;
         if (_isGrounded) {
             _currentOffset = Mathf.Max(-maxOffset, (hitOut.distance - neutralOffset)); 
         } else {
@@ -77,6 +83,7 @@ public class Suspension : MonoBehaviour {
 
         // if NOT grounded, no forces required
         if (!_isGrounded) {
+            _normal = Vector3.zero;
             return;
         }
 
