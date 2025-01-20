@@ -10,8 +10,8 @@ public class SnowKickingUp : MonoBehaviour
     // public Suspension suspRear;
     private Rigidbody _phys;
     private ParticleSystem ps;
-    // private var main;
-    // private var emission;
+    private ParticleSystem.MainModule main;
+    private ParticleSystem.EmissionModule emission;
 
     // Start is called before the first frame update
     void Start()
@@ -27,19 +27,12 @@ public class SnowKickingUp : MonoBehaviour
         }
         
         ps = GetComponent<ParticleSystem>();
-        if (ps != null)
-        {
-            main = ps.main;
-            main.startDelay = 4.0f;
-            main.startLifetime = 2.0f;
+        main = ps.main;
+        main.startDelay = 4.0f;
+        main.startLifetime = 2.0f;
 
-            emission = ps.emission;
-            emission.enabled = false;
-        }
-        else
-        {
-            Debug.LogError("No ParticleSystem found on this GameObject.");
-        }
+        emission = ps.emission;
+        emission.enabled = false;
     }
 
     void OnDrawGizmos() {
@@ -48,9 +41,10 @@ public class SnowKickingUp : MonoBehaviour
         if (!Application.isPlaying) {
             return;
         }
-        
+
         Vector3 lookFwdVector = transform.rotation * Vector3.forward;
         Vector3 lookUpVector = transform.rotation * Vector3.up;
+        Debug.Log(_phys);
         Vector3 projectedVel = Vector3.ProjectOnPlane(_phys.velocity, lookUpVector);
         float particleAggressiveness = 1 - Mathf.Abs(Vector3.Dot(lookFwdVector.normalized, projectedVel.normalized));
         Debug.Log(particleAggressiveness);
