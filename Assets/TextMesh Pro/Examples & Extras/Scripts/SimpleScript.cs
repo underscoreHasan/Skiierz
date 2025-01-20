@@ -1,58 +1,82 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-
-namespace TMPro.Examples
+[RequireComponent(typeof(ParticleSystem))]
+public class SimpleScript : MonoBehaviour
 {
-    
-    public class SimpleScript : MonoBehaviour
+    public float test = 10.0f;
+    // public Suspension suspFwd;
+    // public Suspension suspRear;
+    // private Rigidbody _phys;
+    // private ParticleSystem ps;
+    // private var main;
+    // private var emission;
+
+    // // Start is called before the first frame update
+    // void Start()
+    // {
+    //     _phys = GetComponentInParent<Rigidbody>();
+    //     if (_phys != null)
+    //     {
+    //         Debug.Log("Found Rigidbody on parent: " + _phys);
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("No Rigidbody found on parent.");
+    //     }
+        
+    //     ps = GetComponent<ParticleSystem>();
+    //     if (ps != null)
+    //     {
+    //         main = ps.main;
+    //         main.startDelay = 4.0f;
+    //         main.startLifetime = 2.0f;
+
+    //         emission = ps.emission;
+    //         emission.enabled = false;
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("No ParticleSystem found on this GameObject.");
+    //     }
+    }
+
+    void OnDrawGizmos() {
+        // Vector3 lookFwdVector = transform.rotation * Vector3.forward;
+        // Vector3 lookUpVector = transform.rotation * Vector3.up;
+        // Vector3 projectedVel = Vector3.ProjectOnPlane(_phys.velocity, lookUpVector);
+        // float particleAggressiveness = 1 - Mathf.Abs(Vector3.Dot(lookFwdVector.normalized, projectedVel.normalized));
+        // Debug.Log(particleAggressiveness);
+        // Gizmos.color = Color.black;
+        // Gizmos.DrawLine(transform.position, transform.position + (projectedVel * particleAggressiveness));
+    }
+
+    // Update is called once per frame
+    void Update()
     {
+        
+    }
 
-        private TextMeshPro m_textMeshPro;
-        //private TMP_FontAsset m_FontAsset;
+    // Update is called in a fixed manner
+    void FixedUpdate() 
+    {
+        // // snow kicking up only applies when a character is grounded
+        // if (!(suspFwd.isGrounded || suspRear.isGrounded)) {
+        //     return;
+        // }
 
-        private const string label = "The <#0050FF>count is: </color>{0:2}";
-        private float m_frame;
+        // // create particles in the direction of velocity and inversely proportional to dot product
+        // Vector3 lookFwdVector = transform.rotation * Vector3.forward;
+        // Vector3 lookUpVector = transform.rotation * Vector3.up;
+        // Vector3 projectedVel = Vector3.ProjectOnPlane(_phys.velocity, lookUpVector);
+        // float particleAggressiveness = 1 - Mathf.Abs(Vector3.Dot(lookFwdVector.normalized, projectedVel.normalized));
 
-
-        void Start()
-        {
-            // Add new TextMesh Pro Component
-            m_textMeshPro = gameObject.AddComponent<TextMeshPro>();
-
-            m_textMeshPro.autoSizeTextContainer = true;
-
-            // Load the Font Asset to be used.
-            //m_FontAsset = Resources.Load("Fonts & Materials/LiberationSans SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
-            //m_textMeshPro.font = m_FontAsset;
-
-            // Assign Material to TextMesh Pro Component
-            //m_textMeshPro.fontSharedMaterial = Resources.Load("Fonts & Materials/LiberationSans SDF - Bevel", typeof(Material)) as Material;
-            //m_textMeshPro.fontSharedMaterial.EnableKeyword("BEVEL_ON");
-            
-            // Set various font settings.
-            m_textMeshPro.fontSize = 48;
-
-            m_textMeshPro.alignment = TextAlignmentOptions.Center;
-            
-            //m_textMeshPro.anchorDampening = true; // Has been deprecated but under consideration for re-implementation.
-            //m_textMeshPro.enableAutoSizing = true;
-
-            //m_textMeshPro.characterSpacing = 0.2f;
-            //m_textMeshPro.wordSpacing = 0.1f;
-
-            //m_textMeshPro.enableCulling = true;
-            m_textMeshPro.enableWordWrapping = false;
-
-            //textMeshPro.fontColor = new Color32(255, 255, 255, 255);
-        }
-
-
-        void Update()
-        {
-            m_textMeshPro.SetText(label, m_frame % 1000);
-            m_frame += 1 * Time.deltaTime;
-        }
-
+        // if (particleAggressiveness > 0.1)
+        // {
+        //     emission.enabled = true;
+        // } else {
+        //     emission.enabled = false;
+        // }
     }
 }
