@@ -5,13 +5,19 @@ using UnityEngine;
 [RequireComponent(typeof(ParticleSystem))]
 public class SnowKickingUp : MonoBehaviour
 {
-    public float test = 10.0f;
-    // public Suspension suspFwd;
-    // public Suspension suspRear;
+    public Suspension suspFwd;
+    public Suspension suspRear;
+    
     private Rigidbody _phys;
     private ParticleSystem ps;
     private ParticleSystem.MainModule main;
     private ParticleSystem.EmissionModule emission;
+    
+    private Vector3 lookFwdVector;
+    private Vector3 lookUpVector;
+    private Vector3 projectedVel;
+    private float particleAggressiveness;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +34,6 @@ public class SnowKickingUp : MonoBehaviour
         
         ps = GetComponent<ParticleSystem>();
         main = ps.main;
-        main.startDelay = 4.0f;
-        main.startLifetime = 2.0f;
 
         emission = ps.emission;
         emission.enabled = false;
@@ -42,11 +46,6 @@ public class SnowKickingUp : MonoBehaviour
             return;
         }
 
-        Vector3 lookFwdVector = transform.rotation * Vector3.forward;
-        Vector3 lookUpVector = transform.rotation * Vector3.up;
-        Debug.Log(_phys);
-        Vector3 projectedVel = Vector3.ProjectOnPlane(_phys.velocity, lookUpVector);
-        float particleAggressiveness = 1 - Mathf.Abs(Vector3.Dot(lookFwdVector.normalized, projectedVel.normalized));
         Debug.Log(particleAggressiveness);
         Gizmos.color = Color.black;
         Gizmos.DrawLine(transform.position, transform.position + (projectedVel * particleAggressiveness));
@@ -61,22 +60,27 @@ public class SnowKickingUp : MonoBehaviour
     // Update is called in a fixed manner
     void FixedUpdate() 
     {
-        // // snow kicking up only applies when a character is grounded
-        // if (!(suspFwd.isGrounded || suspRear.isGrounded)) {
-        //     return;
-        // }
+        lookFwdVector = _phys.transform.rotation * Vector3.forward;
+        lookUpVector = _phys.transform.rotation * Vector3.up;
+        projectedVel = Vector3.ProjectOnPlane(_phys.velocity, lookUpVector);
+        particleAggressiveness = 1 - Mathf.Abs(Vector3.Dot(lookFwdVector.normalized, projectedVel.normalized));
 
-        // // create particles in the direction of velocity and inversely proportional to dot product
-        // Vector3 lookFwdVector = transform.rotation * Vector3.forward;
-        // Vector3 lookUpVector = transform.rotation * Vector3.up;
-        // Vector3 projectedVel = Vector3.ProjectOnPlane(_phys.velocity, lookUpVector);
-        // float particleAggressiveness = 1 - Mathf.Abs(Vector3.Dot(lookFwdVector.normalized, projectedVel.normalized));
+        // snow kicking up only applies when a character is grounded
+        if (!(suspFwd.isGrounded || suspRear.isGrounded))
+        {
+            return;
+        }
 
-        // if (particleAggressiveness > 0.1)
-        // {
-        //     emission.enabled = true;
-        // } else {
-        //     emission.enabled = false;
-        // }
+        if (particleAggressiveness > 0.15)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(projectedVel, lookUpVector);
+            transform.rotation = targetRotation;
+            emission.rateOverTime = 150 * particleAggressiveness;
+            emission.enabled = true;
+        }
+        else
+        {
+            emission.enabled = false;
+        }
     }
 }
