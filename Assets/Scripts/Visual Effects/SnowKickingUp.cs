@@ -43,6 +43,12 @@ public class SnowKickingUp : MonoBehaviour
     }
 
     void OnDrawGizmos() {
+
+        // only draw gizmos if game is running
+        if (!Application.isPlaying) {
+            return;
+        }
+        
         Vector3 lookFwdVector = transform.rotation * Vector3.forward;
         Vector3 lookUpVector = transform.rotation * Vector3.up;
         Vector3 projectedVel = Vector3.ProjectOnPlane(_phys.velocity, lookUpVector);
