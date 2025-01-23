@@ -7,17 +7,22 @@ public class SnowKickingUp : MonoBehaviour
 {
     public Suspension suspFwd;
     public Suspension suspRear;
+
+    public AnimationCurve burstCount;
+    public AnimationCurve burstConeRadius;
+    public AnimationCurve burstStartSpeed;
     
     private Rigidbody _phys;
     private ParticleSystem ps;
     private ParticleSystem.MainModule main;
     private ParticleSystem.EmissionModule emission;
+    private ParticleSystem.ShapeModule shape;
+    private ParticleSystem.Burst burst;
     
     private Vector3 lookFwdVector;
     private Vector3 lookUpVector;
     private Vector3 projectedVel;
     private float particleAggressiveness;
-
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +41,10 @@ public class SnowKickingUp : MonoBehaviour
         main = ps.main;
 
         emission = ps.emission;
+        shape = ps.shape;
         emission.enabled = false;
+
+        burst = emission.GetBurst(0);
     }
 
     void OnDrawGizmos() {
@@ -71,11 +79,13 @@ public class SnowKickingUp : MonoBehaviour
             return;
         }
 
-        if (particleAggressiveness > 0.15)
+        if (particleAggressiveness > 0.06)
         {
             Quaternion targetRotation = Quaternion.LookRotation(projectedVel, lookUpVector);
             transform.rotation = targetRotation;
-            emission.rateOverTime = 150 * particleAggressiveness;
+            burst.count = burstCount.Evaluate(particleAggressiveness);
+            shape.radius = burstConeRadius.Evaluate(particleAggressiveness);
+            main.startSpeed = burstStartSpeed.Evaluate(particleAggressiveness); // Change to be based on velocity instead
             emission.enabled = true;
         }
         else
