@@ -1,28 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-[RequireComponent(typeof(ParticleSystem))]
 public class SnowKickingUp : MonoBehaviour
 {
-    public Suspension suspFwd;
-    public Suspension suspRear;
+    public GameObject burstPrefab;
 
     public AnimationCurve burstCount;
     public AnimationCurve burstConeRadius;
     public AnimationCurve burstStartSpeed;
-    
+
+    public Suspension suspFwd;
+    public Suspension suspRear;
+
     private Rigidbody _phys;
-    private ParticleSystem ps;
-    private ParticleSystem.MainModule main;
-    private ParticleSystem.EmissionModule emission;
-    private ParticleSystem.ShapeModule shape;
-    private ParticleSystem.Burst burst;
     
     private Vector3 lookFwdVector;
     private Vector3 lookUpVector;
     private Vector3 projectedVel;
     private float particleAggressiveness;
+    private float lastBurstTimestamp;
 
     // Start is called before the first frame update
     void Start()
@@ -36,15 +34,8 @@ public class SnowKickingUp : MonoBehaviour
         {
             Debug.Log("No Rigidbody found on parent.");
         }
-        
-        ps = GetComponent<ParticleSystem>();
-        main = ps.main;
 
-        emission = ps.emission;
-        shape = ps.shape;
-        emission.enabled = false;
-
-        burst = emission.GetBurst(0);
+        lastBurstTimestamp = 0.0f;
     }
 
     void OnDrawGizmos() {
@@ -54,7 +45,8 @@ public class SnowKickingUp : MonoBehaviour
             return;
         }
 
-        Debug.Log(particleAggressiveness);
+        // Debug.Log(particleAggressiveness);
+        Debug.Log(_phys.velocity.magnitude);
         Gizmos.color = Color.black;
         Gizmos.DrawLine(transform.position, transform.position + (projectedVel * particleAggressiveness));
     }
@@ -79,18 +71,35 @@ public class SnowKickingUp : MonoBehaviour
             return;
         }
 
-        if (particleAggressiveness > 0.06)
+        const float maxExpectedSpeed = 30.0f;
+        const float particleAggressivenessThreshold = 0.04f;
+        const float timeBetweenBurstsThreshold = 0.01f;
+        const float minSpeedThreshold = 10.0f;
+        float currentTime = Time.frameCount / (1.0f / Time.deltaTime);
+        if (particleAggressiveness > particleAggressivenessThreshold &&
+            currentTime - lastBurstTimestamp > timeBetweenBurstsThreshold &&
+            _phys.velocity.magnitude > minSpeedThreshold)
         {
+            lastBurstTimestamp = currentTime;
+
             Quaternion targetRotation = Quaternion.LookRotation(projectedVel, lookUpVector);
             transform.rotation = targetRotation;
+
+            GameObject currentSnow = Instantiate(burstPrefab, transform.position, targetRotation);
+            // Get currentSnow's particle system, modify it, then play it
+            ParticleSystem snowParticleSystem = currentSnow.GetComponent<ParticleSystem>();
+            ParticleSystem.MainModule main = snowParticleSystem.main;
+            ParticleSystem.EmissionModule emission = snowParticleSystem.emission;
+            ParticleSystem.ShapeModule shape = snowParticleSystem.shape;
+            ParticleSystem.Burst burst = emission.GetBurst(0);
+            
+            currentSnow.transform.rotation = targetRotation;
             burst.count = burstCount.Evaluate(particleAggressiveness);
-            shape.radius = burstConeRadius.Evaluate(particleAggressiveness);
-            main.startSpeed = burstStartSpeed.Evaluate(particleAggressiveness); // Change to be based on velocity instead
-            emission.enabled = true;
-        }
-        else
-        {
-            emission.enabled = false;
+            shape.radius = burstConeRadius.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed);
+            main.startSpeed = burstStartSpeed.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed);
+            snowParticleSystem.Play();
+
+            Destroy(currentSnow, 0.5f);
         }
     }
 }
