@@ -22,6 +22,10 @@ public class SnowKickingUp : MonoBehaviour
     private float particleAggressiveness;
     private float lastBurstTimestamp;
 
+    private const float BURST_FACTOR = 15.0f;
+    private const float RADIUS_FACTOR = 3.0f;
+    private const float SPEED_FACTOR = 1.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,9 +98,9 @@ public class SnowKickingUp : MonoBehaviour
             ParticleSystem.Burst burst = emission.GetBurst(0);
             
             currentSnow.transform.rotation = targetRotation;
-            burst.count = burstCount.Evaluate(particleAggressiveness);
-            shape.radius = burstConeRadius.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed);
-            main.startSpeed = burstStartSpeed.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed);
+            burst.count = burstCount.Evaluate(particleAggressiveness) * BURST_FACTOR;
+            shape.radius = burstConeRadius.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed) * RADIUS_FACTOR;
+            main.startSpeed = burstStartSpeed.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed) * SPEED_FACTOR;
             snowParticleSystem.Play();
 
             Destroy(currentSnow, 0.5f);
