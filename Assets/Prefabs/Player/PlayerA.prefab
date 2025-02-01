@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 114155865461657528}
   m_Layer: 0
   m_Name: PlayerA
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,6 +463,18 @@ MonoBehaviour:
   yawScale: 2
   accelScale: 6
   jumpChargeDownforce: 6000
+  chargeCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minChargeDownforce: 20
+  maxChargeDownforce: 300
+  chargeTimeSecondsElapsed: 0
+  chargeTimeSeconds: 1
+  releaseUpForce: 30
+  releaseForceSpeedScale: 0.001
   suspensionFwd: {fileID: 114554986248704544}
   suspensionRear: {fileID: 114159995736364832}
 --- !u!136 &136446507643333240
