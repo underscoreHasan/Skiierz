@@ -74,11 +74,9 @@ public class Suspension : MonoBehaviour {
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(globalSpringNeutral, globalSpringNeutral + _dbgDamperForce * 0.05f);
 
-        // draw precieved axial velocity vs real velocity
+        // draw precieved axial velocity
         Gizmos.color = Color.green;
         Gizmos.DrawLine(globalSpringNeutral, globalSpringNeutral + _dbgAxialVel * 0.5f);
-        Gizmos.color = Color.white;
-        Gizmos.DrawLine(globalSpringNeutral, globalSpringNeutral + parentPhys.velocity * 0.5f);
     }
 
     // Update is called every frame
