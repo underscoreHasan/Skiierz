@@ -50,7 +50,7 @@ public class SnowKickingUp : MonoBehaviour
         }
 
         // Debug.Log(particleAggressiveness);
-        Debug.Log(_phys.velocity.magnitude);
+        // Debug.Log(_phys.velocity.magnitude);
         Gizmos.color = Color.black;
         Gizmos.DrawLine(transform.position, transform.position + (projectedVel * particleAggressiveness));
     }
