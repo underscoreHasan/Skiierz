@@ -11,6 +11,10 @@ public class Suspension : MonoBehaviour {
     public float damper;
     public float minAngledForceFactor;
 
+    private Vector3 _dbgSpringForce;
+    private Vector3 _dbgDamperForce;
+    private Vector3 _dbgAxialVel;
+
     public bool isGrounded {
         get { return _isGrounded; }
     }
@@ -61,6 +65,18 @@ public class Suspension : MonoBehaviour {
         Vector3 offsetPoint = Vector3.down * (neutralOffset + _currentOffset);
         Gizmos.color = Color.gray;
         Gizmos.DrawSphere(transform.TransformPoint(offsetPoint), 0.2f);
+
+        // draw upforce applied by node
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(globalSpringNeutral, globalSpringNeutral + _dbgSpringForce * 0.05f);
+
+        // draw dampening force applied by node
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(globalSpringNeutral, globalSpringNeutral + _dbgDamperForce * 0.05f);
+
+        // draw precieved axial velocity
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(globalSpringNeutral, globalSpringNeutral + _dbgAxialVel * 0.5f);
     }
 
     // Update is called every frame
@@ -95,13 +111,16 @@ public class Suspension : MonoBehaviour {
 
         // apply spring forces
         Vector3 localSpringForce = Vector3.up * spring * -_currentOffset;
-        parentPhys.AddForceAtPosition(transform.rotation * localSpringForce * angledForceFactor, globalSpringAnchor, ForceMode.Acceleration);
-
+        Vector3 totalSpringForce = transform.rotation * localSpringForce * angledForceFactor;
+        _dbgSpringForce = totalSpringForce;
+        parentPhys.AddForceAtPosition(totalSpringForce, globalSpringAnchor, ForceMode.Acceleration);
  
         // apply dampening forces
-        Vector3 axialVelocity = Vector3.Project(parentPhys.velocity, transform.TransformVector(Vector3.up));
+        Vector3 axialVelocity = Vector3.Project(parentPhys.velocity, parentPhys.transform.rotation * Vector3.up);
+        _dbgAxialVel = axialVelocity;
         Vector3 damperForce = -axialVelocity * damper;
-        parentPhys.AddForceAtPosition(transform.rotation * damperForce, globalSpringAnchor, ForceMode.Acceleration);
+        _dbgDamperForce = damperForce;
+        parentPhys.AddForceAtPosition(damperForce, globalSpringAnchor, ForceMode.Acceleration);
 	}
 
     
