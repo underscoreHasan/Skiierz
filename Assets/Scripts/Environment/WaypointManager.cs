@@ -49,4 +49,18 @@ public class WaypointManager : MonoBehaviour
             }
         }
     }
+
+    public Vector3[] GetActiveWaypointPosition()
+    {
+        if (activeWaypointIndex >= waypoints.Count)
+        {
+            throw new System.Exception("No active waypoint found");
+        }
+        //get the left and right points of waypoint using scale
+        Vector3[] points = new Vector3[2];
+        points[0] = waypoints[activeWaypointIndex].transform.position + waypoints[activeWaypointIndex].transform.right * waypoints[activeWaypointIndex].transform.localScale.x / 2;
+        points[1] = waypoints[activeWaypointIndex].transform.position - waypoints[activeWaypointIndex].transform.right * waypoints[activeWaypointIndex].transform.localScale.x / 2;
+        return points;
+
+    }
 }

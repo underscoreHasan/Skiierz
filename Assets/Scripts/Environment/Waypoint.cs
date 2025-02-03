@@ -26,6 +26,7 @@ public class Waypoint : MonoBehaviour
     {
         Gizmos.color = !hit ? new Color(1, 0, 0, 0.3f) : new Color(0, 1, 0, 0.3f);
         // draw cube the same size as the collider
-        Gizmos.DrawCube(transform.position, transform.localScale);
+        Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawCube(Vector3.zero, Vector3.one);
     }
 }
