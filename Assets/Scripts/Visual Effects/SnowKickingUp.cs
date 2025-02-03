@@ -52,7 +52,7 @@ public class SnowKickingUp : MonoBehaviour
         // Debug.Log(particleAggressiveness);
         // Debug.Log(_phys.velocity.magnitude);
         Gizmos.color = Color.black;
-        Gizmos.DrawLine(transform.position, transform.position + (projectedVel * particleAggressiveness));
+        Gizmos.DrawLine(transform.position, transform.position + (projectedVel * particleAggressiveness * 5.0f));
     }
 
     // Update is called once per frame
@@ -74,11 +74,11 @@ public class SnowKickingUp : MonoBehaviour
         {
             return;
         }
-
+        
         const float maxExpectedSpeed = 30.0f;
         const float particleAggressivenessThreshold = 0.04f;
-        const float timeBetweenBurstsThreshold = 0.01f;
-        const float minSpeedThreshold = 10.0f;
+        const float timeBetweenBurstsThreshold = 0.08f;
+        const float minSpeedThreshold = 11.0f;
         float currentTime = Time.frameCount / (1.0f / Time.deltaTime);
         if (particleAggressiveness > particleAggressivenessThreshold &&
             currentTime - lastBurstTimestamp > timeBetweenBurstsThreshold &&

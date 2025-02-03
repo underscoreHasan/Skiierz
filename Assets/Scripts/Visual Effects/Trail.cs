@@ -33,9 +33,9 @@ public class Trail : MonoBehaviour
     {
         RaycastHit hitOut;
         _isGrounded = Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut, detectionDistance);
-        
+
         if (_isGrounded) {
-            distanceToGround = new Vector3(0, hitOut.distance - trailAboveGround, 0); 
+            distanceToGround = new Vector3(0, hitOut.distance - trailAboveGround, 0);
             trailRenderer.SetPosition(trailRenderer.positionCount - 1, transform.position - distanceToGround);
             trailRenderer.emitting = true;
         } else {
