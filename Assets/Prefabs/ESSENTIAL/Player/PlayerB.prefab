@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6375592546788001717}
   - component: {fileID: 6344435958202475125}
   - component: {fileID: 6375592546788001718}
+  - component: {fileID: 918095861}
   m_Layer: 0
   m_Name: PlayerB
   m_TagString: Player
@@ -126,7 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yawScale: 2
   accelScale: 6
-  jumpChargeDownforce: 20000
   chargeCurve:
     serializedVersion: 2
     m_Curve:
@@ -151,11 +151,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  minChargeDownforce: 20
-  maxChargeDownforce: 300
   chargeTimeSecondsElapsed: 0
   chargeTimeSeconds: 1
-  releaseUpForce: 2000
+  releaseUpForce: 375
   releaseForceSpeedScale: 0.1
   suspensionFwd: {fileID: 6343493674702979053}
   suspensionRear: {fileID: 6344434074449099501}
@@ -207,6 +205,24 @@ MonoBehaviour:
   fwdSusp: {fileID: 6343493674702979053}
   rearSusp: {fileID: 6344434074449099501}
   targetRot: {x: 0, y: 0, z: 0}
+--- !u!114 &918095861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456096397104431191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec445bd82da5e594c8040f267299d3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  suspensionFwd: {fileID: 6343493674702979053}
+  suspensionCenter: {fileID: 6342765982833328747}
+  suspensionRear: {fileID: 6344434074449099501}
+  downForceFactor: 10
+  timeOffGroundToDisableDFSeconds: 0.5
+  _jumpPauseTimer: 0
 --- !u!1 &6456508544298338945
 GameObject:
   m_ObjectHideFlags: 0

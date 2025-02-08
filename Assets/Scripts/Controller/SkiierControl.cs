@@ -8,14 +8,11 @@ public class SkiierControl : MonoBehaviour
 
     public float yawScale;
     public float accelScale;
-    public float jumpChargeDownforce;
     public AnimationCurve chargeCurve;
-    public float minChargeDownforce = 20.0f; // change for minimum jump force
-    public float maxChargeDownforce = 300.0f; // change for maximum jump force
-    public float chargeTimeSecondsElapsed = 0.0f; // time that player has charged jump
-    public float chargeTimeSeconds = 1.0f; // time until reach max jump force
-    public float releaseUpForce = 30.0f; // on release, we do give an upwards push
-    public float releaseForceSpeedScale = 0.001f; // scale the release force by speed
+    public float chargeTimeSecondsElapsed; // time that player has charged jump
+    public float chargeTimeSeconds; // time until reach max jump force
+    public float releaseUpForce; // on release, we do give an upwards push
+    public float releaseForceSpeedScale; // scale the release force by speed
 
     public Suspension suspensionFwd;
     public Suspension suspensionRear;
@@ -26,11 +23,12 @@ public class SkiierControl : MonoBehaviour
     private bool releaseJump;
     private float horizontalInput;
     private float verticalInput;
+    private PlayerDownforce downforceHandler;
 
     void Start()
     {
         physics = GetComponent<Rigidbody>();
-        jumpChargeDownforce = 0;
+        downforceHandler = GetComponent<PlayerDownforce>();
     }
 
     void Update()
@@ -74,33 +72,21 @@ public class SkiierControl : MonoBehaviour
         physics.AddForce(moveForce, ForceMode.Acceleration);
 
         // jumping will spring the character down
-        // TODO: fine tune jump force and speed
-        if (holdJump)
-        { //check if space is held
+        if (holdJump) {
             chargeTimeSecondsElapsed += Time.deltaTime;
+        } 
+        else if (releaseJump) {
+            // pause downforce
+            downforceHandler.PauseForJump();
 
-            jumpChargeDownforce =
-                minChargeDownforce +
-                chargeCurve.Evaluate(chargeTimeSecondsElapsed / chargeTimeSeconds) *
-                (maxChargeDownforce - minChargeDownforce);
-
-            Vector3 downForce = transform.rotation * Vector3.down * jumpChargeDownforce;
-
-            //should not slow player down when uphill
-            physics.AddForce(downForce, ForceMode.Acceleration);
-        }
-        // on release space
-        else if (releaseJump)
-        {
             // up push depends on how long player has charged
             float upFactor = Mathf.Min(1.0f, chargeTimeSecondsElapsed / chargeTimeSeconds);
             float speedScale = Mathf.Clamp(physics.velocity.magnitude * releaseForceSpeedScale, 1.0f, 2.0f);
             Vector3 upForce = Vector3.up * upFactor * releaseUpForce * speedScale;
             Debug.Log(speedScale);
-            physics.AddForce(upForce, ForceMode.Impulse);
+            physics.AddForce(upForce, ForceMode.Acceleration);
 
             chargeTimeSecondsElapsed = 0.0f;
-            jumpChargeDownforce = 0.0f;
             releaseJump = false;
         }
     }
