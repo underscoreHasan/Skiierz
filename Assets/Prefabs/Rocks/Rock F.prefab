@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3917098786239549348}
+  - component: {fileID: 5792646377265520681}
   m_Layer: 0
   m_Name: Rock F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3917098786239549348
 Transform:
@@ -33,6 +34,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5792646377265520681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917098786239549351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a004d9c7bf9234fbc2b67e1fbf1b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutralOffset: {x: 90, y: 0, z: 0}
 --- !u!1001 &3917098785727758211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,7 +129,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a14b3277b52eabf4888bae432e908f04, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 209629149565678857, guid: feaf21245d392774bac2499c6637f31b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: feaf21245d392774bac2499c6637f31b, type: 3}
 --- !u!4 &2221576603810151241 stripped
 Transform:
@@ -200,7 +215,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a14b3277b52eabf4888bae432e908f04, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4894701258234163783, guid: 3936e81d110965041a5a57c03e7f9ff2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3936e81d110965041a5a57c03e7f9ff2, type: 3}
 --- !u!4 &1773449687165150607 stripped
 Transform:
