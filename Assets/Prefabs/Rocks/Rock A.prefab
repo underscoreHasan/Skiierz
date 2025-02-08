@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 2244814772409830255}
   - component: {fileID: 4090350852233592741}
   - component: {fileID: 7012183654899728044}
+  - component: {fileID: 209629149565678857}
   m_Layer: 0
   m_Name: Rock A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2920853399899899082
 Transform:
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 289dc898e36d3a849a78a50c9263d284, type: 3}
+--- !u!114 &209629149565678857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576943120985284208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a004d9c7bf9234fbc2b67e1fbf1b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutralOffset: {x: 0, y: 0, z: 0}

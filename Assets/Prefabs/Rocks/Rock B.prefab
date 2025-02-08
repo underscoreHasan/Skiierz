@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 8567976775183079588}
   - component: {fileID: 5837621909260692590}
   - component: {fileID: 3054424680381710160}
+  - component: {fileID: -4383836685512335478}
   m_Layer: 0
   m_Name: Rock B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4704092197498820353
 Transform:
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 757b1bc1a8b429642807d4836ff254dc, type: 3}
+--- !u!114 &-4383836685512335478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333275995152240059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a004d9c7bf9234fbc2b67e1fbf1b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutralOffset: {x: 0, y: 0, z: 0}
