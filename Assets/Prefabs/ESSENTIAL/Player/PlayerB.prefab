@@ -153,7 +153,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   chargeTimeSecondsElapsed: 0
   chargeTimeSeconds: 1
-  releaseUpForce: 375
+  releaseUpForce: 250
   releaseForceSpeedScale: 0.1
   suspensionFwd: {fileID: 6343493674702979053}
   suspensionRear: {fileID: 6344434074449099501}
