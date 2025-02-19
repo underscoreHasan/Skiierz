@@ -14,10 +14,13 @@ public class RagdollHandler : MonoBehaviour
     public SkinnedMeshRenderer ragdollRenderer;
     public SkinnedMeshRenderer ragdollGoggleRenderer;
     public SkinnedMeshRenderer ragdollBeanieRenderer;
+    public MeshRenderer ragdollBoardRenderer;
 
     public SkinnedMeshRenderer animatedRenderer;
     public SkinnedMeshRenderer animatedGoggleRenderer;
-    public SkinnedMeshRenderer aniamtedBeanieRenderer;
+    public SkinnedMeshRenderer animatedBeanieRenderer;
+    public MeshRenderer animatedBoardRenderer;
+
 
     public void ActivateRagdoll(Vector3 velocity) {
         ActivateRecursive(ragdollBoneRoot, animatedBoneRoot, velocity);
@@ -33,10 +36,12 @@ public class RagdollHandler : MonoBehaviour
         ragdollRenderer.enabled = true;
         ragdollGoggleRenderer.enabled = true;
         ragdollBeanieRenderer.enabled = true;
+        ragdollBoardRenderer.enabled = true;
 
         animatedRenderer.enabled = false;
         animatedGoggleRenderer.enabled = false;
-        aniamtedBeanieRenderer.enabled = false;
+        animatedBeanieRenderer.enabled = false;
+        animatedBoardRenderer.enabled = false;
     }
 
     private void ActivateRecursive(Transform current, Transform target, Vector3 velocity) {
@@ -67,6 +72,13 @@ public class RagdollHandler : MonoBehaviour
 
         while (currentChildren.Count > 0) {
             ActivateRecursive(currentChildren.Pop(), targetChildren.Pop(), velocity);
+        }
+    }
+
+    public void Update() {
+        // TODO: debug, remove
+        if (Input.GetKeyDown(KeyCode.L)) {
+            ActivateRagdoll(this.GetComponent<Rigidbody>().velocity);
         }
     }
 }
