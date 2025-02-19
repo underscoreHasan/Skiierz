@@ -7,8 +7,16 @@ public class CollisionHandler : MonoBehaviour
     public Suspension bumperFwd;
     public Suspension bumperRear;
     public Rigidbody phys;
-    public float dismountVelocity;
+    public float dismountFrontVelocity;
+    public float dismountSideVelocity;
     public float dismountBumperOffsetFactor;
+
+    private void OnCollisionEnter(Collision collision) {
+        print("collider enter");
+        print(phys.velocity.magnitude);
+        print(collision.relativeVelocity.magnitude);
+        HandleCollision(collision.relativeVelocity.magnitude, phys.velocity, dismountSideVelocity);
+    }
 
     void FixedUpdate() {
 
@@ -23,13 +31,16 @@ public class CollisionHandler : MonoBehaviour
             return;
         }
 
-        Vector3 cachedVelocity = phys.velocity;
-
-        float velFwd = Vector3.Dot(cachedVelocity, bumperFwd.transform.rotation * Vector3.down);
-        float velRear = Vector3.Dot(cachedVelocity, bumperRear.transform.rotation * Vector3.down);
+        Vector3 ourVelocity = phys.velocity;
+        float velFwd = Vector3.Dot(ourVelocity, bumperFwd.transform.rotation * Vector3.down);
+        float velRear = Vector3.Dot(ourVelocity, bumperRear.transform.rotation * Vector3.down);
         float velMax = Mathf.Max(velFwd, velRear);
 
-        if (velMax >= dismountVelocity) {
+        HandleCollision(velMax, ourVelocity, dismountFrontVelocity);
+    }
+
+    void HandleCollision(float collisionVelocity, Vector3 ourVelocity, float threshold) {
+        if (collisionVelocity >= threshold) {
             // disable all player physics and controls
             phys.isKinematic = true;
             GetComponent<PlayerControl>().enabled = false;
@@ -39,7 +50,7 @@ public class CollisionHandler : MonoBehaviour
             GetComponent<PlayerDownforce>().enabled = false;
 
             // activate ragdoll
-            GetComponent<RagdollHandler>().ActivateRagdoll(cachedVelocity);
+            GetComponent<RagdollHandler>().ActivateRagdoll(ourVelocity);
 
             // disable self
             GetComponent<CollisionHandler>().enabled = false;

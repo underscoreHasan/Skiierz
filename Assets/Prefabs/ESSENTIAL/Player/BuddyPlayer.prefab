@@ -113,10 +113,10 @@ GameObject:
   - component: {fileID: 1621188034}
   - component: {fileID: 1621188033}
   - component: {fileID: 1621188032}
-  - component: {fileID: 1621188037}
   - component: {fileID: 1621188036}
   - component: {fileID: 8437968861431284290}
   - component: {fileID: 1993682332198834248}
+  - component: {fileID: 419446427}
   m_Layer: 2
   m_Name: BuddyPlayer
   m_TagString: Player
@@ -249,20 +249,6 @@ MonoBehaviour:
   flyingNoTargetLerp: 0.01
   timeUntilFlying: 0.1
   flyingRaycastDist: 3.5
---- !u!136 &1621188037
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321369638514587964}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.9236622
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.5300064, z: 0}
 --- !u!54 &1621188036
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -318,8 +304,22 @@ MonoBehaviour:
   bumperFwd: {fileID: 1051182758}
   bumperRear: {fileID: 238627031}
   phys: {fileID: 1621188036}
-  dismountVelocity: 5.5
+  dismountFrontVelocity: 5.5
+  dismountSideVelocity: 12.5
   dismountBumperOffsetFactor: 0.75
+--- !u!65 &419446427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321369638514587964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 1.5, z: 0.4}
+  m_Center: {x: -0.1, y: 0.6, z: 0}
 --- !u!1 &2157423744182995739
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +616,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6457711909609441838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14500427, y: -1.6139984, z: -1.506}
+  m_LocalPosition: {x: -0.14500427, y: -1.39, z: -1.506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
