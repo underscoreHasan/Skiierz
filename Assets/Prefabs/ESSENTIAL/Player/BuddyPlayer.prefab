@@ -1,5 +1,136 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &238627029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 238627030}
+  - component: {fileID: 238627031}
+  m_Layer: 2
+  m_Name: BumperRear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &238627030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238627029}
+  m_LocalRotation: {x: -0, y: -0.6427876, z: -0.7660445, w: 0}
+  m_LocalPosition: {x: -0.00000071525574, y: -0.9999957, z: -0.49999988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 321369638514587965}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -80, y: 0, z: -180}
+--- !u!114 &238627031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238627029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e761711f6202f63458e70b7e94a38bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentPhys: {fileID: 1621188036}
+  neutralOffset: 1.2
+  maxOffset: 0.5
+  spring: 40
+  damper: 20
+  minAngledForceFactor: 0
+--- !u!1 &442277519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442277520}
+  m_Layer: 2
+  m_Name: TrackingCamTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &442277520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442277519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 321369638514587965}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1051182756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051182757}
+  - component: {fileID: 1051182758}
+  m_Layer: 2
+  m_Name: BumperFwd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051182757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051182756}
+  m_LocalRotation: {x: -0.7660445, y: 0, z: 0, w: 0.64278764}
+  m_LocalPosition: {x: 0, y: -0.9999987, z: 0.5000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 321369638514587965}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -100, y: 0, z: 0}
+--- !u!114 &1051182758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051182756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e761711f6202f63458e70b7e94a38bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentPhys: {fileID: 1621188036}
+  neutralOffset: 1.2
+  maxOffset: 0.5
+  spring: 40
+  damper: 20
+  minAngledForceFactor: 0
 --- !u!1 &321369638514587964
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,9 +147,10 @@ GameObject:
   - component: {fileID: 1621188037}
   - component: {fileID: 1621188036}
   - component: {fileID: 8437968861431284290}
+  - component: {fileID: 1993682332198834248}
   m_Layer: 2
   m_Name: BuddyPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,6 +172,9 @@ Transform:
   - {fileID: 2442029254466965227}
   - {fileID: 5813807187835485437}
   - {fileID: 2524805135887340652}
+  - {fileID: 442277520}
+  - {fileID: 1051182757}
+  - {fileID: 238627030}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -139,6 +274,9 @@ MonoBehaviour:
   fwdSusp: {fileID: 321369637988115592}
   rearSusp: {fileID: 321369637988115590}
   targetRot: {x: 0, y: 0, z: 0}
+  landedNormalLerp: 0.125
+  flyingNormalLerp: 0.01
+  timeUntilFlying: 1
 --- !u!136 &1621188037
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -191,8 +329,24 @@ MonoBehaviour:
   ragdollBoardRenderer: {fileID: 2398924847393759777}
   animatedRenderer: {fileID: 1858057905608687139}
   animatedGoggleRenderer: {fileID: 2707376525633092941}
-  animatedBeanieRenderer: {fileID: 0}
+  animatedBeanieRenderer: {fileID: 8037759849703337527}
   animatedBoardRenderer: {fileID: 3488276664509461950}
+--- !u!114 &1993682332198834248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321369638514587964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92ac75f981968c4daf66734a37bdc10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bumperFwd: {fileID: 1051182758}
+  bumperRear: {fileID: 238627031}
+  phys: {fileID: 1621188036}
+  dismountVelocity: 5.5
 --- !u!1 &2157423744182995739
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +1138,12 @@ Transform:
 --- !u!4 &7378817298692691635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7067107443842783605, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &8037759849703337527 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7781762779453039089, guid: 53a4ee6d903690343a64a146c658eb0e,
     type: 3}
   m_PrefabInstance: {fileID: 321369638976966598}
   m_PrefabAsset: {fileID: 0}

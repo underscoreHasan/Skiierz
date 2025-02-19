@@ -7,8 +7,10 @@ public class SlopeAngling : MonoBehaviour
     public Suspension fwdSusp;
     public Suspension rearSusp;
     public Vector3 targetRot;
-    public readonly float landedNormalLerp = 0.1f;
-    public readonly float flyingNormalLerp = 0.004f;
+    public float landedNormalLerp;
+    public float flyingNormalLerp;
+    public float timeUntilFlying;
+    private float _timeInAir = 0.0f;
 
     private Rigidbody _phys;
 
@@ -26,14 +28,25 @@ public class SlopeAngling : MonoBehaviour
         Vector3 newTargetVector;
         float lerpFactor;
         if (!(fwdSusp.isGrounded || rearSusp.isGrounded)) {
-            newTargetVector = Vector3.up;
+
+            _timeInAir += Time.deltaTime;
             lerpFactor = flyingNormalLerp;
 
+            if (_timeInAir >= timeUntilFlying) {
+                newTargetVector = Vector3.up;
+            } else {
+                newTargetVector = targetRot;
+            }
+
         } else {
+
+            _timeInAir = 0.0f;
+
             RaycastHit hitOut;
             Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut);
             newTargetVector = hitOut.normal;
             lerpFactor = landedNormalLerp;
+
         }
 
         targetRot = Vector3.Lerp(targetRot, newTargetVector, lerpFactor);
