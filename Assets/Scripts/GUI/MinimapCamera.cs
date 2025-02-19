@@ -12,7 +12,7 @@ public class MinimapCamera : MonoBehaviour
     void Start()
     {
         minimapCam = GetComponent<Camera>();
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        player = GameObject.FindGameObjectWithTag("CamTrackingTarget")?.transform;
         if (!player)
         {
             Debug.LogError("Player not found");
