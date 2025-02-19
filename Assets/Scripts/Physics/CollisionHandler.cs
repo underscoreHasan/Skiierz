@@ -8,10 +8,18 @@ public class CollisionHandler : MonoBehaviour
     public Suspension bumperRear;
     public Rigidbody phys;
     public float dismountVelocity;
+    public float dismountBumperOffsetFactor;
 
     void FixedUpdate() {
 
         if (!bumperFwd.isGrounded && !bumperRear.isGrounded) {
+            return;
+        }
+
+        // even if the bumpers are being touched, they need to satisfy a certain offset
+        // to be considered as a proper collision
+        if (bumperFwd.absOffset <= bumperFwd.maxOffset * dismountBumperOffsetFactor &&
+            bumperRear.absOffset <= bumperRear.maxOffset * dismountBumperOffsetFactor) {
             return;
         }
 
@@ -22,13 +30,19 @@ public class CollisionHandler : MonoBehaviour
         float velMax = Mathf.Max(velFwd, velRear);
 
         if (velMax >= dismountVelocity) {
-            // disable player control and physics
-            GetComponent<PlayerControl>().enabled = false;
+            // disable all player physics and controls
             phys.isKinematic = true;
+            GetComponent<PlayerControl>().enabled = false;
             GetComponent<Collider>().enabled = false;
+            GetComponent<SlopeAngling>().enabled = false;
+            GetComponent<SnowFriction>().enabled = false;
+            GetComponent<PlayerDownforce>().enabled = false;
 
             // activate ragdoll
             GetComponent<RagdollHandler>().ActivateRagdoll(cachedVelocity);
+
+            // disable self
+            GetComponent<CollisionHandler>().enabled = false;
         }
     }
 }

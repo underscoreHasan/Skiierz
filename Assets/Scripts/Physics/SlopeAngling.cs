@@ -43,11 +43,8 @@ public class SlopeAngling : MonoBehaviour
                 return;
             }
 
-            print("flyging " + Time.time);
-
             // depending on whether a surface can be found, fix to that normal, otherwise point up
-            Vector3 projectVector = _phys.velocity.normalized + (transform.rotation * Vector3.down);
-            bool hit = Physics.Raycast(transform.position, projectVector, out hitOut, flyingRaycastDist);
+            bool hit = Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut, flyingRaycastDist);
             if (hit) {
                 lerpFactor = flyingTargetLerp;
                 newTargetVector = hitOut.normal;

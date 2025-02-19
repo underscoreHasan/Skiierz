@@ -278,7 +278,7 @@ MonoBehaviour:
   flyingTargetLerp: 0.025
   flyingNoTargetLerp: 0.01
   timeUntilFlying: 1.25
-  flyingRaycastDist: 50
+  flyingRaycastDist: 5
 --- !u!136 &1621188037
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -349,6 +349,7 @@ MonoBehaviour:
   bumperRear: {fileID: 238627031}
   phys: {fileID: 1621188036}
   dismountVelocity: 5.5
+  dismountBumperOffsetFactor: 0.25
 --- !u!1 &2157423744182995739
 GameObject:
   m_ObjectHideFlags: 0

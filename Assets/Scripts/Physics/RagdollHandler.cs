@@ -74,11 +74,4 @@ public class RagdollHandler : MonoBehaviour
             ActivateRecursive(currentChildren.Pop(), targetChildren.Pop(), velocity);
         }
     }
-
-    public void Update() {
-        // TODO: debug, remove
-        if (Input.GetKeyDown(KeyCode.L)) {
-            ActivateRagdoll(this.GetComponent<Rigidbody>().velocity);
-        }
-    }
 }
