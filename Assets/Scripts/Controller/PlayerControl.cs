@@ -83,7 +83,6 @@ public class PlayerControl : MonoBehaviour
             float upFactor = Mathf.Min(1.0f, chargeTimeSecondsElapsed / chargeTimeSeconds);
             float speedScale = Mathf.Clamp(physics.velocity.magnitude * releaseForceSpeedScale, 1.0f, 2.0f);
             Vector3 upForce = Vector3.up * upFactor * releaseUpForce * speedScale;
-            Debug.Log(speedScale);
             physics.AddForce(upForce, ForceMode.Acceleration);
 
             chargeTimeSecondsElapsed = 0.0f;
