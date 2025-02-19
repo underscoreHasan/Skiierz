@@ -274,9 +274,11 @@ MonoBehaviour:
   fwdSusp: {fileID: 321369637988115592}
   rearSusp: {fileID: 321369637988115590}
   targetRot: {x: 0, y: 0, z: 0}
-  landedNormalLerp: 0.125
-  flyingNormalLerp: 0.01
-  timeUntilFlying: 1
+  landedNormalLerp: 0.15
+  flyingTargetLerp: 0.025
+  flyingNoTargetLerp: 0.01
+  timeUntilFlying: 1.25
+  flyingRaycastDist: 50
 --- !u!136 &1621188037
 CapsuleCollider:
   m_ObjectHideFlags: 0

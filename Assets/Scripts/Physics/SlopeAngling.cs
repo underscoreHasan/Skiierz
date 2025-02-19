@@ -8,10 +8,13 @@ public class SlopeAngling : MonoBehaviour
     public Suspension rearSusp;
     public Vector3 targetRot;
     public float landedNormalLerp;
-    public float flyingNormalLerp;
+    public float flyingTargetLerp;
+    public float flyingNoTargetLerp;
     public float timeUntilFlying;
-    private float _timeInAir = 0.0f;
+    public float flyingRaycastDist;
 
+    private float _timeInAir = 0.0f;
+    
     private Rigidbody _phys;
 
 
@@ -24,25 +27,39 @@ public class SlopeAngling : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        // slopeangling only applies when a character is grounded
+
         Vector3 newTargetVector;
         float lerpFactor;
+        RaycastHit hitOut;
+
         if (!(fwdSusp.isGrounded || rearSusp.isGrounded)) {
 
             _timeInAir += Time.deltaTime;
-            lerpFactor = flyingNormalLerp;
-
-            if (_timeInAir >= timeUntilFlying) {
-                newTargetVector = Vector3.up;
-            } else {
+            
+            // if we havent been in the air long enough, skip the rest of this
+            if (_timeInAir < timeUntilFlying) {
+                lerpFactor = flyingTargetLerp;
                 newTargetVector = targetRot;
+                return;
+            }
+
+            print("flyging " + Time.time);
+
+            // depending on whether a surface can be found, fix to that normal, otherwise point up
+            Vector3 projectVector = _phys.velocity.normalized + (transform.rotation * Vector3.down);
+            bool hit = Physics.Raycast(transform.position, projectVector, out hitOut, flyingRaycastDist);
+            if (hit) {
+                lerpFactor = flyingTargetLerp;
+                newTargetVector = hitOut.normal;
+            } else {
+                lerpFactor = flyingNoTargetLerp;
+                newTargetVector = Vector3.up;
             }
 
         } else {
 
             _timeInAir = 0.0f;
 
-            RaycastHit hitOut;
             Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut);
             newTargetVector = hitOut.normal;
             lerpFactor = landedNormalLerp;
