@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2112566660236957171}
-  - component: {fileID: 3105348444238935850}
   m_Layer: 0
   m_Name: AudioEmitter
   m_TagString: Untagged
@@ -32,39 +31,6 @@ Transform:
   m_Father: {fileID: 6453690856351760701}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3105348444238935850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107526794214152584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 2057693425
-      Data2: 1120308930
-      Data3: 1091724724
-      Data4: 1436550054
-    Path: event:/Vehicles/Ride-on Mower
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params:
-  - Name: RPM
-    Value: 755
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &6456096397104431191
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,6 +48,7 @@ GameObject:
   - component: {fileID: 6344435958202475125}
   - component: {fileID: 6375592546788001718}
   - component: {fileID: 918095861}
+  - component: {fileID: 8804160020208140370}
   m_Layer: 0
   m_Name: PlayerB
   m_TagString: Player
@@ -289,6 +256,21 @@ MonoBehaviour:
   downForceFactor: 10
   timeOffGroundToDisableDFSeconds: 0.5
   _jumpPauseTimer: 0
+--- !u!114 &8804160020208140370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456096397104431191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f6293a39f944021acdf1948e8ac86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowKickingUp: {fileID: 6457711908165771863}
+  suspFwd: {fileID: 6343493674702979053}
+  suspRear: {fileID: 6344434074449099501}
 --- !u!1 &6456508544298338945
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +785,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   suspFwd: {fileID: 6343493674702979053}
   suspRear: {fileID: 6344434074449099501}
+  burstStarted: 0
 --- !u!1 &6457711908348371264
 GameObject:
   m_ObjectHideFlags: 0

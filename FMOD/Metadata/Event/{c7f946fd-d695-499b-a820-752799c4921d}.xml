@@ -184,6 +184,9 @@ www.yangseunghyuk.com</value>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{7315e3ae-a090-4923-8d1d-e715e89336e0}">
+		<property name="volume">
+			<value>-17</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{3896a628-4e61-4b27-b461-4faee74a9ea3}</destination>
 		</relationship>
