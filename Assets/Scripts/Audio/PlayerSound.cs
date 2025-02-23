@@ -5,19 +5,13 @@ using UnityEngine;
 
 public class PlayerSound : MonoBehaviour
 {
-    public SnowKickingUp snowKickingUp;
-    public Suspension suspFwd;
-    public Suspension suspRear;
-
     private EventInstance snowKickSound;
     private EventInstance skiingSound;
-    private Rigidbody rb;
 
     private void Start()
     {
         snowKickSound = AudioManager.instance.CreateInstance(FMODEvents.instance.snowKick);
         skiingSound = AudioManager.instance.CreateInstance(FMODEvents.instance.skiing);
-        rb = GetComponent<Rigidbody>();
 
         PLAYBACK_STATE skiingPlaybackState;
         skiingSound.getPlaybackState(out skiingPlaybackState);
@@ -29,15 +23,9 @@ public class PlayerSound : MonoBehaviour
         }
     }
 
-    void Update()
+    public void ToggleSnowKickSound(bool toggle)
     {
-        handleSnowKickUpdate();
-        handleSkiingUpdate();
-    }
-
-    void handleSnowKickUpdate()
-    {
-        if (snowKickingUp.burstStarted)
+        if (toggle)
         {
             // Play snow kick sound
             PLAYBACK_STATE playbackState;
@@ -54,16 +42,10 @@ public class PlayerSound : MonoBehaviour
         }
     }
 
-    void handleSkiingUpdate()
+    public void UpdateSkiingSoundIntensity(float intensity)
+    //intensity from 0 to 1
     {
-        if (!(suspFwd.isGrounded || suspRear.isGrounded))
-        {
-            skiingSound.setParameterByName("RPM", 400.0f);
-            return;
-        }
-        float speed = rb.velocity.magnitude;
-        float maxSpeed = 10.0f;
-        float rpm = Mathf.Lerp(400, 1800, speed / maxSpeed);
+        float rpm = Mathf.Lerp(400, 1800, intensity);
         skiingSound.setParameterByName("RPM", rpm);
 
     }

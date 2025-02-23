@@ -16,6 +16,7 @@ public class SkiierControl : MonoBehaviour
 
     public Suspension suspensionFwd;
     public Suspension suspensionRear;
+    public PlayerSound playerSound;
 
     private Rigidbody physics;
 
@@ -65,17 +66,24 @@ public class SkiierControl : MonoBehaviour
         // cant apply acceleration if in the air
         if (!(suspensionFwd.isGrounded || suspensionRear.isGrounded))
         {
+            playerSound.UpdateSkiingSoundIntensity(0);
             return;
         }
+
+        float speed = physics.velocity.magnitude;
+        float maxSpeed = 10.0f;
+        playerSound.UpdateSkiingSoundIntensity(speed / maxSpeed);
 
         Vector3 moveForce = transform.rotation * (new Vector3(0, 0, accel) * accelScale);
         physics.AddForce(moveForce, ForceMode.Acceleration);
 
         // jumping will spring the character down
-        if (holdJump) {
+        if (holdJump)
+        {
             chargeTimeSecondsElapsed += Time.deltaTime;
-        } 
-        else if (releaseJump) {
+        }
+        else if (releaseJump)
+        {
             // pause downforce
             downforceHandler.PauseForJump();
 
@@ -83,7 +91,6 @@ public class SkiierControl : MonoBehaviour
             float upFactor = Mathf.Min(1.0f, chargeTimeSecondsElapsed / chargeTimeSeconds);
             float speedScale = Mathf.Clamp(physics.velocity.magnitude * releaseForceSpeedScale, 1.0f, 2.0f);
             Vector3 upForce = Vector3.up * upFactor * releaseUpForce * speedScale;
-            Debug.Log(speedScale);
             physics.AddForce(upForce, ForceMode.Acceleration);
 
             chargeTimeSecondsElapsed = 0.0f;

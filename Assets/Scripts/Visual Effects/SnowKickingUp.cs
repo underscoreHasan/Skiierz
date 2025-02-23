@@ -14,8 +14,7 @@ public class SnowKickingUp : MonoBehaviour
     public Suspension suspFwd;
     public Suspension suspRear;
 
-    [HideInInspector]
-    public bool burstStarted = false; // flag to prevent multiple bursts sounds in a short time
+    public PlayerSound playerSound;
 
     private Rigidbody _phys;
 
@@ -77,7 +76,7 @@ public class SnowKickingUp : MonoBehaviour
         // snow kicking up only applies when a character is grounded
         if (!(suspFwd.isGrounded || suspRear.isGrounded))
         {
-            burstStarted = false;
+            playerSound.ToggleSnowKickSound(false);
             return;
         }
 
@@ -109,13 +108,13 @@ public class SnowKickingUp : MonoBehaviour
             main.startSpeed = burstStartSpeed.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed) * SPEED_FACTOR;
             snowParticleSystem.Play();
 
-            burstStarted = true;
+            playerSound.ToggleSnowKickSound(true);
 
             Destroy(currentSnow, 0.5f);
         }
         else
         {
-            burstStarted = false;
+            playerSound.ToggleSnowKickSound(false);
         }
     }
 }

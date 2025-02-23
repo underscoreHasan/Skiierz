@@ -24,7 +24,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<value>Jump</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{33020bd4-6815-4ed7-b787-bc0035017be4}</destination>
@@ -120,7 +120,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	</object>
 	<object class="EventMixerMaster" id="{eacb9d48-7e92-4c97-998a-3b877bcdca91}">
 		<property name="volume">
-			<value>-3</value>
+			<value>-25.5</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{28c10953-c50e-47e6-9e27-0fdf6fc5733c}</destination>
@@ -196,8 +196,8 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	</object>
 	<object class="MixerBusEffectChain" id="{cd3ae01a-4cba-4d96-b296-d58420806a7d}">
 		<relationship name="effects">
+			<destination>{7a8051a8-352c-499b-89d4-4909c8d7ad70}</destination>
 			<destination>{be1e506d-39a5-458b-bfbb-586f285086d7}</destination>
-			<destination>{48bde81f-f060-46bd-9318-49c10e90ae01}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6a63480c-e44e-4de4-a769-03ac248b7311}" />
@@ -225,15 +225,12 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{dcb4a4b1-6b66-4c37-856e-2c2a48646663}" />
-	<object class="MixerBusFader" id="{be1e506d-39a5-458b-bfbb-586f285086d7}" />
-	<object class="ProxyEffect" id="{48bde81f-f060-46bd-9318-49c10e90ae01}">
-		<property name="inputFormat">
-			<value>1</value>
-		</property>
-		<relationship name="preset">
-			<destination>{3eae0edd-4f73-005f-09e3-f727ff075640}</destination>
+	<object class="GainEffect" id="{7a8051a8-352c-499b-89d4-4909c8d7ad70}">
+		<relationship name="automators">
+			<destination>{9701f1e4-0e59-47f6-8570-e4b2cd4ea637}</destination>
 		</relationship>
 	</object>
+	<object class="MixerBusFader" id="{be1e506d-39a5-458b-bfbb-586f285086d7}" />
 	<object class="MixerBusFader" id="{0ab09c26-c893-4724-98c2-6e03e3966c5d}" />
 	<object class="DistortionEffect" id="{aef9634b-245b-42c4-b795-6ee103f77540}">
 		<relationship name="automators">
@@ -246,6 +243,14 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</property>
 		<relationship name="automators">
 			<destination>{ee91b4cd-74ee-4f25-9d51-1219027031fe}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{9701f1e4-0e59-47f6-8570-e4b2cd4ea637}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>gain</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{f5352479-60a8-4717-8250-63643df7bd5c}</destination>
 		</relationship>
 	</object>
 	<object class="Automator" id="{06ef6c80-c8e0-4745-8f17-6d139df1aa59}">
@@ -262,6 +267,15 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</property>
 		<relationship name="automationCurves">
 			<destination>{4a9338c9-978b-4328-92be-a7fb28efea38}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{f5352479-60a8-4717-8250-63643df7bd5c}">
+		<relationship name="parameter">
+			<destination>{6fbe4ad6-7ed5-43c8-94ac-fe278fcdbe03}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{b1b69fd6-34ac-4169-bfc6-62f474b24c7b}</destination>
+			<destination>{b93427eb-85e8-4a75-a04a-ce7669ca8d5e}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationCurve" id="{3edfe76a-865d-48e1-bb74-57b3be98e769}">
@@ -281,6 +295,25 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<destination>{af5295ed-9a3c-4f5a-990a-1af28e07388f}</destination>
 			<destination>{b68d3992-2885-4878-b2c4-6afcd0d5a60d}</destination>
 		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{b1b69fd6-34ac-4169-bfc6-62f474b24c7b}">
+		<property name="position">
+			<value>2.5423728813559321</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{b93427eb-85e8-4a75-a04a-ce7669ca8d5e}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.304672807</value>
+		</property>
 	</object>
 	<object class="AutomationPoint" id="{4af1064c-2373-46ed-ad4d-e3188f4200f7}">
 		<property name="position">
