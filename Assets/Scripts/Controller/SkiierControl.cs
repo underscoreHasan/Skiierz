@@ -95,6 +95,9 @@ public class SkiierControl : MonoBehaviour
 
             chargeTimeSecondsElapsed = 0.0f;
             releaseJump = false;
+
+            // play jump sound
+            playerSound.PlayJumpSound(upFactor);
         }
     }
 }
