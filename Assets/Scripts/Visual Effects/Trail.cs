@@ -20,7 +20,6 @@ public class Trail : MonoBehaviour
         } else {
             trailRenderer.emitting = false;
         }
-        
     }
 
     // Update is called once per frame

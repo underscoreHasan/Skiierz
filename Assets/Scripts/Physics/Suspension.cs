@@ -23,6 +23,10 @@ public class Suspension : MonoBehaviour {
         get { return _normal; }
     }
 
+    public float absOffset {
+        get { return Mathf.Abs(_currentOffset); }
+    }
+
     private float _currentOffset;
     private bool _isGrounded;
     private Vector3 _normal;

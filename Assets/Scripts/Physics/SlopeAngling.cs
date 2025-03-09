@@ -7,9 +7,14 @@ public class SlopeAngling : MonoBehaviour
     public Suspension fwdSusp;
     public Suspension rearSusp;
     public Vector3 targetRot;
-    public readonly float landedNormalLerp = 0.1f;
-    public readonly float flyingNormalLerp = 0.004f;
+    public float landedNormalLerp;
+    public float flyingTargetLerp;
+    public float flyingNoTargetLerp;
+    public float timeUntilFlying;
+    public float flyingRaycastDist;
 
+    private float _timeInAir = 0.0f;
+    
     private Rigidbody _phys;
 
 
@@ -22,18 +27,40 @@ public class SlopeAngling : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        // slopeangling only applies when a character is grounded
+
         Vector3 newTargetVector;
         float lerpFactor;
+        RaycastHit hitOut;
+
         if (!(fwdSusp.isGrounded || rearSusp.isGrounded)) {
-            newTargetVector = Vector3.up;
-            lerpFactor = flyingNormalLerp;
+
+            _timeInAir += Time.deltaTime;
+            
+            // if we havent been in the air long enough, skip the rest of this
+            if (_timeInAir < timeUntilFlying) {
+                lerpFactor = flyingTargetLerp;
+                newTargetVector = targetRot;
+                return;
+            }
+
+            // depending on whether a surface can be found, fix to that normal, otherwise point up
+            bool hit = Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut, flyingRaycastDist);
+            if (hit) {
+                lerpFactor = flyingTargetLerp;
+                newTargetVector = hitOut.normal;
+            } else {
+                lerpFactor = flyingNoTargetLerp;
+                newTargetVector = Vector3.up;
+            }
 
         } else {
-            RaycastHit hitOut;
+
+            _timeInAir = 0.0f;
+
             Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut);
             newTargetVector = hitOut.normal;
             lerpFactor = landedNormalLerp;
+
         }
 
         targetRot = Vector3.Lerp(targetRot, newTargetVector, lerpFactor);
