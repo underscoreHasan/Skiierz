@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3564328822440386048}
   - component: {fileID: 3544592490237583910}
   - component: {fileID: 3513824333283085316}
-  - component: {fileID: 3483625267728143906}
   - component: {fileID: 3513824333283085323}
+  - component: {fileID: 656403266252323027}
   m_Layer: 0
   m_Name: TrackingCam
   m_TagString: MainCamera
@@ -27,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3565888215338472590}
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -171.2, y: 74, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!20 &3544592490237583910
 Camera:
   m_ObjectHideFlags: 0
@@ -86,14 +86,6 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3565888215338472590}
   m_Enabled: 1
---- !u!81 &3483625267728143906
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3565888215338472590}
-  m_Enabled: 1
 --- !u!114 &3513824333283085323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +102,17 @@ MonoBehaviour:
   cameraHeight: 1
   cameraDistance: 6
   dampening: 2
+--- !u!114 &656403266252323027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565888215338472590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}

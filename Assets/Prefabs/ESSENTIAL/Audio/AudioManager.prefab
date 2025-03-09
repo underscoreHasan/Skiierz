@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3495529352875619789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3495529352875619788}
+  - component: {fileID: 3495529352875619635}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3495529352875619788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3495529352875619789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3495529352941711539}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3495529352875619635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3495529352875619789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e167dd77eb20f4333ab42bc4b80ab67a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <snowKick>k__BackingField:
+    Guid:
+      Data1: -231724790
+      Data2: 1225114860
+      Data3: 125793448
+      Data4: -1976220322
+    Path: event:/Character/Swerve
+  <skiing>k__BackingField:
+    Guid:
+      Data1: 2057693425
+      Data2: 1120308930
+      Data3: 1091724724
+      Data4: 1436550054
+    Path: event:/Character/Ride-on Mower
+  <jump>k__BackingField:
+    Guid:
+      Data1: -598261406
+      Data2: 1156573983
+      Data3: 1379984049
+      Data4: 437228268
+    Path: event:/Character/Jump
+  <land>k__BackingField:
+    Guid:
+      Data1: 78194903
+      Data2: 1245301811
+      Data3: 1685173410
+      Data4: -1981791828
+    Path: event:/Character/Landing
+  <ambience>k__BackingField:
+    Guid:
+      Data1: 1198788837
+      Data2: 1177438829
+      Data3: 1431117501
+      Data4: -326572916
+    Path: event:/Ambience/Forest
+  <music>k__BackingField:
+    Guid:
+      Data1: -939964675
+      Data2: 1234949781
+      Data3: 661987496
+      Data4: 496157849
+    Path: event:/Music/Level 02
+--- !u!1 &3495529352941711693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3495529352941711539}
+  - component: {fileID: 3495529352941711692}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3495529352941711539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3495529352941711693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -147.92, y: 54, z: -96.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3495529352875619788}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3495529352941711692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3495529352941711693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04988fa148b4495ab08a54920c2bb88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

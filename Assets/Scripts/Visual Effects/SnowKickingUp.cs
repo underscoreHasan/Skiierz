@@ -14,8 +14,10 @@ public class SnowKickingUp : MonoBehaviour
     public Suspension suspFwd;
     public Suspension suspRear;
 
+    public PlayerSound playerSound;
+
     private Rigidbody _phys;
-    
+
     private Vector3 lookFwdVector;
     private Vector3 lookUpVector;
     private Vector3 projectedVel;
@@ -42,10 +44,12 @@ public class SnowKickingUp : MonoBehaviour
         lastBurstTimestamp = 0.0f;
     }
 
-    void OnDrawGizmos() {
+    void OnDrawGizmos()
+    {
 
         // only draw gizmos if game is running
-        if (!Application.isPlaying) {
+        if (!Application.isPlaying)
+        {
             return;
         }
 
@@ -58,11 +62,11 @@ public class SnowKickingUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // Update is called in a fixed manner
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         lookFwdVector = _phys.transform.rotation * Vector3.forward;
         lookUpVector = _phys.transform.rotation * Vector3.up;
@@ -72,9 +76,10 @@ public class SnowKickingUp : MonoBehaviour
         // snow kicking up only applies when a character is grounded
         if (!(suspFwd.isGrounded || suspRear.isGrounded))
         {
+            playerSound.ToggleSnowKickSound(false);
             return;
         }
-        
+
         const float maxExpectedSpeed = 30.0f;
         const float particleAggressivenessThreshold = 0.04f;
         const float timeBetweenBurstsThreshold = 0.08f;
@@ -96,14 +101,20 @@ public class SnowKickingUp : MonoBehaviour
             ParticleSystem.EmissionModule emission = snowParticleSystem.emission;
             ParticleSystem.ShapeModule shape = snowParticleSystem.shape;
             ParticleSystem.Burst burst = emission.GetBurst(0);
-            
+
             currentSnow.transform.rotation = targetRotation;
             burst.count = burstCount.Evaluate(particleAggressiveness) * BURST_FACTOR;
             shape.radius = burstConeRadius.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed) * RADIUS_FACTOR;
             main.startSpeed = burstStartSpeed.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed) * SPEED_FACTOR;
             snowParticleSystem.Play();
 
+            playerSound.ToggleSnowKickSound(true);
+
             Destroy(currentSnow, 0.5f);
+        }
+        else
+        {
+            playerSound.ToggleSnowKickSound(false);
         }
     }
 }
