@@ -145,6 +145,7 @@ Transform:
   - {fileID: 238627030}
   - {fileID: 6457711909377440021}
   - {fileID: 6457711909609441837}
+  - {fileID: 1572330795115132412}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -210,6 +211,8 @@ MonoBehaviour:
   releaseForceSpeedScale: 0.1
   suspensionFwd: {fileID: 321369637988115592}
   suspensionRear: {fileID: 321369637988115590}
+  playerSound: {fileID: 1572499978333871819}
+  playerSoundMaxSpeed: 10
 --- !u!114 &1621188033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +473,50 @@ MonoBehaviour:
   spring: 400
   damper: 12
   minAngledForceFactor: 0.5
+--- !u!1 &6051362801257969879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1572330795115132412}
+  - component: {fileID: 1572499978333871819}
+  m_Layer: 2
+  m_Name: PlayerSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: 29258b1336a580946bc144df00b74ac1, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1572330795115132412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051362801257969879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 321369638514587965}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1572499978333871819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051362801257969879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f6293a39f944021acdf1948e8ac86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6457711909377440022
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +637,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   suspFwd: {fileID: 321369637988115592}
   suspRear: {fileID: 321369637988115590}
+  playerSound: {fileID: 1572499978333871819}
 --- !u!1 &6457711909609441838
 GameObject:
   m_ObjectHideFlags: 0

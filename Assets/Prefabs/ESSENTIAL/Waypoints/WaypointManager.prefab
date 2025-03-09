@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 712703104988642957}
   - component: {fileID: 712703104988642947}
   - component: {fileID: 712703104988642958}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Waypoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712703106062140234}
   - component: {fileID: 712703106062140233}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WaypointManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}

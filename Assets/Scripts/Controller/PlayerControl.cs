@@ -17,6 +17,9 @@ public class PlayerControl : MonoBehaviour
     public Suspension suspensionFwd;
     public Suspension suspensionRear;
 
+    public PlayerSound playerSound;
+    public float playerSoundMaxSpeed; 
+
     private Rigidbody physics;
 
     private bool holdJump;
@@ -65,8 +68,12 @@ public class PlayerControl : MonoBehaviour
         // cant apply acceleration if in the air
         if (!(suspensionFwd.isGrounded || suspensionRear.isGrounded))
         {
+            playerSound.UpdateSkiingSoundIntensity(0);
             return;
         }
+
+        float speed = physics.velocity.magnitude;
+        playerSound.UpdateSkiingSoundIntensity(speed / playerSoundMaxSpeed);
 
         Vector3 moveForce = transform.rotation * (new Vector3(0, 0, accel) * accelScale);
         physics.AddForce(moveForce, ForceMode.Acceleration);
@@ -87,6 +94,8 @@ public class PlayerControl : MonoBehaviour
 
             chargeTimeSecondsElapsed = 0.0f;
             releaseJump = false;
+
+            playerSound.PlayJumpSound(upFactor);
         }
     }
 }

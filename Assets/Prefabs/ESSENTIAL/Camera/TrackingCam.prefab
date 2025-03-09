@@ -102,6 +102,7 @@ MonoBehaviour:
   cameraHeight: 1
   cameraDistance: 6
   dampening: 2
+  rotation: {x: 0, y: 90, z: 0}
 --- !u!114 &656403266252323027
 MonoBehaviour:
   m_ObjectHideFlags: 0
