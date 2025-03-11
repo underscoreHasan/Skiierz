@@ -108,7 +108,8 @@ public class SnowKickingUp : MonoBehaviour
             main.startSpeed = burstStartSpeed.Evaluate(_phys.velocity.magnitude / maxExpectedSpeed) * SPEED_FACTOR;
             snowParticleSystem.Play();
 
-            playerSound.ToggleSnowKickSound(true);
+            float maxSpeedSound = 30.0f;
+            playerSound.ToggleSnowKickSound(true, _phys.velocity.magnitude / maxSpeedSound);
 
             Destroy(currentSnow, 0.5f);
         }
