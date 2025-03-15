@@ -3,9 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    private Animator myAnimator;
+
+    private void Start() {
+        myAnimator = GetComponent<Animator>();
+    }
     public void StartGame()
     {
-        SceneManager.LoadScene("SlopeTestsA"); // Replace with actual scene name
+
+         myAnimator.SetTrigger("StartAnimation");
+        //SceneManager.LoadScene("SlopeTestsA"); // Replace with actual scene name
+    }
+
+    public void LevelSelect() {
+
     }
 
     public void QuitGame()
