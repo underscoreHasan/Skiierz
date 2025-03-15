@@ -562,7 +562,6 @@ GameObject:
   - component: {fileID: 196051278}
   - component: {fileID: 196051277}
   - component: {fileID: 196051276}
-  - component: {fileID: 196051279}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -635,6 +634,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 447994031}
+        m_TargetAssemblyTypeName: CameraAnimationController, Assembly-CSharp
+        m_MethodName: PlayCameraAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1949441185}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: StartGame
@@ -647,16 +658,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447994030}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
+      - m_Target: {fileID: 196051274}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartAnimation
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118248037}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 56237334}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &196051277
@@ -697,27 +732,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196051274}
   m_CullTransparentMesh: 1
---- !u!95 &196051279
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196051274}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7907a9017231ace48a96e2a47b7867f7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &288455584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1136,7 @@ GameObject:
   - component: {fileID: 447994029}
   - component: {fileID: 447994028}
   - component: {fileID: 447994030}
+  - component: {fileID: 447994031}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1293,6 +1308,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &447994031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447994024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fb2cc74f891b64fa1c8b18c45f811b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraAnimator: {fileID: 447994030}
+  animationName: StartAnimation
 --- !u!1 &491808235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,6 +2444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d12a7b520c44930a3b14773a51a9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayBeforeSceneChange: 2
 --- !u!114 &1768562317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3094,7 +3124,6 @@ GameObject:
   - component: {fileID: 1949441187}
   - component: {fileID: 1949441186}
   - component: {fileID: 1949441185}
-  - component: {fileID: 1949441190}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3114,6 +3143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d12a7b520c44930a3b14773a51a9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayBeforeSceneChange: 2
 --- !u!114 &1949441186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3200,27 +3230,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!95 &1949441190
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949441184}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7907a9017231ace48a96e2a47b7867f7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1955827052
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,18 +1,21 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.Rendering.PostProcessing;
 
 public class MainMenuController : MonoBehaviour
 {
-    private Animator myAnimator;
+    public float delayBeforeSceneChange = 2.0f; // Adjust this as needed
 
-    private void Start() {
-        myAnimator = GetComponent<Animator>();
+    public void StartGame() {
+        PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
+        ppVolume.enabled = false;
+        StartCoroutine(DelayedSceneLoad());
     }
-    public void StartGame()
-    {
 
-         myAnimator.SetTrigger("StartAnimation");
-        //SceneManager.LoadScene("SlopeTestsA"); // Replace with actual scene name
+    private IEnumerator DelayedSceneLoad() {
+        yield return new WaitForSeconds(delayBeforeSceneChange);
+        SceneManager.LoadScene("SlopeTestsA"); // Replace with your actual scene name
     }
 
     public void LevelSelect() {
@@ -24,5 +27,7 @@ public class MainMenuController : MonoBehaviour
         Application.Quit(); 
         Debug.Log("Game is exiting");
     }
+
+
 }
 
