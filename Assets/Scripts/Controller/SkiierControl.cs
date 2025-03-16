@@ -71,8 +71,8 @@ public class SkiierControl : MonoBehaviour
         }
 
         float speed = physics.velocity.magnitude;
-        float maxSpeed = 10.0f;
-        playerSound.UpdateSkiingSoundIntensity(speed / maxSpeed);
+        float maxSpeedSound = 30.0f;
+        playerSound.UpdateSkiingSoundIntensity(speed / maxSpeedSound);
 
         Vector3 moveForce = transform.rotation * (new Vector3(0, 0, accel) * accelScale);
         physics.AddForce(moveForce, ForceMode.Acceleration);

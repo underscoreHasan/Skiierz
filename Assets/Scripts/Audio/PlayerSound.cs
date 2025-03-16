@@ -10,6 +10,10 @@ public class PlayerSound : MonoBehaviour
     private EventInstance jumpSound;
     private EventInstance landSound;
 
+
+    public float snowKickMinDuration = 0.5f;
+    [SerializeField] private float snowKickElapsed = 0;
+
     private void Start()
     {
         snowKickSound = AudioManager.instance.CreateInstance(FMODEvents.instance.snowKick);
@@ -24,6 +28,20 @@ public class PlayerSound : MonoBehaviour
             skiingSound.setParameterByName("RPM", 400.0f);
             skiingSound.setParameterByName("Load", -1.0f);
             skiingSound.start();
+        }
+    }
+
+    void Update()
+    {
+        PLAYBACK_STATE playbackState;
+        snowKickSound.getPlaybackState(out playbackState);
+        if (playbackState.Equals(PLAYBACK_STATE.PLAYING))
+        {
+            snowKickElapsed += Time.deltaTime;
+            if (snowKickElapsed > snowKickMinDuration)
+            {
+                snowKickSound.stop(STOP_MODE.ALLOWFADEOUT);
+            }
         }
     }
 
@@ -50,30 +68,38 @@ public class PlayerSound : MonoBehaviour
         }
     }
 
-    public void ToggleSnowKickSound(bool toggle)
+    public void ToggleSnowKickSound(bool toggle, float intensity = 0.0f)
     {
+        PLAYBACK_STATE playbackState;
+        snowKickSound.getPlaybackState(out playbackState);
+
         if (toggle)
         {
+            snowKickElapsed = 0;
             // Play snow kick sound
-            PLAYBACK_STATE playbackState;
-            snowKickSound.getPlaybackState(out playbackState);
+            snowKickSound.setParameterByName("Speed", intensity * 6.0f);
+
             if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
             {
-                snowKickSound.setParameterByName("Speed", 6.0f);
+
                 snowKickSound.start();
             }
-        }
-        else
-        {
-            snowKickSound.stop(STOP_MODE.ALLOWFADEOUT);
         }
     }
 
     public void UpdateSkiingSoundIntensity(float intensity)
     //intensity from 0 to 1
     {
-        float rpm = Mathf.Lerp(400, 1800, intensity);
+        float rpm = Mathf.Lerp(0, 1800, intensity);
         skiingSound.setParameterByName("RPM", rpm);
 
     }
+    /**
+    when starting to play kick sound
+    - start timer (set by flag)
+    - clear the flag for stopping sound
+    when stopping
+    - in update if flag is set, check elapsed, if greater than min duration, stop playing
+    - set up the flag
+    */
 }

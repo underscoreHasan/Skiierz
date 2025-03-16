@@ -24,7 +24,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<value>Swerve</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{33020bd4-6815-4ed7-b787-bc0035017be4}</destination>
@@ -74,6 +74,9 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{ecca83db-749a-41f9-b25d-a4f99833d815}">
+		<relationship name="automationTracks">
+			<destination>{7c1f22cd-d7f3-4082-8a7a-2bb91cf2fe73}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{f534253c-fb3d-4ed2-9fc6-78e3d703e761}</destination>
 		</relationship>
@@ -100,10 +103,10 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	<object class="MarkerTrack" id="{084b601c-5e43-447f-a282-874f6941950f}" />
 	<object class="GroupTrack" id="{e7e258ba-19cb-49e4-a361-1b292113d36f}">
 		<relationship name="automationTracks">
-			<destination>{dd61dde8-dad2-408c-9a25-76f3e39002ec}</destination>
+			<destination>{4a15d939-7bda-4ce2-8830-adb8684476a5}</destination>
 		</relationship>
 		<relationship name="modules">
-			<destination>{a0e6f50f-1a5a-41c1-95d1-e2ca114d6409}</destination>
+			<destination>{fab04dd9-d9f3-427b-985b-fcd31a9e0d6f}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{d073d58e-df69-4481-ae5c-aba7388a393f}</destination>
@@ -116,7 +119,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	</object>
 	<object class="ParameterProxy" id="{e006e092-0949-4015-8992-2f2933600c4b}">
 		<relationship name="modules">
-			<destination>{a0e6f50f-1a5a-41c1-95d1-e2ca114d6409}</destination>
+			<destination>{fab04dd9-d9f3-427b-985b-fcd31a9e0d6f}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{6fbe4ad6-7ed5-43c8-94ac-fe278fcdbe03}</destination>
@@ -126,6 +129,12 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		<property name="volume">
 			<value>-6</value>
 		</property>
+		<relationship name="automators">
+			<destination>{8f43ee58-df69-4e05-abe3-d3dbd2561862}</destination>
+		</relationship>
+		<relationship name="modulators">
+			<destination>{e1150bfc-d054-45e3-a8eb-39c450d400d9}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{5d9b05f2-6535-47a1-ad92-f8d80a4f96bd}</destination>
 		</relationship>
@@ -136,47 +145,46 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<destination>{3d44dd0d-d5e8-4db0-9b99-0af56bbf096a}</destination>
 		</relationship>
 	</object>
+	<object class="AutomationTrack" id="{7c1f22cd-d7f3-4082-8a7a-2bb91cf2fe73}">
+		<relationship name="automator">
+			<destination>{8f43ee58-df69-4e05-abe3-d3dbd2561862}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{6c4554ec-1e6f-4f0f-92e0-df488a0a7ae7}">
 		<relationship name="effects">
 			<destination>{2290605a-e48e-4cf0-8238-b987a311f6dd}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{24396414-a12b-457c-a89b-1433faf75091}" />
-	<object class="AutomationTrack" id="{dd61dde8-dad2-408c-9a25-76f3e39002ec}">
+	<object class="AutomationTrack" id="{4a15d939-7bda-4ce2-8830-adb8684476a5}">
 		<relationship name="automator">
-			<destination>{8c74db90-56ab-4dde-baea-9c45e3b6d865}</destination>
+			<destination>{d90797b0-d2e3-440a-bc2e-b57e39cd953d}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{a0e6f50f-1a5a-41c1-95d1-e2ca114d6409}">
-		<property name="isCutoff">
-			<value>true</value>
-		</property>
+	<object class="SingleSound" id="{fab04dd9-d9f3-427b-985b-fcd31a9e0d6f}">
 		<property name="length">
 			<value>8</value>
 		</property>
-		<property name="startOffset">
-			<value>50.5</value>
+		<property name="pitch">
+			<value>24</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
-		<relationship name="automators">
-			<destination>{8c74db90-56ab-4dde-baea-9c45e3b6d865}</destination>
-		</relationship>
-		<relationship name="modulators">
-			<destination>{c66f7680-d988-417a-b806-2e825180f2a0}</destination>
-		</relationship>
-		<relationship name="fadeInCurve">
-			<destination>{e1a827d9-d732-4d76-89cd-aaf52322b561}</destination>
-		</relationship>
 		<relationship name="audioFile">
-			<destination>{aa01ab40-d8f4-4939-b178-d910e349396f}</destination>
+			<destination>{2b229abc-219a-4930-88b9-2611b454bae1}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d073d58e-df69-4481-ae5c-aba7388a393f}">
+		<property name="volume">
+			<value>-21.5</value>
+		</property>
 		<property name="name">
 			<value>Rolling</value>
 		</property>
+		<relationship name="automators">
+			<destination>{d90797b0-d2e3-440a-bc2e-b57e39cd953d}</destination>
+		</relationship>
 		<relationship name="modulators">
 			<destination>{df02d584-01cd-48f4-b358-e8a6e4e30b2f}</destination>
 		</relationship>
@@ -190,6 +198,31 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<destination>{f534253c-fb3d-4ed2-9fc6-78e3d703e761}</destination>
 		</relationship>
 	</object>
+	<object class="Automator" id="{8f43ee58-df69-4e05-abe3-d3dbd2561862}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>pitch</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{8b6f1f3c-cd62-47cb-a617-dd230e307a9b}</destination>
+		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{e1150bfc-d054-45e3-a8eb-39c450d400d9}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="initialValue">
+			<value>-68.8888855</value>
+		</property>
+		<property name="attackTime">
+			<value>120</value>
+		</property>
+		<property name="peakValue">
+			<value>-2.22222137</value>
+		</property>
+		<property name="holdTime">
+			<value>641.025635</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{5d9b05f2-6535-47a1-ad92-f8d80a4f96bd}">
 		<relationship name="effects">
 			<destination>{0ace7bae-3860-4383-8668-26f25d984a51}</destination>
@@ -198,29 +231,10 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	</object>
 	<object class="MixerBusPanner" id="{d0414605-1100-4e76-b163-8a1d44c0b533}" />
 	<object class="MixerBusFader" id="{2290605a-e48e-4cf0-8238-b987a311f6dd}" />
-	<object class="Automator" id="{8c74db90-56ab-4dde-baea-9c45e3b6d865}">
+	<object class="Automator" id="{d90797b0-d2e3-440a-bc2e-b57e39cd953d}">
 		<property name="nameOfPropertyBeingAutomated">
-			<value>pitch</value>
+			<value>volume</value>
 		</property>
-		<relationship name="automationCurves">
-			<destination>{0cd59ede-447e-46ce-b7b5-5b1f2a40209c}</destination>
-		</relationship>
-	</object>
-	<object class="RandomizerModulator" id="{c66f7680-d988-417a-b806-2e825180f2a0}">
-		<property name="nameOfPropertyBeingModulated">
-			<value>startOffset</value>
-		</property>
-		<property name="amount">
-			<value>100</value>
-		</property>
-	</object>
-	<object class="FadeCurve" id="{e1a827d9-d732-4d76-89cd-aaf52322b561}">
-		<relationship name="startPoint">
-			<destination>{1f68fd43-1470-4d5d-92d8-dcf70abf49b2}</destination>
-		</relationship>
-		<relationship name="endPoint">
-			<destination>{83c28d28-11ca-4aa4-a258-b5b2e2e24576}</destination>
-		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{df02d584-01cd-48f4-b358-e8a6e4e30b2f}">
 		<property name="nameOfPropertyBeingModulated">
@@ -230,10 +244,10 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>0</value>
+			<value>170.25647</value>
 		</property>
 		<property name="releaseTime">
-			<value>237.17952</value>
+			<value>100</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>
@@ -245,58 +259,39 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{507fc586-69a1-4ab6-9a28-f08cc6b2820a}" />
+	<object class="AutomationCurve" id="{8b6f1f3c-cd62-47cb-a617-dd230e307a9b}">
+		<relationship name="parameter">
+			<destination>{6fbe4ad6-7ed5-43c8-94ac-fe278fcdbe03}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{9b4736ab-559d-4730-bea2-182f57f3dc7f}</destination>
+			<destination>{90e265dc-a0e3-4dbe-aee9-6e619ac6c67d}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{0ace7bae-3860-4383-8668-26f25d984a51}" />
 	<object class="ProxyEffect" id="{3a577217-4ece-48ca-8880-2aee998f023e}">
 		<property name="inputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="preset">
 			<destination>{028d38fd-417b-0bad-290b-a30ea50da357}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationCurve" id="{0cd59ede-447e-46ce-b7b5-5b1f2a40209c}">
-		<relationship name="parameter">
-			<destination>{6fbe4ad6-7ed5-43c8-94ac-fe278fcdbe03}</destination>
-		</relationship>
-		<relationship name="automationPoints">
-			<destination>{8e55167b-14fe-414d-ae9c-aebac228bff0}</destination>
-			<destination>{77968d1f-3b09-418d-a093-43aaf0d7a58a}</destination>
-		</relationship>
-	</object>
-	<object class="AutomationPoint" id="{1f68fd43-1470-4d5d-92d8-dcf70abf49b2}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-		<property name="curveShape">
-			<value>-0.2547189</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{83c28d28-11ca-4aa4-a258-b5b2e2e24576}">
-		<property name="position">
-			<value>5</value>
-		</property>
-		<property name="value">
-			<value>1</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{3f7fec79-3e81-429c-936d-381dd6a53698}" />
-	<object class="AutomationPoint" id="{8e55167b-14fe-414d-ae9c-aebac228bff0}">
+	<object class="AutomationPoint" id="{9b4736ab-559d-4730-bea2-182f57f3dc7f}">
 		<property name="position">
-			<value>8</value>
+			<value>0.19209039548022599</value>
 		</property>
 		<property name="value">
-			<value>2.5</value>
+			<value>-10</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{77968d1f-3b09-418d-a093-43aaf0d7a58a}">
+	<object class="AutomationPoint" id="{90e265dc-a0e3-4dbe-aee9-6e619ac6c67d}">
 		<property name="position">
-			<value>0.5</value>
+			<value>7.9209039548022595</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>10</value>
 		</property>
 	</object>
 </objects>
