@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3142921458783457358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138411606253204286}
+  - component: {fileID: 1774713680730945368}
+  m_Layer: 2
+  m_Name: RocksVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138411606253204286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142921458783457358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 200, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1774713680730945368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142921458783457358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974971586a6f00747ad1483b7bb83001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.3289925, g: 0.3289925, b: 0.6075471, a: 0.19607843}
+  objectCount: 20
+  objectScaleMin: 1.25
+  objectScaleMax: 5
+  toSpawn:
+  - {fileID: 2576943120985284208, guid: feaf21245d392774bac2499c6637f31b, type: 3}
+  - {fileID: 5333275995152240059, guid: b0a3e81ffc0b987459bf597034193290, type: 3}
+  - {fileID: 4523499669484865541, guid: 5327c78a42f2d964c8353bf279f108cd, type: 3}
+  - {fileID: 2705268247607588184, guid: 3936e81d110965041a5a57c03e7f9ff2, type: 3}
+  - {fileID: 2210208070925859015, guid: 9aac7a85ef57ff2438ac18ca6b85c683, type: 3}
+  - {fileID: 3917098786239549351, guid: 4614526521aed6b48834b68a66f691fe, type: 3}
