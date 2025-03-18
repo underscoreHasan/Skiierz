@@ -48,8 +48,7 @@ public class RockFloorStick : MonoBehaviour
         }
 
         if (isCliff) {
-            Vector3 projectedUp = Vector3.ProjectOnPlane(Quaternion.Euler(neutralOffset) * Vector3.forward, hit.normal).normalized;
-            rotationAdjustment = Quaternion.FromToRotation(Quaternion.Euler(neutralOffset) * Vector3.forward, projectedUp);
+            // TODO: make this work
         }
 
         transform.rotation = Quaternion.FromToRotation(Quaternion.Euler(neutralOffset) * Vector3.up, hit.normal) *
