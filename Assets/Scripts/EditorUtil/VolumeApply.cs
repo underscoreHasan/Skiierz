@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
+using UnityEditor;
 using UnityEngine;
 
 public class VolumeApply : MonoBehaviour
@@ -17,6 +18,8 @@ public class VolumeApply : MonoBehaviour
 
     public void PlaceThatShit() {
         
+        Undo.IncrementCurrentGroup();
+
         List<GameObject> allThatsSpawned = new List<GameObject>();
 
         int failsafe = objectCount + 128;
@@ -27,7 +30,7 @@ public class VolumeApply : MonoBehaviour
             }
 
             GameObject toInstantiate = toSpawn[Random.Range(0, toSpawn.Length)];
-            
+
             Vector3 rayCastOffset = new Vector3(
                 Random.Range(-0.5f, 0.5f) * transform.lossyScale.x, 
                 0.0f,
@@ -43,6 +46,8 @@ public class VolumeApply : MonoBehaviour
             }
 
             GameObject placedThing = Instantiate(toInstantiate, hit.point, Quaternion.identity);
+            Undo.RegisterCreatedObjectUndo(placedThing, "Spawn Objects");
+
             placedThing.transform.localScale *= Random.Range(objectScaleMin, objectScaleMax);
             allThatsSpawned.Add(placedThing);
 
@@ -63,9 +68,13 @@ public class VolumeApply : MonoBehaviour
         posAccum /= (float)allThatsSpawned.Count;
 
         GameObject allParent = new GameObject("Cluster");
+        Undo.RegisterCreatedObjectUndo(allParent, "Cluster Parent");
+
         allParent.transform.position = posAccum;
         foreach (GameObject obj in allThatsSpawned) {
             obj.transform.parent = allParent.transform;
         }
+
+        Undo.CollapseUndoOperations(Undo.GetCurrentGroup());
     }
 }
