@@ -111,6 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a004d9c7bf9234fbc2b67e1fbf1b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neutralOffset: {x: 0, y: 0, z: 0}
+  neutralOffset: {x: 0, y: 180, z: 0}
   pushDown: 0
   randomRotate: 0

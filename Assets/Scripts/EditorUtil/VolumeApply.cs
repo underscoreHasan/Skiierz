@@ -13,7 +13,8 @@ public class VolumeApply : MonoBehaviour
     public GameObject[] toSpawn;
     private void OnDrawGizmos() {
         Gizmos.color = color;
-        Gizmos.DrawCube(transform.position, transform.lossyScale);
+        Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, transform.lossyScale);
+        Gizmos.DrawCube(Vector3.zero, Vector3.one);
     }
 
     public void PlaceThatShit() {
@@ -37,10 +38,10 @@ public class VolumeApply : MonoBehaviour
                 Random.Range(-0.5f, 0.5f) * transform.lossyScale.z);
 
             RaycastHit hit;
-            bool didHit = Physics.Raycast(transform.position + rayCastOffset, Vector3.down, out hit);
+            bool didHit = Physics.Raycast(transform.position + transform.rotation * rayCastOffset, Vector3.down, out hit);
 
-            // didnt get anything, try again with a different case
-            if (!didHit) {
+            // didnt get anything, or hit something we already spawned, try again with a different case
+            if (!didHit || allThatsSpawned.Contains(hit.transform.gameObject)) {
                 --i;
                 continue;
             }
