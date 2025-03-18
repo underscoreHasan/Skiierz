@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+[CustomEditor(typeof(RockFloorStick))]
 public class RockFloorStickEditor : Editor
 {
-    [CustomEditor(typeof(RockFloorStick))]
     public override void OnInspectorGUI() {
         DrawDefaultInspector();
 

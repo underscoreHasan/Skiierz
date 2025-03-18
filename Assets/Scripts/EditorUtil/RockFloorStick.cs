@@ -6,6 +6,7 @@ using UnityEngine;
 public class RockFloorStick : MonoBehaviour
 {
     public Vector3 neutralOffset;
+    public float pushDown;
     public bool randomRotate;
 
     private void OnDrawGizmosSelected() {
@@ -20,7 +21,6 @@ public class RockFloorStick : MonoBehaviour
         Gizmos.DrawLine(origin, origin + upwardVector * transform.lossyScale.magnitude * 1.5f);
     }
 
-    [ContextMenu("StickToSurfaceNormal")]
     public void StickToSurfaceNormal() {
         RaycastHit hit;
         Vector3 rayEmitPos = transform.position + Vector3.up * 0.5f;
@@ -40,9 +40,6 @@ public class RockFloorStick : MonoBehaviour
             }
 
         } while (hit.transform == transform);
-
-        print(hit.transform.name);
-        print(hit.normal);
 
         Quaternion randomRot = Quaternion.identity;
         if (randomRotate) {
