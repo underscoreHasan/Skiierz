@@ -6,17 +6,17 @@ using UnityEngine;
 public class RockFloorStick : MonoBehaviour
 {
     public Vector3 neutralOffset;
-    public float pushDown;
     public bool randomRotate;
+    public bool isCliff;
 
     private void OnDrawGizmosSelected() {
         Vector3 origin = transform.position;
 
-        Vector3 forwardVector = Quaternion.Euler(neutralOffset) * transform.forward;
+        Vector3 forwardVector = transform.rotation * Quaternion.Euler(neutralOffset) * Vector3.forward;
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(origin, origin + forwardVector * transform.lossyScale.magnitude);
 
-        Vector3 upwardVector = Quaternion.Euler(neutralOffset) * transform.up;
+        Vector3 upwardVector = transform.rotation * Quaternion.Euler(neutralOffset) * Vector3.up;
         Gizmos.color = Color.green;
         Gizmos.DrawLine(origin, origin + upwardVector * transform.lossyScale.magnitude * 1.5f);
     }
@@ -41,11 +41,18 @@ public class RockFloorStick : MonoBehaviour
 
         } while (hit.transform == transform);
 
-        Quaternion randomRot = Quaternion.identity;
+        Quaternion rotationAdjustment = Quaternion.identity;
+
         if (randomRotate) {
-            randomRot = Quaternion.Euler(Vector3.up * UnityEngine.Random.Range(0, 360));
+            rotationAdjustment = Quaternion.Euler(Vector3.up * UnityEngine.Random.Range(0, 360));
         }
-        transform.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal) *
-            randomRot * Quaternion.Euler(neutralOffset);
+
+        if (isCliff) {
+            Vector3 projectedUp = Vector3.ProjectOnPlane(Quaternion.Euler(neutralOffset) * Vector3.forward, hit.normal).normalized;
+            rotationAdjustment = Quaternion.FromToRotation(Quaternion.Euler(neutralOffset) * Vector3.forward, projectedUp);
+        }
+
+        transform.rotation = Quaternion.FromToRotation(Quaternion.Euler(neutralOffset) * Vector3.up, hit.normal) *
+            rotationAdjustment * Quaternion.Euler(neutralOffset);
     }
 }
