@@ -6,21 +6,31 @@ using UnityEngine;
 public class RockFloorStick : MonoBehaviour
 {
     public Vector3 neutralOffset;
+    public bool randomRotate;
+
+    private void OnDrawGizmosSelected() {
+        Vector3 origin = transform.position;
+
+        Vector3 forwardVector = Quaternion.Euler(neutralOffset) * transform.forward;
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(origin, origin + forwardVector * transform.lossyScale.magnitude);
+
+        Vector3 upwardVector = Quaternion.Euler(neutralOffset) * transform.up;
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(origin, origin + upwardVector * transform.lossyScale.magnitude * 1.5f);
+    }
 
     [ContextMenu("StickToSurfaceNormal")]
-    private void StickToSurfaceNormal() {
+    public void StickToSurfaceNormal() {
         RaycastHit hit;
         Vector3 rayEmitPos = transform.position + Vector3.up * 0.5f;
         int failsafe = 32;
         do {
-            print(rayEmitPos);
             bool didHit = Physics.Raycast(rayEmitPos, Vector3.down, out hit);
 
             if (!didHit) {
-                print("didnt hit");
                 return;
             }
-            print("did hit");
 
             rayEmitPos = hit.point;
 
@@ -34,6 +44,11 @@ public class RockFloorStick : MonoBehaviour
         print(hit.transform.name);
         print(hit.normal);
 
-        transform.rotation = Quaternion.LookRotation(hit.normal) * Quaternion.Euler(neutralOffset);
+        Quaternion randomRot = Quaternion.identity;
+        if (randomRotate) {
+            randomRot = Quaternion.Euler(Vector3.up * UnityEngine.Random.Range(0, 360));
+        }
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal) *
+            randomRot * Quaternion.Euler(neutralOffset);
     }
 }
