@@ -16,6 +16,9 @@ public class VolumeApply : MonoBehaviour
     }
 
     public void PlaceThatShit() {
+        
+        List<GameObject> allThatsSpawned = new List<GameObject>();
+
         int failsafe = objectCount + 128;
         for (int i = 0; i < objectCount; i++) {
             if (--failsafe <= 0) {
@@ -40,7 +43,8 @@ public class VolumeApply : MonoBehaviour
             }
 
             GameObject placedThing = Instantiate(toInstantiate, hit.point, Quaternion.identity);
-            placedThing.transform.localScale = Vector3.one * Random.Range(objectScaleMin, objectScaleMax);
+            placedThing.transform.localScale *= Random.Range(objectScaleMin, objectScaleMax);
+            allThatsSpawned.Add(placedThing);
 
             RockFloorStick stickScript;
             try {
@@ -49,6 +53,19 @@ public class VolumeApply : MonoBehaviour
             } catch (UnityException _) {
                 // whatever its fine
             }
+        } // END FOR LOOP
+
+        // create a quick parent to contain all these things
+        Vector3 posAccum = Vector3.zero;
+        foreach (GameObject obj in allThatsSpawned) {
+            posAccum += obj.transform.position;
+        }
+        posAccum /= (float)allThatsSpawned.Count;
+
+        GameObject allParent = new GameObject("Cluster");
+        allParent.transform.position = posAccum;
+        foreach (GameObject obj in allThatsSpawned) {
+            obj.transform.parent = allParent.transform;
         }
     }
 }

@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.3289925, g: 0.3289925, b: 0.6075471, a: 0.19607843}
-  objectCount: 0
-  objectScaleMin: 0
-  objectScaleMax: 0
+  objectCount: 20
+  objectScaleMin: 1.25
+  objectScaleMax: 5
   toSpawn:
   - {fileID: 2576943120985284208, guid: feaf21245d392774bac2499c6637f31b, type: 3}
   - {fileID: 5333275995152240059, guid: b0a3e81ffc0b987459bf597034193290, type: 3}
