@@ -52,12 +52,17 @@ public class VolumeApply : MonoBehaviour
             placedThing.transform.localScale *= Random.Range(objectScaleMin, objectScaleMax);
             allThatsSpawned.Add(placedThing);
 
-            RockFloorStick stickScript;
-            try {
-                stickScript = placedThing.GetComponent<RockFloorStick>();
+            // IF THIS IS A ROCK
+            RockFloorStick stickScript = placedThing.GetComponent<RockFloorStick>();
+            if (stickScript != null) {
                 stickScript.StickToSurfaceNormal();
-            } catch (UnityException _) {
-                // whatever its fine
+            }
+
+            // IF THIS IS A TREE
+            TreeRandomizer treeScript = placedThing.GetComponent<TreeRandomizer>();
+            if (treeScript != null) {
+                treeScript.Emplace();
+                treeScript.Randomize();
             }
         } // END FOR LOOP
 
