@@ -51,7 +51,7 @@ public class RockFloorStick : MonoBehaviour
             // TODO: make this work
         }
 
-        transform.rotation = Quaternion.FromToRotation(Quaternion.Euler(neutralOffset) * Vector3.up, hit.normal) *
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal) *
             rotationAdjustment * Quaternion.Euler(neutralOffset);
     }
 }
