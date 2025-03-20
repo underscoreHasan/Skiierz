@@ -307,6 +307,7 @@ MonoBehaviour:
   bumperFwd: {fileID: 1051182758}
   bumperRear: {fileID: 238627031}
   phys: {fileID: 1621188036}
+  playerSound: {fileID: 1572499978333871819}
   dismountFrontVelocity: 5.5
   dismountSideVelocity: 12.5
   dismountBumperOffsetFactor: 0.75
@@ -517,6 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f6293a39f944021acdf1948e8ac86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowKickMinDuration: 0.5
+  snowKickElapsed: 0
 --- !u!1 &6457711909377440022
 GameObject:
   m_ObjectHideFlags: 0
