@@ -517,6 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f6293a39f944021acdf1948e8ac86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowKickMinDuration: 0.5
+  snowKickElapsed: 0
 --- !u!1 &6457711909377440022
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,8 +736,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.27468133, g: 0.41380683, b: 0.6528301, a: 1}
-      key1: {r: 0.27468133, g: 0.41380683, b: 0.6528301, a: 1}
+      key0: {r: 0.41960788, g: 0.47058827, b: 0.5529412, a: 1}
+      key1: {r: 0.74509805, g: 0.7803922, b: 0.8235295, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -751,8 +753,8 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 52428
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -760,14 +762,14 @@ TrailRenderer:
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.05
+  m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
 --- !u!114 &6457711909609441836
