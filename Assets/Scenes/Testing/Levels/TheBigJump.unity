@@ -29736,19 +29736,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1621188034, guid: b696741ca45ffba42abae2b04f8a401b, type: 3}
-      propertyPath: releaseUpForce
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1621188034, guid: b696741ca45ffba42abae2b04f8a401b, type: 3}
-      propertyPath: chargeTimeSeconds
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 233068561492974188, guid: b696741ca45ffba42abae2b04f8a401b,
-        type: 3}
-      propertyPath: boostForce
-      value: 75
-      objectReference: {fileID: 0}
     - target: {fileID: 321369638514587964, guid: b696741ca45ffba42abae2b04f8a401b,
         type: 3}
       propertyPath: m_Name
