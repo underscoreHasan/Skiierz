@@ -207,8 +207,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   chargeTimeSecondsElapsed: 0
-  chargeTimeSeconds: 1
-  releaseUpForce: 250
+  chargeTimeSeconds: 0.7
+  releaseUpForce: 500
   releaseForceSpeedScale: 0.1
   suspensionFwd: {fileID: 321369637988115592}
   suspensionRear: {fileID: 321369637988115590}
@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8cdf91378876b458ff54c65c7ce1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boostForce: 75
 --- !u!65 &419446427
 BoxCollider:
   m_ObjectHideFlags: 0
