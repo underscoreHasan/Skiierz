@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Booster : MonoBehaviour
+public class PlayerBooster : MonoBehaviour
 {
-    public float boostForce;
-
     private float detectionDistance;
     private Vector3 distanceToGround;
     private Vector3 DownOffset;
@@ -31,7 +29,13 @@ public class Booster : MonoBehaviour
             {
                 booster = hitOut.transform.gameObject;
                 Vector3 direction = booster.transform.forward;
-                _phys.AddForce(_phys.velocity + (booster.transform.forward * boostForce), ForceMode.Acceleration);
+                BoostPadInfo padInfo = booster.GetComponent<BoostPadInfo>();
+                if (Time.time - padInfo.lastActivatedTimeStamp > padInfo.cooldownTime)
+                {
+                    padInfo.lastActivatedTimeStamp = Time.time;
+                    float padVelocityChange = padInfo.VelocityChangeMagnitude;
+                    _phys.AddForce(booster.transform.forward * padVelocityChange, ForceMode.VelocityChange);
+                }
             }
         }
     }
