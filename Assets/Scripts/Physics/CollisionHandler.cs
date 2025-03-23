@@ -57,7 +57,7 @@ public class CollisionHandler : MonoBehaviour
             GetComponent<PlayerDownforce>().enabled = false;
 
             // activate ragdoll
-            GetComponent<RagdollHandler>().ActivateRagdoll(ourVelocity);
+            GetComponent<RagdollHandler>().ToggleRagdoll(ourVelocity);
 
             // disable self
             GetComponent<CollisionHandler>().enabled = false;

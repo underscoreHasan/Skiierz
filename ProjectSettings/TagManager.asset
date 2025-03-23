@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CamTrackingTarget
   - Booster
+  - WaypointManager
   layers:
   - Default
   - TransparentFX
