@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 1621188036}
   - component: {fileID: 8437968861431284290}
   - component: {fileID: 1993682332198834248}
+  - component: {fileID: 233068561492974188}
   - component: {fileID: 419446427}
   m_Layer: 2
   m_Name: BuddyPlayer
@@ -206,8 +207,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   chargeTimeSecondsElapsed: 0
-  chargeTimeSeconds: 1
-  releaseUpForce: 250
+  chargeTimeSeconds: 0.7
+  releaseUpForce: 500
   releaseForceSpeedScale: 0.1
   suspensionFwd: {fileID: 321369637988115592}
   suspensionRear: {fileID: 321369637988115590}
@@ -311,6 +312,19 @@ MonoBehaviour:
   dismountFrontVelocity: 5.5
   dismountSideVelocity: 12.5
   dismountBumperOffsetFactor: 0.75
+--- !u!114 &233068561492974188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321369638514587964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8cdf91378876b458ff54c65c7ce1b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostForce: 75
 --- !u!65 &419446427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -572,12 +586,21 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.08653327
+      outSlope: 0.08653327
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.80625
+    - serializedVersion: 3
+      time: 0.6773465
+      value: 0.2895096
+      inSlope: 1.0068381
+      outSlope: 1.0068381
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
@@ -595,21 +618,30 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.1
-      inSlope: 0
-      outSlope: 0
+      value: 0.2
+      inSlope: 0.8677232
+      outSlope: 0.8677232
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.32480595
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
+      time: 0.47487098
+      value: 0.34254596
+      inSlope: 0.568124
+      outSlope: 0.568124
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0249939
+      value: 0.6316261
+      inSlope: 0.558148
+      outSlope: 0.558148
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18292199
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -619,16 +651,25 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.4
+      inSlope: 0.007335642
+      outSlope: 0.007335642
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.38970503
     - serializedVersion: 3
-      time: 1
-      value: 1
+      time: 0.39810705
+      value: 0.64120734
+      inSlope: 0.0012437252
+      outSlope: 0.0012437252
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.35308966
+      outWeight: 0.6275526
+    - serializedVersion: 3
+      time: 1.0062561
+      value: 1.009304
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -641,6 +682,13 @@ MonoBehaviour:
   suspFwd: {fileID: 321369637988115592}
   suspRear: {fileID: 321369637988115590}
   playerSound: {fileID: 1572499978333871819}
+  BURST_FACTOR: 9
+  RADIUS_FACTOR: 3
+  SPEED_FACTOR: 1.5
+  maxExpectedSpeed: 30
+  particleAggressivenessThreshold: 0.05
+  timeBetweenBurstsThreshold: 0.08
+  minSpeedThreshold: 12
 --- !u!1 &6457711909609441838
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,8 +785,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.27468133, g: 0.41380683, b: 0.6528301, a: 1}
-      key1: {r: 0.27468133, g: 0.41380683, b: 0.6528301, a: 1}
+      key0: {r: 0.41960788, g: 0.47058827, b: 0.5529412, a: 1}
+      key1: {r: 0.74509805, g: 0.7803922, b: 0.8235295, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -754,8 +802,8 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 52428
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -763,14 +811,14 @@ TrailRenderer:
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.05
+  m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
 --- !u!114 &6457711909609441836

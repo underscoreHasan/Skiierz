@@ -10,6 +10,7 @@ public class Trail : MonoBehaviour
 
     private bool _isGrounded;
     private Vector3 distanceToGround;
+    private Vector3 DownOffset;
 
 
     // Start is called before the first frame update
@@ -38,6 +39,8 @@ public class Trail : MonoBehaviour
             trailRenderer.SetPosition(trailRenderer.positionCount - 1, transform.position - distanceToGround);
             trailRenderer.emitting = true;
         } else {
+            DownOffset = new Vector3(0, 1, 0);
+            trailRenderer.SetPosition(trailRenderer.positionCount - 1, transform.position - DownOffset);
             trailRenderer.emitting = false;
         }
     }

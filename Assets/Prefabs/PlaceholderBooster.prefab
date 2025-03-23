@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 3590527009458688781}
   - component: {fileID: 4352887728585581939}
   - component: {fileID: 625795035807321127}
-  - component: {fileID: 283006678480091040}
+  - component: {fileID: 1859065435}
+  - component: {fileID: -4518392910807427124}
   m_Layer: 0
   m_Name: PlaceholderBooster
-  m_TagString: Untagged
+  m_TagString: Booster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3429221096450649938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 299.95758, y: 559.99457, z: 1638.7792}
-  m_LocalScale: {x: 10, y: 0.26276, z: 10}
+  m_LocalPosition: {x: 299.95758, y: 559.46906, z: 1638.7792}
+  m_LocalScale: {x: 10, y: 0.52552, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,16 +85,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &283006678480091040
-BoxCollider:
+--- !u!114 &1859065435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429221096450649938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f57b3fbe63f344aa9513f8179eb147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VelocityChangeMagnitude: 20
+  cooldownTime: 2
+  lastActivatedTimeStamp: 0
+--- !u!64 &-4518392910807427124
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3429221096450649938}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}

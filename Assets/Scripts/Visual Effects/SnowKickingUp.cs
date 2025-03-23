@@ -16,6 +16,15 @@ public class SnowKickingUp : MonoBehaviour
 
     public PlayerSound playerSound;
 
+    public float BURST_FACTOR = 15.0f;
+    public float RADIUS_FACTOR = 3.0f;
+    public float SPEED_FACTOR = 1.5f;
+
+    public float maxExpectedSpeed = 35.0f;
+    public float particleAggressivenessThreshold = 0.04f;
+    public float timeBetweenBurstsThreshold = 0.08f;
+    public float minSpeedThreshold = 11.0f;
+
     private Rigidbody _phys;
 
     private Vector3 lookFwdVector;
@@ -23,10 +32,6 @@ public class SnowKickingUp : MonoBehaviour
     private Vector3 projectedVel;
     private float particleAggressiveness;
     private float lastBurstTimestamp;
-
-    private const float BURST_FACTOR = 15.0f;
-    private const float RADIUS_FACTOR = 3.0f;
-    private const float SPEED_FACTOR = 1.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -80,10 +85,6 @@ public class SnowKickingUp : MonoBehaviour
             return;
         }
 
-        const float maxExpectedSpeed = 30.0f;
-        const float particleAggressivenessThreshold = 0.04f;
-        const float timeBetweenBurstsThreshold = 0.08f;
-        const float minSpeedThreshold = 11.0f;
         float currentTime = Time.frameCount / (1.0f / Time.deltaTime);
         if (particleAggressiveness > particleAggressivenessThreshold &&
             currentTime - lastBurstTimestamp > timeBetweenBurstsThreshold &&
@@ -92,6 +93,9 @@ public class SnowKickingUp : MonoBehaviour
             lastBurstTimestamp = currentTime;
 
             Quaternion targetRotation = Quaternion.LookRotation(projectedVel, lookUpVector);
+            int angle = Random.Range(-10, 10);
+            Quaternion variance = Quaternion.Euler(0, angle, 0);
+            targetRotation = variance * targetRotation;
             transform.rotation = targetRotation;
 
             GameObject currentSnow = Instantiate(burstPrefab, transform.position, targetRotation);
