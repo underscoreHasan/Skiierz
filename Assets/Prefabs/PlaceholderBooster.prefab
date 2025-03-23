@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3590527009458688781}
   - component: {fileID: 4352887728585581939}
   - component: {fileID: 625795035807321127}
-  - component: {fileID: 283006678480091040}
   - component: {fileID: 1859065435}
+  - component: {fileID: -4518392910807427124}
   m_Layer: 0
   m_Name: PlaceholderBooster
   m_TagString: Booster
@@ -85,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &283006678480091040
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3429221096450649938}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1859065435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +100,17 @@ MonoBehaviour:
   VelocityChangeMagnitude: 20
   cooldownTime: 2
   lastActivatedTimeStamp: 0
+--- !u!64 &-4518392910807427124
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429221096450649938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
