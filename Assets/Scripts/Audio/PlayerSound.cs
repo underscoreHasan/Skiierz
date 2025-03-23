@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FMOD.Studio;
@@ -94,12 +95,9 @@ public class PlayerSound : MonoBehaviour
         skiingSound.setParameterByName("RPM", rpm);
 
     }
-    /**
-    when starting to play kick sound
-    - start timer (set by flag)
-    - clear the flag for stopping sound
-    when stopping
-    - in update if flag is set, check elapsed, if greater than min duration, stop playing
-    - set up the flag
-    */
+    public void ClearSounds()
+    {
+        UpdateSkiingSoundIntensity(0);
+        ToggleSnowKickSound(false);
+    }
 }
