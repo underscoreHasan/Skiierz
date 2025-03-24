@@ -85,7 +85,6 @@ public class CollisionHandler : MonoBehaviour
             return;
         }
 
-        hasDismounted = true;
         if (collisionVelocity >= threshold)
         {
             // disable all player physics and controls
@@ -102,6 +101,8 @@ public class CollisionHandler : MonoBehaviour
             // disable sound
             playerSound.ClearSounds();
             playerSound.enabled = false;
+
+            hasDismounted = true;
         }
     }
 }
