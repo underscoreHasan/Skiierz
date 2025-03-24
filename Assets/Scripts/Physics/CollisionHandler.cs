@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,28 +12,61 @@ public class CollisionHandler : MonoBehaviour
     public float dismountFrontVelocity;
     public float dismountSideVelocity;
     public float dismountBumperOffsetFactor;
+    public bool hasDismounted = false;
+    public float respawnTimeSeconds;
+    public float dismountTimeElapsedSeconds;
 
-    private void OnCollisionEnter(Collision collision)
-    {
+    private void OnCollisionEnter(Collision collision) {
         print("collider enter");
         print(phys.velocity.magnitude);
         print(collision.relativeVelocity.magnitude);
         HandleCollision(collision.relativeVelocity.magnitude, phys.velocity, dismountSideVelocity);
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
+        if (hasDismounted) {
+            DismountedLogic();
+        } else {
+            NonDismountedLogic();
+        }
+    }
 
-        if (!bumperFwd.isGrounded && !bumperRear.isGrounded)
-        {
+    void DismountedLogic() {
+        if (dismountTimeElapsedSeconds > respawnTimeSeconds) {
+            
+            dismountTimeElapsedSeconds = 0.0f;
+
+            // enable all player physics and controls
+            phys.isKinematic = false;
+            GetComponent<PlayerControl>().enabled = true;
+            GetComponent<Collider>().enabled = true;
+            GetComponent<SlopeAngling>().enabled = true;
+            GetComponent<SnowFriction>().enabled = true;
+            GetComponent<PlayerDownforce>().enabled = true;
+
+            // deactivate ragdoll
+            GetComponent<RagdollHandler>().ToggleRagdoll(Vector3.zero);
+
+            // enable sound
+            playerSound.ClearSounds();
+            playerSound.enabled = true;
+
+            hasDismounted = false;
+            return;
+        }
+
+        dismountTimeElapsedSeconds += Time.deltaTime;
+    }
+
+    void NonDismountedLogic() {
+        if (!bumperFwd.isGrounded && !bumperRear.isGrounded) {
             return;
         }
 
         // even if the bumpers are being touched, they need to satisfy a certain offset
         // to be considered as a proper collision
         if (bumperFwd.absOffset <= bumperFwd.maxOffset * dismountBumperOffsetFactor &&
-            bumperRear.absOffset <= bumperRear.maxOffset * dismountBumperOffsetFactor)
-        {
+            bumperRear.absOffset <= bumperRear.maxOffset * dismountBumperOffsetFactor) {
             return;
         }
 
@@ -46,6 +80,12 @@ public class CollisionHandler : MonoBehaviour
 
     void HandleCollision(float collisionVelocity, Vector3 ourVelocity, float threshold)
     {
+        // can't DOUBLE DISMOUNT
+        if (hasDismounted) {
+            return;
+        }
+
+        hasDismounted = true;
         if (collisionVelocity >= threshold)
         {
             // disable all player physics and controls
@@ -58,9 +98,6 @@ public class CollisionHandler : MonoBehaviour
 
             // activate ragdoll
             GetComponent<RagdollHandler>().ToggleRagdoll(ourVelocity);
-
-            // disable self
-            GetComponent<CollisionHandler>().enabled = false;
 
             // disable sound
             playerSound.ClearSounds();

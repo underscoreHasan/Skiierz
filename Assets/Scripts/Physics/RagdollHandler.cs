@@ -26,6 +26,7 @@ public class RagdollHandler : MonoBehaviour
         ToggleRecursive(ragdollBoneRoot, animatedBoneRoot, velocity);
 
         ragdollBoard.position = animatedBoard.position;
+        ragdollBoard.rotation = animatedBoard.rotation;
         Collider boardCollider = ragdollBoard.GetComponent<Collider>();
         boardCollider.enabled ^= true;
 

@@ -312,6 +312,9 @@ MonoBehaviour:
   dismountFrontVelocity: 5.5
   dismountSideVelocity: 12.5
   dismountBumperOffsetFactor: 0.75
+  hasDismounted: 0
+  respawnTimeSeconds: 10
+  dismountTimeElapsedSeconds: 0
 --- !u!114 &233068561492974188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8cdf91378876b458ff54c65c7ce1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostForce: 75
 --- !u!65 &419446427
 BoxCollider:
   m_ObjectHideFlags: 0
