@@ -15,6 +15,13 @@ public class CollisionHandler : MonoBehaviour
     public bool hasDismounted = false;
     public float respawnTimeSeconds;
     public float dismountTimeElapsedSeconds;
+    public Vector3 lastSpawnPoint;
+    public Quaternion lastSpawnRotation;
+
+    private void Awake() {
+        lastSpawnPoint = transform.position;
+        lastSpawnRotation = transform.rotation;
+    }
 
     private void OnCollisionEnter(Collision collision) {
         print("collider enter");
@@ -51,6 +58,8 @@ public class CollisionHandler : MonoBehaviour
             playerSound.ClearSounds();
             playerSound.enabled = true;
 
+            // respawn at last position
+            transform.position = lastSpawnPoint;
             hasDismounted = false;
             return;
         }
