@@ -313,8 +313,10 @@ MonoBehaviour:
   dismountSideVelocity: 12.5
   dismountBumperOffsetFactor: 0.75
   hasDismounted: 0
-  respawnTimeSeconds: 10
+  respawnTimeSeconds: 5
   dismountTimeElapsedSeconds: 0
+  lastSpawnPoint: {x: 0, y: 0, z: 0}
+  lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &233068561492974188
 MonoBehaviour:
   m_ObjectHideFlags: 0
