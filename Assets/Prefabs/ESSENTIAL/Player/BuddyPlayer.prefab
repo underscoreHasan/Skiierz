@@ -324,7 +324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8cdf91378876b458ff54c65c7ce1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostForce: 75
 --- !u!65 &419446427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -559,7 +558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6457711909377440022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.145, y: -1.614, z: -0.75}
+  m_LocalPosition: {x: -0.14, y: -1.614, z: -0.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -618,30 +617,30 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.2
-      inSlope: 0.8677232
-      outSlope: 0.8677232
+      value: 0.25
+      inSlope: 0.32795846
+      outSlope: 0.32795846
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.32480595
+      outWeight: 0.28664714
     - serializedVersion: 3
-      time: 0.47487098
-      value: 0.34254596
-      inSlope: 0.568124
-      outSlope: 0.568124
+      time: 0.63094234
+      value: 0.33205593
+      inSlope: 0.051832676
+      outSlope: 0.051832676
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.0249939
-      value: 0.6316261
-      inSlope: 0.558148
-      outSlope: 0.558148
+      time: 1
+      value: 0.6
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.18292199
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -659,14 +658,14 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.38970503
     - serializedVersion: 3
-      time: 0.39810705
-      value: 0.64120734
-      inSlope: 0.0012437252
-      outSlope: 0.0012437252
+      time: 0.8320547
+      value: 0.5363461
+      inSlope: 0.6002606
+      outSlope: 0.6002606
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.35308966
-      outWeight: 0.6275526
+      outWeight: 0.49777487
     - serializedVersion: 3
       time: 1.0062561
       value: 1.009304
@@ -683,12 +682,12 @@ MonoBehaviour:
   suspRear: {fileID: 321369637988115590}
   playerSound: {fileID: 1572499978333871819}
   BURST_FACTOR: 9
-  RADIUS_FACTOR: 3
+  RADIUS_FACTOR: 3.5
   SPEED_FACTOR: 1.5
-  maxExpectedSpeed: 30
-  particleAggressivenessThreshold: 0.05
+  maxExpectedSpeed: 35
+  particleAggressivenessThreshold: 0.06
   timeBetweenBurstsThreshold: 0.08
-  minSpeedThreshold: 12
+  minSpeedThreshold: 12.5
 --- !u!1 &6457711909609441838
 GameObject:
   m_ObjectHideFlags: 0
