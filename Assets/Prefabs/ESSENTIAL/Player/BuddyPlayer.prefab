@@ -74,14 +74,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051182756}
-  m_LocalRotation: {x: -0.7660445, y: 0, z: 0, w: 0.64278764}
+  m_LocalRotation: {x: -0.7924337, y: -0, z: -0, w: 0.6099582}
   m_LocalPosition: {x: 0, y: -0.9999987, z: 0.5000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 321369638514587965}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -100, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -104.827, y: 0, z: 0}
 --- !u!114 &1051182758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suspFwd: {fileID: 321369637988115592}
   suspRear: {fileID: 321369637988115590}
-  staticFrictionFactor: 0.5
-  dynamicFrictionFactor: 0.2
+  staticFrictionFactor: 0.2
+  dynamicFrictionFactor: 0.05
   sideFrictionFactor: 3
   sideTorqueFactor: 3.5
   sideTorqueMaxOrthagonality: 0.4
@@ -312,6 +312,11 @@ MonoBehaviour:
   dismountFrontVelocity: 5.5
   dismountSideVelocity: 12.5
   dismountBumperOffsetFactor: 0.75
+  hasDismounted: 0
+  respawnTimeSeconds: 5
+  dismountTimeElapsedSeconds: 0
+  lastSpawnPoint: {x: 0, y: 0, z: 0}
+  lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &233068561492974188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8cdf91378876b458ff54c65c7ce1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostForce: 75
 --- !u!65 &419446427
 BoxCollider:
   m_ObjectHideFlags: 0

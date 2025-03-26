@@ -19,6 +19,10 @@ public class Waypoint : MonoBehaviour
         if (other.tag == "Player")
         {
             hit = true;
+
+            // save last checkpoint
+            other.GetComponent<CollisionHandler>().lastSpawnPoint = other.transform.position;
+            other.GetComponent<CollisionHandler>().lastSpawnRotation = other.transform.rotation;
         }
     }
 

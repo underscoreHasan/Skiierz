@@ -22,39 +22,41 @@ public class RagdollHandler : MonoBehaviour
     public MeshRenderer animatedBoardRenderer;
 
 
-    public void ActivateRagdoll(Vector3 velocity) {
-        ActivateRecursive(ragdollBoneRoot, animatedBoneRoot, velocity);
+    public void ToggleRagdoll(Vector3 velocity) {
+        ToggleRecursive(ragdollBoneRoot, animatedBoneRoot, velocity);
 
         ragdollBoard.position = animatedBoard.position;
+        ragdollBoard.rotation = animatedBoard.rotation;
         Collider boardCollider = ragdollBoard.GetComponent<Collider>();
-        boardCollider.enabled = true;
+        boardCollider.enabled ^= true;
 
         Rigidbody boardPhys = ragdollBoard.GetComponent<Rigidbody>();
-        boardPhys.isKinematic = false;
+        boardPhys.isKinematic ^= true;
         boardPhys.velocity = velocity;
 
-        ragdollRenderer.enabled = true;
-        ragdollGoggleRenderer.enabled = true;
-        ragdollBeanieRenderer.enabled = true;
-        ragdollBoardRenderer.enabled = true;
+        ragdollRenderer.enabled ^= true;
+        ragdollGoggleRenderer.enabled ^= true;
+        ragdollBeanieRenderer.enabled ^= true;
+        ragdollBoardRenderer.enabled ^= true;
 
-        animatedRenderer.enabled = false;
-        animatedGoggleRenderer.enabled = false;
-        animatedBeanieRenderer.enabled = false;
-        animatedBoardRenderer.enabled = false;
+        animatedRenderer.enabled ^= true;
+        animatedGoggleRenderer.enabled ^= true;
+        animatedBeanieRenderer.enabled ^= true;
+        animatedBoardRenderer.enabled ^= true;
     }
 
-    private void ActivateRecursive(Transform current, Transform target, Vector3 velocity) {
+    private void ToggleRecursive(Transform current, Transform target, Vector3 velocity) {
 
         // some children wont have colliders or physics, we can just skip these
         try {
+            current.position = target.position;
             current.rotation = target.rotation;
 
             Collider collider = current.GetComponent<Collider>();
-            collider.enabled = true;
+            collider.enabled ^= true;
 
             Rigidbody rigidbody = current.GetComponent<Rigidbody>();
-            rigidbody.isKinematic = false;
+            rigidbody.isKinematic ^= true;
             rigidbody.velocity = velocity;
 
         } catch (Exception _) {
@@ -71,7 +73,7 @@ public class RagdollHandler : MonoBehaviour
         }
 
         while (currentChildren.Count > 0) {
-            ActivateRecursive(currentChildren.Pop(), targetChildren.Pop(), velocity);
+            ToggleRecursive(currentChildren.Pop(), targetChildren.Pop(), velocity);
         }
     }
 }
