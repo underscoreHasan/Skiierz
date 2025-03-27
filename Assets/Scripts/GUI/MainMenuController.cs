@@ -10,12 +10,36 @@ public class MainMenuController : MonoBehaviour
     public void StartGame() {
         PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
         ppVolume.enabled = false;
-        StartCoroutine(DelayedSceneLoad());
+        StartCoroutine(DelayedSceneLoad("SlopeTestsA"));
     }
 
-    private IEnumerator DelayedSceneLoad() {
+    public void LoadLevelOne() {
+        PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
+        ppVolume.enabled = false;
+        StartCoroutine(DelayedSceneLoad("BackToBasics"));
+    }
+
+    public void LoadLevelTwo() {
+        PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
+        ppVolume.enabled = false;
+        StartCoroutine(DelayedSceneLoad("TheBigJump"));
+    }
+
+    //public void LoadLevelThree() {
+    //    PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
+    //    ppVolume.enabled = false;
+    //    StartCoroutine(DelayedSceneLoad("TheBigJump"));
+    //}
+
+    //public void LoadLevelFour() {
+    //    PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
+    //    ppVolume.enabled = false;
+    //    StartCoroutine(DelayedSceneLoad("MovingUpInTheWorld"));
+    //}
+
+    private IEnumerator DelayedSceneLoad(string scene) {
         yield return new WaitForSeconds(delayBeforeSceneChange);
-        SceneManager.LoadScene("SlopeTestsA"); // Replace with your actual scene name
+        SceneManager.LoadScene(scene); // Replace with your actual scene name
     }
 
     public void LevelSelect() {

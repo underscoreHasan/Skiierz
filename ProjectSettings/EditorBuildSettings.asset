@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing/MaterialTestsA.unity
     guid: f4433958d678a134b968ceb1f78737c7
+  - enabled: 1
+    path: Assets/Scenes/Testing/Levels/BunnyHill.unity
+    guid: 5f41e19a439cb644eb46879e498f05aa
+  - enabled: 1
+    path: Assets/Scenes/Testing/Levels/BackToBasics.unity
+    guid: 829958f54a03a5049937390dd767ffe7
+  - enabled: 1
+    path: Assets/Scenes/Testing/Levels/MovingUpInTheWorld.unity
+    guid: 4f31a983a93e9fe4a870512cf9ea2b47
+  - enabled: 1
+    path: Assets/Scenes/Testing/Levels/TheBigJump.unity
+    guid: 3ceb5b8c889ffe744bf96a7cea79ad0c
   m_configObjects: {}
