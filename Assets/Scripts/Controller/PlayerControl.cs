@@ -18,7 +18,22 @@ public class PlayerControl : MonoBehaviour
     public Suspension suspensionRear;
 
     public PlayerSound playerSound;
-    public float playerSoundMaxSpeed; 
+    public float playerSoundMaxSpeed;
+
+    public Transform jointSpine;
+    public Transform jointNeck;
+    public Transform jointShoulderL;
+    public Transform jointShoulderR;
+    public Transform jointElbowL;
+    public Transform jointElbowR;
+
+    public float jointSpineBendFactor;
+    public float jointNeckBendNeutral;
+    public float jointNeckBendFactor;
+    public float jointShoulderBendFactor;
+    public float jointElbowBendFactor;
+    public float jointBendTarget = 0;
+    public float jointLerpFactor;
 
     private Rigidbody physics;
 
@@ -42,11 +57,27 @@ public class PlayerControl : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
     }
 
+    void HandleUpperBodyAnimation() {
+        
+        jointBendTarget = Mathf.Lerp(jointBendTarget, horizontalInput, jointLerpFactor * Time.deltaTime);
+        
+        jointSpine.localRotation = Quaternion.Euler(-jointBendTarget * jointSpineBendFactor, -jointBendTarget * jointSpineBendFactor, 0.0f);
+        jointNeck.localRotation = Quaternion.Euler(0.0f, jointNeckBendNeutral + jointBendTarget * jointNeckBendFactor, 0.0f);
+
+        jointShoulderL.localRotation = Quaternion.Euler(jointBendTarget * jointShoulderBendFactor, 0.0f, 140.0f);
+        jointShoulderR.localRotation = Quaternion.Euler(jointBendTarget * jointShoulderBendFactor, 0.0f, -140.0f);
+
+        jointElbowL.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
+        jointElbowR.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
+    
+    }
+
     void FixedUpdate()
     {
         float yaw = horizontalInput;
         float accel = verticalInput;
 
+        HandleUpperBodyAnimation();
 
         // we cannot ski backwards!
         if (Vector3.Dot(physics.velocity, transform.forward) < 0)
