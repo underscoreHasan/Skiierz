@@ -35,7 +35,7 @@ https://www.fmod.com/docs/studio/working-with-instruments.html#scatterer-instrum
 Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Culture Co. Ltd.</value>
 		</property>
 		<property name="name">
-			<value>Forest</value>
+			<value>Wind</value>
 		</property>
 		<property name="outputFormat">
 			<value>5</value>
@@ -176,7 +176,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<destination>{4e08ab7c-fda4-4493-97ec-53d38dc7b02d}</destination>
 		</relationship>
 		<relationship name="modules">
-			<destination>{55dac587-e21f-42d7-aad9-b2e7b151e10a}</destination>
+			<destination>{b5addb66-f72c-47eb-9fff-37732b6f19b6}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{3d1f80b3-422f-457e-9988-5cbfd374aa60}</destination>
@@ -241,7 +241,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 	<object class="ParameterProxy" id="{1412b0f6-5c6b-4fda-a56b-77d4f1d18e64}">
 		<relationship name="modules">
 			<destination>{7d61c7d6-65d0-4341-877c-431750338b69}</destination>
-			<destination>{55dac587-e21f-42d7-aad9-b2e7b151e10a}</destination>
+			<destination>{b5addb66-f72c-47eb-9fff-37732b6f19b6}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{aa37dcda-6161-459d-bdf5-9400828f7ed3}</destination>
@@ -466,21 +466,18 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<destination>{fa05863b-6b88-4f01-82bf-47921de8e34b}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{55dac587-e21f-42d7-aad9-b2e7b151e10a}">
+	<object class="SingleSound" id="{b5addb66-f72c-47eb-9fff-37732b6f19b6}">
 		<property name="isCutoff">
 			<value>true</value>
 		</property>
-		<property name="start">
-			<value>0.01</value>
-		</property>
-		<property name="length">
-			<value>0.98999999999999999</value>
+		<property name="volume">
+			<value>6</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{45d8239f-3e43-410a-9fe9-ba2618b62dd7}</destination>
+			<destination>{39100617-a88b-4f41-9daa-08a9b2fcda31}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3d1f80b3-422f-457e-9988-5cbfd374aa60}">
@@ -1274,7 +1271,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>0.45281456796539993</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1.25265884</value>
 		</property>
 		<property name="curveShape">
 			<value>1</value>
@@ -1285,7 +1282,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-71.648941</value>
 		</property>
 		<property name="curveShape">
 			<value>-1</value>
@@ -1296,7 +1293,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>0.60264900662251653</value>
 		</property>
 		<property name="value">
-			<value>-18</value>
+			<value>-16.7473412</value>
 		</property>
 	</object>
 	<object class="Automator" id="{f70ebeec-8ecf-4864-9906-7f38ab4a6c19}">

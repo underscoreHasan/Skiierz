@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Event" id="{edbc1da2-f0c6-4931-a626-fe0486796818}">
+		<property name="note">
+			<value>This is an example of a multi-layered ambience event using parameters, scatterer instruments, sidechaining, and automation.
+
+There are three parameters in this event: "Rain", "Wind", and "Cover". The timeline parameter sheet is not being used so it has been removed.
+
+The "Rain" parameter controls the volume of the "Rain Small", "Rain Medium", and "Rain Large" tracks. From parameter value 0.00, the birds scatterer instrument is triggered. When the parameter value reaches 0.20, the birds scatterer instrument is untriggered and the rain drop scatterer instrument is triggered, giving the rain drops a heavier sound. 
+
+As the "Rain" parameter's value increases it blends the volumes of the small, medium, and large rain tracks. Towards parameter value 1.00 all three rain tracks become full volume and layered to give the impression of a lot of rain falling. The rain drop scatterer instrument's spawn rate increases to give the sound of more heavy rain falling. 
+
+When the "Rain" parameter's value is between 0.80 and 1.00 the thunder scatterer instrument is triggered. With the scatterer instrument's polyphony set to 1 and stealing set to "None", only 1 playlist item can be played at any given time. Its min &amp; max spawn interval settings ensure that a playlist item is only played every 10 to 38 seconds. The "Thunder" track contains a sidechain effect, which is attached to the sidechain modulator on the volume fader of the "Weather Submix" track. This means when a playlist item is played it ducks the rain and wind submix by 3dB to make the thunder cut through the mix better.
+
+The bird scatterer instrument also has a parameter condition based on the "Wind" parameter where the instrument triggers if the "Wind" parameter value falls between 0.00 to 20.00. Therefore, the scatterer instrument on the "Birds" track is only triggered when both the specified "Rain" and "Wind" parameter conditions are met.
+
+The birds, rain drops, and thunderstorm scatterer instruments have their min &amp; max scatter distance settings set to 0. This causes the spawned sounds to play in 2D, rather than spatializing them as discrete 3D point sources relative to the listener.
+
+The "Wind" parameter controls the volume of the "Wind Weak" and "Wind Strong" tracks. The higher the parameter value, the more it blends the two tracks together. A multiband EQ effect on the "Wind Weak" track is automated to boost the low end to give the impression of the wind being more gusty.
+
+The "Rain Small", "Rain Medium", "Rain Large", "Wind Weak", and "Wind Strong" tracks are all routed to the "Weather Submix" track. The "Cover" parameter automates a multiband EQ effect on this track to lowpass when the player goes under cover. This method allows all affected tracks (in this situation the rain and wind) to get lowpassed using only one effect while leaving tracks that should not be touched (such as thunder) unaffected by this.
+
+There is a 0.15/s seek speed set on the "Rain" and "Wind" parameters for them to smoothly ramp up and down, preventing sudden changes in weather.
+
+https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
+
+https://www.fmod.com/docs/studio/authoring-events.html#parameters
+
+https://www.fmod.com/docs/studio/authoring-events.html#routing
+
+https://www.fmod.com/docs/studio/glossary.html#sidechain-effect
+
+https://www.fmod.com/docs/studio/working-with-instruments.html#scatterer-instruments
+
+Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Culture Co. Ltd.</value>
+		</property>
+		<property name="name">
+			<value>Fireplace</value>
+		</property>
+		<property name="outputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b6770cc5-a214-4b8e-bc5e-d7983fee345a}</destination>
+		</relationship>
+		<relationship name="tags">
+			<destination>{2e193f8d-92b5-4f55-a7d7-fbd073e56354}</destination>
+			<destination>{b25c4f9d-1f47-4b94-89e1-8b05ecc39502}</destination>
+			<destination>{ff19646f-4dc8-43be-9d99-73cde9536edf}</destination>
+			<destination>{721cf887-761f-4cf4-a1cf-2e8790901610}</destination>
+			<destination>{5e618944-886a-41d0-96a0-a08198069cb1}</destination>
+			<destination>{4588ab2a-071d-4015-b568-407ac4472c7e}</destination>
+			<destination>{0fc2fa3d-8018-4c63-93ae-377a27e014f5}</destination>
+			<destination>{bac8db8b-2092-43f1-9eb2-6f233db2d7a7}</destination>
+			<destination>{cf457cc2-8cc5-4b8a-a10b-3437fa75fb20}</destination>
+			<destination>{d04b5409-a5d8-48c6-bd2b-4ed1630f88da}</destination>
+			<destination>{0561d714-637a-45af-bd52-33501f57b446}</destination>
+			<destination>{c993486d-84e1-468e-9f5a-d1b045016729}</destination>
+			<destination>{bd5bac35-9143-4797-8e85-b42cd8ec2a6c}</destination>
+			<destination>{236a8681-4e37-498c-a1ea-c0e3819e7267}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{77a40f97-97e9-474c-bc0b-e5f8e0f9c5ba}</destination>
+		</relationship>
+		<relationship name="masterTrack">
+			<destination>{9f9c94e6-dec8-4668-bc38-7198012c590f}</destination>
+		</relationship>
+		<relationship name="mixerInput">
+			<destination>{a709f144-a4ec-4bc4-8ebb-db8f22ea029c}</destination>
+		</relationship>
+		<relationship name="automatableProperties">
+			<destination>{99cdce1f-d264-4422-9cfa-a6d9257e73fb}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{6c79b9a5-d511-4de1-a4d8-b0223bf1e378}</destination>
+		</relationship>
+		<relationship name="groupTracks">
+			<destination>{00a0b04f-a1ba-4e22-94c0-974a12e5bd44}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{ee9bd63b-286e-471f-aaa3-59ad8e8e960c}</destination>
+		</relationship>
+		<relationship name="parameters">
+			<destination>{5e47f891-b1b6-4f6d-a594-518c3669806e}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{561cd480-bd2b-4c2e-b919-d775f9c4f409}</destination>
+		</relationship>
+	</object>
+	<object class="EventMixer" id="{77a40f97-97e9-474c-bc0b-e5f8e0f9c5ba}">
+		<relationship name="masterBus">
+			<destination>{ebfaca3c-6c62-4fbb-a08d-7345aecfcfc4}</destination>
+		</relationship>
+	</object>
+	<object class="MasterTrack" id="{9f9c94e6-dec8-4668-bc38-7198012c590f}">
+		<relationship name="mixerGroup">
+			<destination>{ebfaca3c-6c62-4fbb-a08d-7345aecfcfc4}</destination>
+		</relationship>
+	</object>
+	<object class="MixerInput" id="{a709f144-a4ec-4bc4-8ebb-db8f22ea029c}">
+		<relationship name="effectChain">
+			<destination>{ba638925-740e-47a4-9bac-f6ccaf0153ce}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{e22ee8da-eaf1-41d0-a503-1e6d12dfb45d}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{d9982c58-a056-4e6c-b8e3-883854b4bffb}</destination>
+		</relationship>
+	</object>
+	<object class="EventAutomatableProperties" id="{99cdce1f-d264-4422-9cfa-a6d9257e73fb}">
+		<property name="isPersistent">
+			<value>true</value>
+		</property>
+		<property name="priority">
+			<value>3</value>
+		</property>
+	</object>
+	<object class="MarkerTrack" id="{6c79b9a5-d511-4de1-a4d8-b0223bf1e378}" />
+	<object class="GroupTrack" id="{00a0b04f-a1ba-4e22-94c0-974a12e5bd44}">
+		<relationship name="automationTracks">
+			<destination>{d73590e5-dd7d-47b7-a5d9-a6a910319353}</destination>
+		</relationship>
+		<relationship name="modules">
+			<destination>{17f2945c-4d8e-4f77-96c0-429bc5b05f1f}</destination>
+		</relationship>
+		<relationship name="mixerGroup">
+			<destination>{82740513-361f-4b39-b83b-4dddc744560e}</destination>
+		</relationship>
+	</object>
+	<object class="Timeline" id="{ee9bd63b-286e-471f-aaa3-59ad8e8e960c}">
+		<property name="isProxyEnabled">
+			<value>false</value>
+		</property>
+	</object>
+	<object class="ParameterProxy" id="{5e47f891-b1b6-4f6d-a594-518c3669806e}">
+		<relationship name="modules">
+			<destination>{17f2945c-4d8e-4f77-96c0-429bc5b05f1f}</destination>
+		</relationship>
+		<relationship name="preset">
+			<destination>{1eee7926-9ab1-4edd-93f0-61be04a652f0}</destination>
+		</relationship>
+	</object>
+	<object class="EventMixerMaster" id="{ebfaca3c-6c62-4fbb-a08d-7345aecfcfc4}">
+		<property name="volume">
+			<value>-18.5</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{a79f98ba-cc8b-4451-b959-b90672ce775e}</destination>
+		</relationship>
+		<relationship name="effectChain">
+			<destination>{4c637de4-b9aa-4d1a-8af8-d0f0b4380f3e}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{7cc73ca0-2e2a-4fd8-a6d1-24e26a471bc6}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{77a40f97-97e9-474c-bc0b-e5f8e0f9c5ba}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ba638925-740e-47a4-9bac-f6ccaf0153ce}">
+		<relationship name="effects">
+			<destination>{63ffb864-efe2-4683-8b57-e23d8377ff1e}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{e22ee8da-eaf1-41d0-a503-1e6d12dfb45d}" />
+	<object class="AutomationTrack" id="{d73590e5-dd7d-47b7-a5d9-a6a910319353}">
+		<relationship name="automator">
+			<destination>{da5f3699-d0e0-4fc7-864f-a5b689f6d2df}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{17f2945c-4d8e-4f77-96c0-429bc5b05f1f}">
+		<property name="isCutoff">
+			<value>true</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{a5b8b982-4656-4873-b5de-f93f942de02f}</destination>
+		</relationship>
+	</object>
+	<object class="EventMixerGroup" id="{82740513-361f-4b39-b83b-4dddc744560e}">
+		<property name="color">
+			<value>Green</value>
+		</property>
+		<property name="name">
+			<value>Wind Weak</value>
+		</property>
+		<relationship name="automators">
+			<destination>{da5f3699-d0e0-4fc7-864f-a5b689f6d2df}</destination>
+		</relationship>
+		<relationship name="effectChain">
+			<destination>{f2ebbf6e-3647-4262-8efe-b3462e6b7531}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{283a790b-9723-48e3-9437-daadc9cd5e25}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{ebfaca3c-6c62-4fbb-a08d-7345aecfcfc4}</destination>
+		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{a79f98ba-cc8b-4451-b959-b90672ce775e}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="releaseTime">
+			<value>3000</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="MixerBusEffectChain" id="{4c637de4-b9aa-4d1a-8af8-d0f0b4380f3e}">
+		<relationship name="effects">
+			<destination>{7eb49c47-0d22-4e1b-a786-68161ffc4a56}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{7cc73ca0-2e2a-4fd8-a6d1-24e26a471bc6}" />
+	<object class="MixerBusFader" id="{63ffb864-efe2-4683-8b57-e23d8377ff1e}" />
+	<object class="Automator" id="{da5f3699-d0e0-4fc7-864f-a5b689f6d2df}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{b110edf6-be75-49fa-b1f7-0be908b9a32b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{f2ebbf6e-3647-4262-8efe-b3462e6b7531}">
+		<relationship name="effects">
+			<destination>{c902fedf-e162-4562-a9c6-3aa5050a7425}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{283a790b-9723-48e3-9437-daadc9cd5e25}" />
+	<object class="MixerBusFader" id="{7eb49c47-0d22-4e1b-a786-68161ffc4a56}" />
+	<object class="AutomationCurve" id="{b110edf6-be75-49fa-b1f7-0be908b9a32b}">
+		<relationship name="parameter">
+			<destination>{1eee7926-9ab1-4edd-93f0-61be04a652f0}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{db798c94-c9d1-47b6-bd06-74f043e4425c}</destination>
+			<destination>{cf3f6d25-204c-49e3-9254-ecfb605416ff}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{c902fedf-e162-4562-a9c6-3aa5050a7425}" />
+	<object class="AutomationPoint" id="{db798c94-c9d1-47b6-bd06-74f043e4425c}">
+		<property name="position">
+			<value>0.35000000000000003</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{cf3f6d25-204c-49e3-9254-ecfb605416ff}">
+		<property name="position">
+			<value>0.99858757062146897</value>
+		</property>
+		<property name="value">
+			<value>10</value>
+		</property>
+	</object>
+</objects>
