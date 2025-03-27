@@ -102,7 +102,7 @@ MonoBehaviour:
   player: {fileID: 0}
   cameraHeight: 7
   cameraDistance: 6
-  dampening: 2
+  dampening: 2.5
   rotation: {x: 0, y: 90, z: 0}
 --- !u!114 &656403266252323027
 MonoBehaviour:

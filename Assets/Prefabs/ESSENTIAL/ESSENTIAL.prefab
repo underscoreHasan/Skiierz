@@ -630,6 +630,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8582398602111302509}
     m_Modifications:
+    - target: {fileID: 3513824333283085323, guid: 53776732df6e38b4e845f1779c633bc9,
+        type: 3}
+      propertyPath: maxTiltAmount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513824333283085323, guid: 53776732df6e38b4e845f1779c633bc9,
+        type: 3}
+      propertyPath: tiltDampening
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513824333283085323, guid: 53776732df6e38b4e845f1779c633bc9,
+        type: 3}
+      propertyPath: tiltMagnitude
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3544592490237583910, guid: 53776732df6e38b4e845f1779c633bc9,
         type: 3}
       propertyPath: far clip plane
