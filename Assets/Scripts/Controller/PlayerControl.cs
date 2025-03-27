@@ -64,8 +64,8 @@ public class PlayerControl : MonoBehaviour
         jointSpine.localRotation = Quaternion.Euler(-jointBendTarget * jointSpineBendFactor, -jointBendTarget * jointSpineBendFactor, 0.0f);
         jointNeck.localRotation = Quaternion.Euler(0.0f, jointNeckBendNeutral + jointBendTarget * jointNeckBendFactor, 0.0f);
 
-        jointShoulderL.localRotation = Quaternion.Euler(jointBendTarget * jointShoulderBendFactor, 0.0f, 140.0f);
-        jointShoulderR.localRotation = Quaternion.Euler(jointBendTarget * jointShoulderBendFactor, 0.0f, -140.0f);
+        jointShoulderL.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointShoulderBendFactor), 0.0f, 140.0f);
+        jointShoulderR.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointShoulderBendFactor), 0.0f, -140.0f);
 
         jointElbowL.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
         jointElbowR.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
