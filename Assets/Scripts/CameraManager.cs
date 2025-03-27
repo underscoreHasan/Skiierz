@@ -31,9 +31,26 @@ public class CameraManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Vector3 targetCamOffset;
+        if (playerCollisionHandler.hasDismounted) {
+            targetCamOffset = camTarget.TransformDirection(0, 0, -cameraDistance);
+        } else {
+            targetCamOffset = (Quaternion.Euler(rotation) * camTarget.TransformDirection(0, cameraHeight, -cameraDistance));
+        }
+        
+        Vector3 targetCamPos = camTarget.position + targetCamOffset;
+
+        // make a raycast to ensure camera doesn't smack into ground (but can still phase through things while lerping)
+        RaycastHit hit;
+        bool didHit = Physics.Raycast(camTarget.position, targetCamOffset, out hit, cameraDistance);
+        if (didHit) {
+            print("didhit");
+            targetCamPos = hit.point;
+        }
+
         transform.position = Vector3.Lerp(
             transform.position,
-            camTarget.position + (Quaternion.Euler(rotation) * camTarget.TransformDirection(new Vector3(0, cameraHeight, -cameraDistance))),
+            targetCamPos,
             Time.deltaTime * dampening);
 
         Vector3 targetPoint;
