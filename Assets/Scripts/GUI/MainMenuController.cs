@@ -16,26 +16,26 @@ public class MainMenuController : MonoBehaviour
     public void LoadLevelOne() {
         PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
         ppVolume.enabled = false;
-        StartCoroutine(DelayedSceneLoad("BunnyHill"));
+        StartCoroutine(DelayedSceneLoad("BackToBasics"));
     }
 
     public void LoadLevelTwo() {
         PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
         ppVolume.enabled = false;
-        StartCoroutine(DelayedSceneLoad("BackToBasics"));
-    }
-
-    public void LoadLevelThree() {
-        PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
-        ppVolume.enabled = false;
         StartCoroutine(DelayedSceneLoad("TheBigJump"));
     }
 
-    public void LoadLevelFour() {
-        PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
-        ppVolume.enabled = false;
-        StartCoroutine(DelayedSceneLoad("MovingUpInTheWorld"));
-    }
+    //public void LoadLevelThree() {
+    //    PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
+    //    ppVolume.enabled = false;
+    //    StartCoroutine(DelayedSceneLoad("TheBigJump"));
+    //}
+
+    //public void LoadLevelFour() {
+    //    PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
+    //    ppVolume.enabled = false;
+    //    StartCoroutine(DelayedSceneLoad("MovingUpInTheWorld"));
+    //}
 
     private IEnumerator DelayedSceneLoad(string scene) {
         yield return new WaitForSeconds(delayBeforeSceneChange);
