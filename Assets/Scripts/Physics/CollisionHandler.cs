@@ -61,6 +61,7 @@ public class CollisionHandler : MonoBehaviour
 
             // respawn at last position
             transform.position = lastSpawnPoint;
+            transform.rotation = lastSpawnRotation;
             hasDismounted = false;
 
             // clear trail
