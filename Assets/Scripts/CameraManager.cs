@@ -36,10 +36,11 @@ public class CameraManager : MonoBehaviour
             camTarget.position + (Quaternion.Euler(rotation) * camTarget.TransformDirection(new Vector3(0, cameraHeight, -cameraDistance))),
             Time.deltaTime * dampening);
 
-        Vector3 targetPoint = (camTarget.position + (camTarget.rotation * Vector3.up * cameraLookHeight));
-        // if dismount, then no offset
+        Vector3 targetPoint;
         if (playerCollisionHandler.hasDismounted) {
             targetPoint = camTarget.position;
+        } else {
+            targetPoint = (camTarget.position + (camTarget.rotation * Vector3.up * cameraLookHeight));
         }
 
         targetRotation = Quaternion.LookRotation(targetPoint - transform.position);

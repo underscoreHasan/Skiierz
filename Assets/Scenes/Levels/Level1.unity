@@ -20388,12 +20388,12 @@ PrefabInstance:
     - target: {fileID: 1017109193619153187, guid: 5f93f5ac027a4e946a670fab06becb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 177.49744
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 1017109193619153187, guid: 5f93f5ac027a4e946a670fab06becb5c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -107.63678
+      value: -119.2
       objectReference: {fileID: 0}
     - target: {fileID: 1017109193619153187, guid: 5f93f5ac027a4e946a670fab06becb5c,
         type: 3}
@@ -120622,11 +120622,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5177260041320578791, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: rotateDampening
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6203143590551507948, guid: 19080dd63308acf4a8977fc37433e9f9,
         type: 3}
       propertyPath: m_AnchorMax.x
