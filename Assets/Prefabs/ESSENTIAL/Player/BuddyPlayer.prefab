@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawScale: 2
-  accelScale: 6
+  accelScale: 3.5
   chargeCurve:
     serializedVersion: 2
     m_Curve:
@@ -241,11 +241,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suspFwd: {fileID: 321369637988115592}
   suspRear: {fileID: 321369637988115590}
-  staticFrictionFactor: 0.2
+  staticFrictionFactor: 0.3
   dynamicFrictionFactor: 0.05
   sideFrictionFactor: 3
   sideTorqueFactor: 3.5
   sideTorqueMaxOrthagonality: 0.4
+  groundNormalPushFactor: 10
 --- !u!114 &1621188032
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,8 +11,10 @@ public class SnowFriction : MonoBehaviour {
     public float sideFrictionFactor;
     public float sideTorqueFactor;
     public float sideTorqueMaxOrthagonality;
+    public float groundNormalPushFactor;
 
     private Rigidbody _phys;
+    private Vector3 _dbgSlopeForce;
 
     // Use this for initialization
     void Start () {
@@ -42,6 +44,10 @@ public class SnowFriction : MonoBehaviour {
         Vector3 projectedVel = Vector3.ProjectOnPlane(_phys.velocity, lookUpVector);
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position + projectedVel * 2f);
+
+        // draw slope velocity
+        Gizmos.color = Color.white;
+        Gizmos.DrawLine(transform.position, transform.position + _dbgSlopeForce * 3f);
     }
 	
 	// Update is called once per frame
@@ -80,5 +86,12 @@ public class SnowFriction : MonoBehaviour {
         float velocityOrthogonality = Vector3.Dot(planarVel.normalized, lookSideVector);
         velocityOrthogonality = Mathf.Clamp(velocityOrthogonality, -sideTorqueMaxOrthagonality, sideTorqueMaxOrthagonality);
         _phys.AddTorque(lookUpVector * velocityOrthogonality * sideTorqueFactor, ForceMode.Acceleration);
+
+        // we also apply a pushing force based on the slope
+        RaycastHit hitOut;
+        Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut);
+        Vector3 planarSlopeVector = Vector3.ProjectOnPlane(hitOut.normal, Vector3.up); ;
+        _dbgSlopeForce = planarSlopeVector;
+        _phys.AddForce(planarSlopeVector * groundNormalPushFactor, ForceMode.Acceleration);
     }
 }
