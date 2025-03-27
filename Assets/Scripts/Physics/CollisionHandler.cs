@@ -17,6 +17,7 @@ public class CollisionHandler : MonoBehaviour
     public float dismountTimeElapsedSeconds;
     public Vector3 lastSpawnPoint;
     public Quaternion lastSpawnRotation;
+    public Trail playerTrail;
 
     private void Awake() {
         lastSpawnPoint = transform.position;
@@ -60,7 +61,11 @@ public class CollisionHandler : MonoBehaviour
 
             // respawn at last position
             transform.position = lastSpawnPoint;
+            transform.rotation = lastSpawnRotation;
             hasDismounted = false;
+
+            // clear trail
+            playerTrail.trailRenderer.Clear();
             return;
         }
 

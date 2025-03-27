@@ -21,7 +21,6 @@ public class RagdollHandler : MonoBehaviour
     public SkinnedMeshRenderer animatedBeanieRenderer;
     public MeshRenderer animatedBoardRenderer;
 
-
     public void ToggleRagdoll(Vector3 velocity) {
         ToggleRecursive(ragdollBoneRoot, animatedBoneRoot, velocity);
 

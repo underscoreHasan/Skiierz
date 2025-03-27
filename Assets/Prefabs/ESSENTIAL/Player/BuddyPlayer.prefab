@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawScale: 2
-  accelScale: 6
+  accelScale: 3.5
   chargeCurve:
     serializedVersion: 2
     m_Curve:
@@ -214,6 +214,19 @@ MonoBehaviour:
   suspensionRear: {fileID: 321369637988115590}
   playerSound: {fileID: 1572499978333871819}
   playerSoundMaxSpeed: 10
+  jointSpine: {fileID: 5121922096382238149}
+  jointNeck: {fileID: 900572871958653490}
+  jointShoulderL: {fileID: 5294831466309366381}
+  jointShoulderR: {fileID: 6888353451400284759}
+  jointElbowL: {fileID: 1642497126586506455}
+  jointElbowR: {fileID: 9143312884787497142}
+  jointSpineBendFactor: 30
+  jointNeckBendNeutral: 60
+  jointNeckBendFactor: 50
+  jointShoulderBendFactor: 30
+  jointElbowBendFactor: 40
+  jointBendTarget: 0
+  jointLerpFactor: 2
 --- !u!114 &1621188033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,11 +241,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suspFwd: {fileID: 321369637988115592}
   suspRear: {fileID: 321369637988115590}
-  staticFrictionFactor: 0.2
+  staticFrictionFactor: 0.3
   dynamicFrictionFactor: 0.05
   sideFrictionFactor: 3
   sideTorqueFactor: 3.5
   sideTorqueMaxOrthagonality: 0.4
+  groundNormalPushFactor: 10
 --- !u!114 &1621188032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +331,7 @@ MonoBehaviour:
   dismountTimeElapsedSeconds: 0
   lastSpawnPoint: {x: 0, y: 0, z: 0}
   lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  playerTrail: {fileID: 6457711909609441836}
 --- !u!114 &233068561492974188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,6 +1474,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 321369638976966598}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &900572871958653490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 579488509021365748, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1642497126586506455 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1350773763512767249, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!137 &1858057905608687139 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2142761425934234085, guid: 53a4ee6d903690343a64a146c658eb0e,
@@ -1483,6 +1510,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 321369638976966598}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &5121922096382238149 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4855165144281846275, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5294831466309366381 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5552585198442347947, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6888353451400284759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6624200268330141073, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7378817298692691635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7067107443842783605, guid: 53a4ee6d903690343a64a146c658eb0e,
@@ -1492,6 +1537,12 @@ Transform:
 --- !u!137 &8037759849703337527 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7781762779453039089, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9143312884787497142 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8833293194194290544, guid: 53a4ee6d903690343a64a146c658eb0e,
     type: 3}
   m_PrefabInstance: {fileID: 321369638976966598}
   m_PrefabAsset: {fileID: 0}
