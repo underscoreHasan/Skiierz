@@ -85,6 +85,20 @@ public class SnowKickingUp : MonoBehaviour
             return;
         }
 
+        // only kick up snow when on a game object marked as snow
+        RaycastHit hitOut;
+        float detectionDistance = 2.0f;
+        Physics.Raycast(transform.position, transform.rotation * Vector3.down, out hitOut, detectionDistance);
+        if (hitOut.collider != null)
+        {
+            if (hitOut.collider.tag != "Snow")
+            {
+                playerSound.ToggleSnowKickSound(false);
+                return;
+            }
+        }
+            
+
         float currentTime = Time.frameCount / (1.0f / Time.deltaTime);
         if (particleAggressiveness > particleAggressivenessThreshold &&
             currentTime - lastBurstTimestamp > timeBetweenBurstsThreshold &&

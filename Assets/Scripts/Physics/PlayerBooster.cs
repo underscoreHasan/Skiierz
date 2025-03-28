@@ -28,13 +28,13 @@ public class PlayerBooster : MonoBehaviour
             if (hitOut.collider.tag == "Booster")
             {
                 booster = hitOut.transform.gameObject;
-                Vector3 direction = booster.transform.forward;
+                Vector3 direction = -booster.transform.right; // sends player opposite to the x axis of boost pad
                 BoostPadInfo padInfo = booster.GetComponent<BoostPadInfo>();
                 if (Time.time - padInfo.lastActivatedTimeStamp > padInfo.cooldownTime)
                 {
                     padInfo.lastActivatedTimeStamp = Time.time;
                     float padVelocityChange = padInfo.VelocityChangeMagnitude;
-                    _phys.AddForce(booster.transform.forward * padVelocityChange, ForceMode.VelocityChange);
+                    _phys.AddForce(direction * padVelocityChange, ForceMode.VelocityChange);
                 }
             }
         }
