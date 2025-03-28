@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaypointManager : MonoBehaviour
 {
@@ -46,8 +47,16 @@ public class WaypointManager : MonoBehaviour
             if (timerUI != null)
             {
                 timerUI.OnFinishRace();
+                StartCoroutine(DelayedSceneLoad());
+
             }
         }
+    }
+
+    private IEnumerator DelayedSceneLoad() {
+        yield return new WaitForSeconds(2.0f);
+        int nextSceneIndex = (SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
+        SceneManager.LoadScene(nextSceneIndex);
     }
 
     public Vector3[] GetActiveWaypointPosition()
