@@ -7,22 +7,22 @@ public class MainMenuController : MonoBehaviour
 {
     public float delayBeforeSceneChange = 2.0f; // Adjust this as needed
 
-    public void StartGame() {
-        PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
-        ppVolume.enabled = false;
-        StartCoroutine(DelayedSceneLoad("SlopeTestsA"));
-    }
+    //public void StartGame() {
+    //    PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
+    //    ppVolume.enabled = false;
+    //    StartCoroutine(DelayedSceneLoad("SlopeTestsA"));
+    //}
 
     public void LoadLevelOne() {
         PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
         ppVolume.enabled = false;
-        StartCoroutine(DelayedSceneLoad("BackToBasics"));
+        StartCoroutine(DelayedSceneLoad("Level1"));
     }
 
     public void LoadLevelTwo() {
         PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
         ppVolume.enabled = false;
-        StartCoroutine(DelayedSceneLoad("TheBigJump"));
+        StartCoroutine(DelayedSceneLoad("Level2"));
     }
 
     //public void LoadLevelThree() {
