@@ -20,7 +20,7 @@ public class VolumeApply : MonoBehaviour
 
     public void PlaceThatShit() {
         
-        Undo.IncrementCurrentGroup();
+        // Undo.IncrementCurrentGroup();
 
         List<GameObject> allThatsSpawned = new List<GameObject>();
 
@@ -48,7 +48,7 @@ public class VolumeApply : MonoBehaviour
             }
 
             GameObject placedThing = Instantiate(toInstantiate, hit.point, Quaternion.identity);
-            Undo.RegisterCreatedObjectUndo(placedThing, "Spawn Objects");
+            // Undo.RegisterCreatedObjectUndo(placedThing, "Spawn Objects");
 
             placedThing.transform.localScale *= Random.Range(objectScaleMin, objectScaleMax);
             allThatsSpawned.Add(placedThing);
@@ -75,13 +75,13 @@ public class VolumeApply : MonoBehaviour
         posAccum /= (float)allThatsSpawned.Count;
 
         GameObject allParent = new GameObject("Cluster");
-        Undo.RegisterCreatedObjectUndo(allParent, "Cluster Parent");
+        // Undo.RegisterCreatedObjectUndo(allParent, "Cluster Parent");
 
         allParent.transform.position = posAccum;
         foreach (GameObject obj in allThatsSpawned) {
             obj.transform.parent = allParent.transform;
         }
 
-        Undo.CollapseUndoOperations(Undo.GetCurrentGroup());
+        // Undo.CollapseUndoOperations(Undo.GetCurrentGroup());
     }
 }
