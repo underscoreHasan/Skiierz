@@ -16,8 +16,11 @@ public class CollisionHandler : MonoBehaviour
     public bool hasDismounted = false;
     public float respawnTimeSeconds;
     public float dismountTimeElapsedSeconds;
+
     public Vector3 lastSpawnPoint;
     public Quaternion lastSpawnRotation;
+    public Vector3 lastSpawnVelocity;
+
     public Trail playerTrail;
 
     public Rigidbody corePhys;
@@ -39,6 +42,7 @@ public class CollisionHandler : MonoBehaviour
     private void Awake() {
 
         trackingCam = GameObject.FindWithTag("MainCamera").transform;
+        lastSpawnVelocity = Vector3.zero;
         lastTrackPos = trackingCam.position;
         lastTrackRot = trackingCam.rotation;
 
@@ -89,6 +93,7 @@ public class CollisionHandler : MonoBehaviour
             transform.rotation = lastSpawnRotation;
             trackingCam.position = lastTrackPos;
             trackingCam.rotation = lastTrackRot;
+            phys.velocity = lastSpawnVelocity;
             hasDismounted = false;
 
             // clear trail

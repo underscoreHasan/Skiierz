@@ -22,6 +22,7 @@ public class Waypoint : MonoBehaviour
 
             // save last checkpoint
             CollisionHandler handler = other.GetComponent<CollisionHandler>();
+            handler.lastSpawnVelocity = handler.phys.velocity;
             handler.lastSpawnPoint = other.transform.position;
             handler.lastSpawnRotation = other.transform.rotation;
             // this is horrible spaghetti code nonesense
