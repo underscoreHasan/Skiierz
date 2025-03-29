@@ -132,7 +132,7 @@ public class CollisionHandler : MonoBehaviour
         HandleCollision(velMax, ourVelocity, dismountFrontVelocity);
     }
 
-    void HandleCollision(float collisionVelocity, Vector3 ourVelocity, float threshold)
+    public void HandleCollision(float collisionVelocity, Vector3 ourVelocity, float threshold)
     {
         // can't DOUBLE DISMOUNT
         if (hasDismounted) {
