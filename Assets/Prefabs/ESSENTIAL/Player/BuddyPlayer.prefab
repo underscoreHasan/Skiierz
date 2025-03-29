@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawScale: 2
-  accelScale: 3.5
-  carveAccelScale: 1.25
+  accelScale: 4
+  carveAccelScale: 1.55
   chargeCurve:
     serializedVersion: 2
     m_Curve:
