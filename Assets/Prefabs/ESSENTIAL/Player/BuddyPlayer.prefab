@@ -332,6 +332,10 @@ MonoBehaviour:
   lastSpawnPoint: {x: 0, y: 0, z: 0}
   lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
   playerTrail: {fileID: 6457711909609441836}
+  corePhys: {fileID: 0}
+  minVelocityToDie: 5
+  minVelocityTimeRequired: 2
+  minVelocityTimeElapsed: 0
   fadeImage: {fileID: 0}
   fadeCurve:
     serializedVersion: 2
@@ -367,6 +371,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   fadeInTime: 0.5
+  trackingCam: {fileID: 0}
+  lastTrackPos: {x: 0, y: 0, z: 0}
+  lastTrackRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &233068561492974188
 MonoBehaviour:
   m_ObjectHideFlags: 0
