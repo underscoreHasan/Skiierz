@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -19,15 +20,15 @@ public class CollisionHandler : MonoBehaviour
     public Quaternion lastSpawnRotation;
     public Trail playerTrail;
 
+    public Image fadeImage;
+
     private void Awake() {
         lastSpawnPoint = transform.position;
         lastSpawnRotation = transform.rotation;
+        fadeImage = GameObject.Find("FadeCanvas").GetComponent<Image>();
     }
 
     private void OnCollisionEnter(Collision collision) {
-        print("collider enter");
-        print(phys.velocity.magnitude);
-        print(collision.relativeVelocity.magnitude);
         HandleCollision(collision.relativeVelocity.magnitude, phys.velocity, dismountSideVelocity);
     }
 
@@ -116,7 +117,29 @@ public class CollisionHandler : MonoBehaviour
             playerSound.ClearSounds();
             playerSound.enabled = false;
 
+            //fade image
+            fadeMyImage();
+
             hasDismounted = true;
         }
+    }
+
+    void fadeMyImage() {
+        StartCoroutine(FadeCoroutine());
+    }
+
+    IEnumerator FadeCoroutine() {
+        Color startColor = fadeImage.color;
+        float elapsedTime = 0f;
+        float fadeDuration = 5f;
+
+        while (elapsedTime < fadeDuration) {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
+            fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+            yield return null;
+        }
+
+        fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, 0);
     }
 }
