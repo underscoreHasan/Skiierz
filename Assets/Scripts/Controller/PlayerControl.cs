@@ -94,7 +94,7 @@ public class PlayerControl : MonoBehaviour
         jointElbowL.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
         jointElbowR.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
 
-        float chargeFactor = Mathf.Min(1.0f, chargeTimeSecondsElapsed / chargeTimeSeconds) * pelvisOffsetChargeFactor;
+        float chargeFactor = Mathf.Min(1.0f, chargeCurve.Evaluate(chargeTimeSecondsElapsed / chargeTimeSeconds)) * pelvisOffsetChargeFactor;
 
         Vector3 acceleration = (physics.velocity - lastVelocity) / Mathf.Max(0.001f, Time.deltaTime);
         acceleration = Vector3.Lerp(acceleration, lastAcceleration, 0.4f);
@@ -165,7 +165,7 @@ public class PlayerControl : MonoBehaviour
             downforceHandler.PauseForJump();
 
             // up push depends on how long player has charged
-            float upFactor = Mathf.Min(1.0f, chargeTimeSecondsElapsed / chargeTimeSeconds);
+            float upFactor = Mathf.Min(1.0f, chargeCurve.Evaluate(chargeTimeSecondsElapsed / chargeTimeSeconds));
             float speedScale = Mathf.Clamp(physics.velocity.magnitude * releaseForceSpeedScale, 1.0f, 2.0f);
             Vector3 upForce = Vector3.up * upFactor * releaseUpForce * speedScale;
             physics.AddForce(upForce, ForceMode.Acceleration);
