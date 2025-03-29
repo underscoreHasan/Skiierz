@@ -51726,8 +51726,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nLucas Poirier\nEric Yee\nBailey Brown\nPaige Hoffmann\n\n\nWinsor Zhu\nDean
-    Yang\n\n\nCindy Heng\nRamir Guinn\nElio Fox\t\t\t\t\t\t"
+  m_text: "\nLucas Poirier\nEric Yee\nBailey Brown\nPaige Hoffmann\n\n\n\nWinsor
+    Zhu\nDean Yang\n\n\nCindy Heng\nRamir Guinn\nElio Fox\tand Pavit Sidhu\t\t\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 363d413f096caa840a289e6ab04be49d, type: 2}
   m_sharedMaterial: {fileID: 6237714663021980503, guid: 363d413f096caa840a289e6ab04be49d,
