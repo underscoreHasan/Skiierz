@@ -182,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yawScale: 2
   accelScale: 3.5
+  carveAccelScale: 1.25
   chargeCurve:
     serializedVersion: 2
     m_Curve:
@@ -331,6 +332,7 @@ MonoBehaviour:
   dismountTimeElapsedSeconds: 0
   lastSpawnPoint: {x: 0, y: 0, z: 0}
   lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  lastSpawnVelocity: {x: 0, y: 0, z: 0}
   playerTrail: {fileID: 6457711909609441836}
   corePhys: {fileID: 0}
   minVelocityToDie: 7.5

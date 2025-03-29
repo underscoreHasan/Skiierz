@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
 
     public float yawScale;
     public float accelScale;
+    public float carveAccelScale;
     public AnimationCurve chargeCurve;
     public float chargeTimeSecondsElapsed; // time that player has charged jump
     public float chargeTimeSeconds; // time until reach max jump force
@@ -75,7 +76,7 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate()
     {
         float yaw = horizontalInput;
-        float accel = verticalInput;
+        float accel = verticalInput + Mathf.Abs(horizontalInput * carveAccelScale);
 
         HandleUpperBodyAnimation();
 
