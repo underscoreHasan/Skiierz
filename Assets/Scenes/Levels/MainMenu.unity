@@ -3562,7 +3562,7 @@ RectTransform:
   m_GameObject: {fileID: 56237334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1737016, y: 1.1737016, z: 1.1737016}
+  m_LocalScale: {x: 1.1737016, y: 1.5765564, z: 1.1737016}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1564029587}
@@ -44826,8 +44826,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -51704,7 +51704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 390, y: 0.0000076294}
+  m_AnchoredPosition: {x: 390, y: 0}
   m_SizeDelta: {x: 459.3746, y: 1013.392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978030360
@@ -51727,8 +51727,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nLucas Poirier\nEric Yee\nBailey Brown\nPaige Hoffmann\n\n\n\nWinsor
-    Zhu\nDean Yang\n\n\nCindy Heng\nRamir Guinn\nElio Fox, Pavit Sidhu\t\t\t"
+  m_text: "\nLucas Poirier\nEric Yee\nBailey Brown\nPaige Hoffmann\n\n\nWinsor Zhu\nDean
+    Yang\n\n\nCindy Heng\nRamir Guinn\nElio Fox, Pavit Sidhu\t\t\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 363d413f096caa840a289e6ab04be49d, type: 2}
   m_sharedMaterial: {fileID: 6237714663021980503, guid: 363d413f096caa840a289e6ab04be49d,
@@ -51756,8 +51756,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -61619,7 +61619,7 @@ PrefabInstance:
     - target: {fileID: 6013372386076319637, guid: aa0e977d72bc37e4d8c8ec28856bdf17,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -290.68195
+      value: -301
       objectReference: {fileID: 0}
     - target: {fileID: 6013372386076319637, guid: aa0e977d72bc37e4d8c8ec28856bdf17,
         type: 3}
@@ -85234,7 +85234,7 @@ RectTransform:
   m_GameObject: {fileID: 1564029586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4512981, y: 1.4512981, z: 1.4512981}
+  m_LocalScale: {x: 1.4512981, y: 1.2315426, z: 1.4512981}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 56237335}
@@ -85242,7 +85242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.69999695, y: 3}
+  m_AnchoredPosition: {x: -0.69999695, y: -0.3}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564029588
