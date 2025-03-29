@@ -25,7 +25,7 @@ public class CollisionHandler : MonoBehaviour
     private void Awake() {
         lastSpawnPoint = transform.position;
         lastSpawnRotation = transform.rotation;
-        fadeImage = GameObject.Find("FadeCanvas").GetComponent<Image>();
+        fadeImage = GameObject.FindWithTag("FadeCanvas").GetComponent<Image>();
     }
 
     private void OnCollisionEnter(Collision collision) {
@@ -117,25 +117,23 @@ public class CollisionHandler : MonoBehaviour
             playerSound.ClearSounds();
             playerSound.enabled = false;
 
-            //fade image
-            fadeMyImage();
-
+            // fade image
             hasDismounted = true;
+            FadeRespawnImage();
+
         }
     }
 
-    void fadeMyImage() {
+    void FadeRespawnImage() {
         StartCoroutine(FadeCoroutine());
     }
 
     IEnumerator FadeCoroutine() {
         Color startColor = fadeImage.color;
-        float elapsedTime = 0f;
-        float fadeDuration = 5f;
 
-        while (elapsedTime < fadeDuration) {
-            elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
+        while (hasDismounted) {
+            print("running");
+            float alpha = dismountTimeElapsedSeconds / respawnTimeSeconds;
             fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
             yield return null;
         }
