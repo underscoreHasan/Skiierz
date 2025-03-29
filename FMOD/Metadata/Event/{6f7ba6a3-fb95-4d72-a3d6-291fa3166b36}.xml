@@ -122,9 +122,6 @@ www.yangseunghyuk.com</value>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{a3c4b100-b65c-4292-954b-4eb93c97d2ec}">
-		<property name="volume">
-			<value>5</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{3fa1bbf0-bd26-456f-862e-c59a3407c664}</destination>
 		</relationship>
@@ -153,9 +150,6 @@ www.yangseunghyuk.com</value>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{c4e590ec-5454-4cec-992a-b42df9d8061a}">
-		<property name="volume">
-			<value>2.5</value>
-		</property>
 		<property name="name">
 			<value>Layer 1</value>
 		</property>

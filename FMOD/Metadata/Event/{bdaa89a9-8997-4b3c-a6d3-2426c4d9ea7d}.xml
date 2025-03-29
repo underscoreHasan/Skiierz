@@ -245,11 +245,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{15b1704c-ae16-45e0-b065-ad8ad42bcf5b}" />
-	<object class="GainEffect" id="{257457e0-8e58-433e-b0c8-3d6dcd868871}">
-		<property name="gain">
-			<value>10</value>
-		</property>
-	</object>
+	<object class="GainEffect" id="{257457e0-8e58-433e-b0c8-3d6dcd868871}" />
 	<object class="GainEffect" id="{97176420-d672-4e2b-9809-ef3b9d735d49}">
 		<property name="gain">
 			<value>10</value>

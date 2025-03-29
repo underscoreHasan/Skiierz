@@ -292,11 +292,7 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 			<value>10</value>
 		</property>
 	</object>
-	<object class="GainEffect" id="{6c29f490-8437-48b0-b215-2838d0cb7255}">
-		<property name="gain">
-			<value>10</value>
-		</property>
-	</object>
+	<object class="GainEffect" id="{6c29f490-8437-48b0-b215-2838d0cb7255}" />
 	<object class="AutomationCurve" id="{7a568198-d870-4b5a-9b45-46c03fd27d94}">
 		<relationship name="parameter">
 			<destination>{27917f63-d316-4f46-95a0-a271283fb8ad}</destination>

@@ -84,7 +84,7 @@ Recordings by David at Track Time Audio.</value>
 	</object>
 	<object class="EventMixerMaster" id="{accda771-9c72-4199-8492-478631c3f921}">
 		<property name="volume">
-			<value>6.5</value>
+			<value>3.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{ad18679f-d1de-4453-85cf-cfe4498abec6}</destination>
