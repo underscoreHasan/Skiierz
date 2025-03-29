@@ -72,6 +72,13 @@ MonoBehaviour:
       Data3: 1685173410
       Data4: -1981791828
     Path: event:/Character/Landing
+  <yell>k__BackingField:
+    Guid:
+      Data1: -1112897111
+      Data2: 1262258583
+      Data3: 639947686
+      Data4: 2112543172
+    Path: event:/Character/Hurt
   <ambience>k__BackingField:
     Guid:
       Data1: 1198788837

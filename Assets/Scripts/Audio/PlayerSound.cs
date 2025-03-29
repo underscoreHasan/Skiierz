@@ -10,6 +10,7 @@ public class PlayerSound : MonoBehaviour
     private EventInstance skiingSound;
     private EventInstance jumpSound;
     private EventInstance landSound;
+    private EventInstance yellSound;
 
 
     public float snowKickMinDuration = 0.5f;
@@ -21,6 +22,7 @@ public class PlayerSound : MonoBehaviour
         skiingSound = AudioManager.instance.CreateInstance(FMODEvents.instance.skiing);
         jumpSound = AudioManager.instance.CreateInstance(FMODEvents.instance.jump);
         landSound = AudioManager.instance.CreateInstance(FMODEvents.instance.land);
+        yellSound = AudioManager.instance.CreateInstance(FMODEvents.instance.yell);
 
         PLAYBACK_STATE skiingPlaybackState;
         skiingSound.getPlaybackState(out skiingPlaybackState);
@@ -67,6 +69,11 @@ public class PlayerSound : MonoBehaviour
             landSound.setParameterByName("Speed", speed);
             landSound.start();
         }
+    }
+    public void PlayYellSound()
+    {
+        Debug.Log("Play");
+        yellSound.start();
     }
 
     public void ToggleSnowKickSound(bool toggle, float intensity = 0.0f)

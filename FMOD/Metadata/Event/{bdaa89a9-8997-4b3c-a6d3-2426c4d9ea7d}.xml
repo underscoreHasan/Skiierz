@@ -126,7 +126,10 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	<object class="MixerBusPanner" id="{d98f535e-30d5-4a8d-b5a1-9104035d5354}" />
 	<object class="MultiSound" id="{0459d9dc-7f02-4f0a-aa25-a27f88befdfd}">
 		<property name="length">
-			<value>6</value>
+			<value>3.3000000000000003</value>
+		</property>
+		<property name="volume">
+			<value>10</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{af1545e3-d705-4ccd-a75f-a8eab86e33a0}</destination>
@@ -170,6 +173,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		<relationship name="effects">
 			<destination>{3faabf23-bec9-4c55-bdba-56d913b5fe82}</destination>
 			<destination>{15b1704c-ae16-45e0-b065-ad8ad42bcf5b}</destination>
+			<destination>{257457e0-8e58-433e-b0c8-3d6dcd868871}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{bc20a289-0652-4750-b102-4b5c337932e5}" />
@@ -241,6 +245,11 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{15b1704c-ae16-45e0-b065-ad8ad42bcf5b}" />
+	<object class="GainEffect" id="{257457e0-8e58-433e-b0c8-3d6dcd868871}">
+		<property name="gain">
+			<value>10</value>
+		</property>
+	</object>
 	<object class="GainEffect" id="{97176420-d672-4e2b-9809-ef3b9d735d49}">
 		<property name="gain">
 			<value>10</value>
