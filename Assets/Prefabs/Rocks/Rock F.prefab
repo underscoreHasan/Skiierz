@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3917098786239549348
 Transform:
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neutralOffset: {x: 0, y: 0, z: 0}
   randomRotate: 1
+  isCliff: 0
 --- !u!1001 &3917098785727758211
 PrefabInstance:
   m_ObjectHideFlags: 0

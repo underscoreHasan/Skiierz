@@ -44,7 +44,6 @@ public class CameraManager : MonoBehaviour
         RaycastHit hit;
         bool didHit = Physics.Raycast(camTarget.position, targetCamOffset, out hit, cameraDistance);
         if (didHit) {
-            print("didhit");
             targetCamPos = hit.point;
         }
 
