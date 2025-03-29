@@ -20,6 +20,10 @@ public class DeathZoneTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("collided with deathzon");
+        if (other.tag == "Player") {
+            CollisionHandler collisionHandler = other.GetComponent<CollisionHandler>();
+            Rigidbody rigidbody = other.GetComponent<Rigidbody>();
+            collisionHandler.HandleCollision(rigidbody.velocity.magnitude, rigidbody.velocity, - 1.0f);
+        }
     }
 }

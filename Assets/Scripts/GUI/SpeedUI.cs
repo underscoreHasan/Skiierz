@@ -27,6 +27,6 @@ public class SpeedUI : MonoBehaviour
     {
         speed = playerRB.velocity.magnitude;
         speedSlider.value = speed;
-        speedText.text = speed.ToString("F1") + " m/s";
+        speedText.text = (speed / 3.0f).ToString("F1") + " m/s";
     }
 }

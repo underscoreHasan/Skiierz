@@ -16,18 +16,42 @@ public class CollisionHandler : MonoBehaviour
     public bool hasDismounted = false;
     public float respawnTimeSeconds;
     public float dismountTimeElapsedSeconds;
+
     public Vector3 lastSpawnPoint;
     public Quaternion lastSpawnRotation;
+    public Vector3 lastSpawnVelocity;
+
     public Trail playerTrail;
+
+    public Rigidbody corePhys;
+    public float minVelocityToDie;
+    public float minVelocityTimeRequired;
+    public float minVelocityTimeElapsed;
 
     public Image fadeImage;
     public AnimationCurve fadeCurve;
     public float fadeInTime;
 
+    public float maxRagdollTime;
+    public float ragdollTimeElapsed;
+
+    public Transform trackingCam;
+    public Vector3 lastTrackPos;
+    public Quaternion lastTrackRot;
+
     private void Awake() {
+
+        trackingCam = GameObject.FindWithTag("MainCamera").transform;
+        lastSpawnVelocity = Vector3.zero;
+        lastTrackPos = trackingCam.position;
+        lastTrackRot = trackingCam.rotation;
+
         lastSpawnPoint = transform.position;
         lastSpawnRotation = transform.rotation;
+
         fadeImage = GameObject.FindWithTag("FadeCanvas").GetComponent<Image>();
+        corePhys = GameObject.FindWithTag("CamTrackingTarget").GetComponent<Rigidbody>();
+
     }
 
     private void OnCollisionEnter(Collision collision) {
@@ -43,6 +67,8 @@ public class CollisionHandler : MonoBehaviour
     }
 
     void DismountedLogic() {
+
+        // WE ARE OUT OF TIME
         if (dismountTimeElapsedSeconds > respawnTimeSeconds) {
             
             dismountTimeElapsedSeconds = 0.0f;
@@ -62,17 +88,38 @@ public class CollisionHandler : MonoBehaviour
             playerSound.ClearSounds();
             playerSound.enabled = true;
 
-            // respawn at last position
+            // respawn at last position (and reset camera)
             transform.position = lastSpawnPoint;
             transform.rotation = lastSpawnRotation;
+            trackingCam.position = lastTrackPos;
+            trackingCam.rotation = lastTrackRot;
+            phys.velocity = lastSpawnVelocity;
             hasDismounted = false;
 
             // clear trail
             playerTrail.trailRenderer.Clear();
+
+            // clear timing stuff
+            minVelocityTimeElapsed = 0.0f;
+            ragdollTimeElapsed = 0.0f;
             return;
         }
 
-        dismountTimeElapsedSeconds += Time.deltaTime;
+        ragdollTimeElapsed += Time.deltaTime;
+
+        // we need to be minimally moving for some time before we can start the fade out
+        if (minVelocityTimeElapsed < minVelocityTimeRequired && (ragdollTimeElapsed < maxRagdollTime)) {
+            // if we are moving at minimum velocity, we can start incrementing this timer
+            if (corePhys.velocity.magnitude < minVelocityToDie) {
+                minVelocityTimeElapsed += Time.deltaTime;
+            } else {
+                minVelocityTimeElapsed = 0.0f;
+            }
+        } else {
+            // only once the player has been moving at a minimum velocity for some time can
+            // we start to respawn
+            dismountTimeElapsedSeconds += Time.deltaTime;
+        }
     }
 
     void NonDismountedLogic() {
@@ -95,7 +142,7 @@ public class CollisionHandler : MonoBehaviour
         HandleCollision(velMax, ourVelocity, dismountFrontVelocity);
     }
 
-    void HandleCollision(float collisionVelocity, Vector3 ourVelocity, float threshold)
+    public void HandleCollision(float collisionVelocity, Vector3 ourVelocity, float threshold)
     {
         // can't DOUBLE DISMOUNT
         if (hasDismounted) {
