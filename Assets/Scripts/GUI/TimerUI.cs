@@ -7,26 +7,29 @@ using UnityEngine;
 public class TimerUI : MonoBehaviour
 {
     TMP_Text timerText;
-    String time;
+    float timeElapsed;
+    String timeElapsedStr;
     bool finished = false;
 
-    void Start()
+    void Awake()
     {
         timerText = GetComponent<TMP_Text>();
+        timeElapsed = 0.0f;
     }
 
     void Update()
     {
         if (finished) return;
-        time = Time.time.ToString("F1") + "s";
-        timerText.text = time;
+        timeElapsedStr = timeElapsed.ToString("F1") + "s";
+        timerText.text = timeElapsedStr;
+        timeElapsed += Time.deltaTime;
     }
 
     public void OnFinishRace()
     {
         finished = true;
         //display finished in place of time
-        timerText.text = "Finished!!\n" + time;
+        timerText.text = "Finished!!\n" + timeElapsedStr;
         // fade out the text
         StartCoroutine(FadeOut());
     }
