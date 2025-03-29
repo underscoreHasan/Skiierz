@@ -44,6 +44,7 @@ public class PlayerControl : MonoBehaviour
     public Vector3 footTargetRNeutral;
     public float pelvisOffsetChargeFactor;
     public float pelvisOffsetAccelerationFactor;
+    public float pelvisOffsetStopFactor;
     public float pelvisOffsetMax;
     public float pelvisOffset;
     public float pelvisOffsetLerpFactor;
@@ -96,12 +97,14 @@ public class PlayerControl : MonoBehaviour
 
         float chargeFactor = Mathf.Min(1.0f, chargeCurve.Evaluate(chargeTimeSecondsElapsed / chargeTimeSeconds)) * pelvisOffsetChargeFactor;
 
+        float stopFactor = -Mathf.Min(verticalInput, 0.0f) * pelvisOffsetStopFactor; // only works when going backwards
+
         Vector3 acceleration = (physics.velocity - lastVelocity) / Mathf.Max(0.001f, Time.deltaTime);
         acceleration = Vector3.Lerp(acceleration, lastAcceleration, 0.4f);
         float accelerationFactor = Vector3.Dot(acceleration, transform.rotation * Vector3.up) * pelvisOffsetAccelerationFactor;
         
 
-        float pelvisOffsetTarget = Mathf.Clamp(pelvisOffsetNeutral + chargeFactor + accelerationFactor, 0.0f, pelvisOffsetMax);
+        float pelvisOffsetTarget = Mathf.Clamp(pelvisOffsetNeutral + chargeFactor + accelerationFactor + stopFactor, 0.0f, pelvisOffsetMax);
         pelvisOffset = Mathf.Lerp(pelvisOffset, pelvisOffsetTarget, pelvisOffsetLerpFactor);
 
         jointPelvis.localPosition = jointPelvis.InverseTransformVector( 
@@ -122,7 +125,9 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate()
     {
         float yaw = horizontalInput;
-        float accel = verticalInput + Mathf.Abs(horizontalInput * carveAccelScale);
+
+        // if holding BACKSPACE, dont add force on carve
+        float accel = verticalInput + (horizontalInput > 0 ? Mathf.Abs(horizontalInput * carveAccelScale) : 0.0f);
 
         HandleUpperBodyAnimation();
 
