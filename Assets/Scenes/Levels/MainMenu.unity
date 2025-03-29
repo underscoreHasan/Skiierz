@@ -1412,9 +1412,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Leads: \nProject Lead\nTeam Management\nLead Programmer\nLead Artist\n\nProgrammers:\nGUI,
-    Player Movement\nAutdio Integration, Gameplay Mechanics\n\nArtists:\n3D Artist\nCharacter
-    Design\nSpecial Thanks:\t\t\t\t\t\t"
+  m_text: "Leads: \nProject Lead\nLead Designer\nLead Programmer\nLead Artist\n\nProgrammers:\nGUI,
+    Player Movement\nAutdio Integration, Gameplay Mechanics\n\nArtists:\n3D Art\nCharacter
+    Design\nSpecial Thanks\t\t\t\t\t\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50a2aa7a54d21784594861277828a37b, type: 2}
   m_sharedMaterial: {fileID: 5190968921210093237, guid: 50a2aa7a54d21784594861277828a37b,
