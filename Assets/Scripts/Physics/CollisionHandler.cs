@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -19,15 +20,17 @@ public class CollisionHandler : MonoBehaviour
     public Quaternion lastSpawnRotation;
     public Trail playerTrail;
 
+    public Image fadeImage;
+    public AnimationCurve fadeCurve;
+    public float fadeInTime;
+
     private void Awake() {
         lastSpawnPoint = transform.position;
         lastSpawnRotation = transform.rotation;
+        fadeImage = GameObject.FindWithTag("FadeCanvas").GetComponent<Image>();
     }
 
     private void OnCollisionEnter(Collision collision) {
-        print("collider enter");
-        print(phys.velocity.magnitude);
-        print(collision.relativeVelocity.magnitude);
         HandleCollision(collision.relativeVelocity.magnitude, phys.velocity, dismountSideVelocity);
     }
 
@@ -116,7 +119,36 @@ public class CollisionHandler : MonoBehaviour
             playerSound.ClearSounds();
             playerSound.enabled = false;
 
+            // fade image
             hasDismounted = true;
+            FadeRespawnImage();
+
         }
+    }
+
+    void FadeRespawnImage() {
+        StartCoroutine(FadeCoroutine());
+    }
+
+    IEnumerator FadeCoroutine() {
+        Color startColor = fadeImage.color;
+
+        // fade out
+        while (hasDismounted) {
+            float alpha = fadeCurve.Evaluate(dismountTimeElapsedSeconds / respawnTimeSeconds);
+            fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+            yield return null;
+        }
+
+        // fade back in
+        float fadeInSecondsElapsed = 0.0f;
+        while (fadeInSecondsElapsed < fadeInTime) {
+            fadeInSecondsElapsed += Time.deltaTime;
+            float alpha = 1.0f - fadeCurve.Evaluate(fadeInSecondsElapsed / fadeInTime);
+            fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+            yield return null;
+        }
+
+        fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, 0);
     }
 }

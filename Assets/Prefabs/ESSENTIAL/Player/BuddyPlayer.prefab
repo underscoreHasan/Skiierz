@@ -332,6 +332,41 @@ MonoBehaviour:
   lastSpawnPoint: {x: 0, y: 0, z: 0}
   lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
   playerTrail: {fileID: 6457711909609441836}
+  fadeImage: {fileID: 0}
+  fadeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.39221004
+      outSlope: 0.39221004
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.17156355
+    - serializedVersion: 3
+      time: 0.49116513
+      value: 0.53439313
+      inSlope: 2.5875475
+      outSlope: 2.5875475
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07210702
+      outWeight: 0.103330925
+    - serializedVersion: 3
+      time: 0.791626
+      value: 1.0018845
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fadeInTime: 0.5
 --- !u!114 &233068561492974188
 MonoBehaviour:
   m_ObjectHideFlags: 0
