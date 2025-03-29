@@ -1,0 +1,2575 @@
+fileFormatVersion: 2
+guid: ed34a32754db2424abf18648385523f2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4455
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359e1abe8f52edc4386251c2473d2729
+      internalID: 1480380276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 4455
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfc1064c72402248af657b28fbd4616
+      internalID: 70567323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 4455
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6099edae4b73524fa782a2e398b4469
+      internalID: 419617636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 4455
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be756f649ab6a34d98ab34677bd12a0
+      internalID: -1678888408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 4455
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b5a09398b4c5245ba5940ea58efab5
+      internalID: -396472838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 4455
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb703bc50eab3a4aae274b46eeb0325
+      internalID: 406469311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 4455
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef3c078a32f9654980e3c34f4dbdba4
+      internalID: -1468774000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4158
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0b22b234a69ba48bb41f2803ae99e0
+      internalID: 760668567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 4158
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa533e9476199548a73205d4fe32fa5
+      internalID: -1930685123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 4158
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f860bf13f506ef4891d742dbcf00a4a
+      internalID: 638091467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 4158
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df31ba86f3e33d049b5d15b78f5f1e1b
+      internalID: 748742099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 4158
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c5050c123a8734596b3458f3b89bca
+      internalID: -1068881260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 4158
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53935aa35935a05458df1ca2e59f50fd
+      internalID: -1006592445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 4158
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbdb96ee05a48043bb9273582846133
+      internalID: -590910214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3861
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6659ba656c86d47b040ae305ef8f9a
+      internalID: -2126482128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3861
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210e6b75f2b89d048aabb2f005f929cb
+      internalID: -204783163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 3861
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693d2ef66a5bb544e8bd4d6f93b1ad2e
+      internalID: -1892362393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 3861
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df5baee17bb4a946961587f39dd102c
+      internalID: -229739422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3861
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf484c37921f6346b037770197408f0
+      internalID: 1922022312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3861
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6deb1168bc3a1944582ea52229f33a64
+      internalID: 1566939286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3861
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b95a550841e61a4e9d41247b53f4077
+      internalID: 345522875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3564
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15b70ffcb3afad43993f4920b1e1169
+      internalID: -1212530409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3564
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220ffba8ce7573f408042b4863e0608c
+      internalID: 437881456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 3564
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe28921b803306947aa5e39f051dee2f
+      internalID: -67153480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 3564
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2d15fd6f638ef4587f082615760718
+      internalID: -777435453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3564
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ee50fc55d409a48a48652598dcd7ec
+      internalID: -1434009068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3564
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5481fa03629c70b419cacedfa8728776
+      internalID: -1381641368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3564
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23688291fea4d5b4f9add256030eea53
+      internalID: 1868859158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3267
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523a3c1b16c1b6248a8aa8d1c66e71cd
+      internalID: 248717028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3267
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4d1ad51b38cc2458f05a388aa52a0c
+      internalID: -501627262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 3267
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0dd91e86a0b9d74883dff014e9c1f5d
+      internalID: -1042948949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 3267
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cc2ed23cfe4f745a505fac0b352248
+      internalID: 1103778447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3267
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b73dfe2065d4e540a9b7593b7191119
+      internalID: 1367476579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3267
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24122f0b553e9c4188eaa379bbe232e
+      internalID: 1492485425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3267
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6450c1bac36e44d498935163ce93676e
+      internalID: 26141899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2970
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6231cef3105af34184d914790dfd7de
+      internalID: 212794174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2970
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e387a08455b2d843b60a8d2bbb62f3b
+      internalID: -1053420821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2970
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6819269164766743bbccb2a92155cbc
+      internalID: -716500100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2970
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a755f485537dc45aa96ba42feea4e3
+      internalID: 79729426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2970
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a705737933b4a4e9a2a664676816de
+      internalID: -1525743269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2970
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f008a719214812f46b49962464a69341
+      internalID: 1448954089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2970
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8147bbc54609e49a4b85aeaded1d07
+      internalID: 43784794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2673
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910694712d1f46f458514ef64154cace
+      internalID: -881556670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2673
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9dd2c4299fb2fd4b85bf06cf154f972
+      internalID: 2101094238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2673
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3644e67d8f48204b8de69d0c7246992
+      internalID: -1511149889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2673
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defc448889450d342a1c2274642b440d
+      internalID: -775097803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2673
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5006d2aca162d83448f80bb516b46de4
+      internalID: 154355646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2673
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c863022d28ac13a4e8f0d47b3af5a989
+      internalID: 1931255883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2673
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a33ad594c7de4459ffd1e8c4e889b7
+      internalID: -2040565812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2376
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fcceb427228cc499bd7bc2ea78b894
+      internalID: 2084843305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2376
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6d1b044e6bd504ab3223429552d1dc
+      internalID: 697045914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2376
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86aa38e71d54dd74c87f504c68c8f5c5
+      internalID: -427483341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2376
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b14062b65d8ae74790dafd0b8db88a0
+      internalID: 1223903883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2376
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82346c39a6d51364f822a14037d5be8a
+      internalID: -13303038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2376
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9e1294d0c29b741b54524400231be8
+      internalID: -1884106410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2376
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e850e27e001feca48beea34cd1140d4b
+      internalID: 298612563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2079
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b02e575ad062342bfa38b86183857b
+      internalID: 738530295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2079
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895ada4a2706885408af48b9c834dadf
+      internalID: 1240018006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2079
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c11e86b8e37bec4896986567f84c681
+      internalID: 1584904221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2079
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84c67172ecac464bae74e5d294a90ae
+      internalID: -786416292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2079
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6eb4535483a884281f5175ea5ebd6a
+      internalID: 241751143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2079
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ca255151f9d5b4094ca5737554e5e1
+      internalID: 431124820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2079
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6483aad3def33d843bd351fc477e5c31
+      internalID: -1698359600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1782
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208aaeba4ec71764ea10e53b02f2de24
+      internalID: -1841975416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1782
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89fcfcff9f2ac4f4e9e2328eb523bed8
+      internalID: 1794057452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1782
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0522268a41641ee40b2094968d75c9a7
+      internalID: -1562007700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1782
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3dda9c9b954c0468f082d98be13a7c
+      internalID: 69747072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1782
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1c157b6e5c7cb4fa5a4aaaebc835b5
+      internalID: 1501757463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1782
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9791841a62559b14a87003d60b914300
+      internalID: -1476660487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1782
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82602824c7da514ebe6b46f45d8417d
+      internalID: -302558928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1485
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71851b09294d3e4199ca58d00d42aa7
+      internalID: 680143683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1485
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276262da797bb3848bc30c546ed1580f
+      internalID: -192114453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1485
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5eb0d210783cc4896b7387aa9bef97
+      internalID: -299456547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1485
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176e665ee32bf2a4e9f13cb7f1bf1825
+      internalID: -902345862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1485
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983eeeb56ed0b54478e78e896ed97c68
+      internalID: 256277846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1485
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f1ea7915245cb40af5ffd48f20b18a
+      internalID: 1015264201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1485
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1a4f6bb05a1b94a81e259958411eca
+      internalID: -1607199829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1188
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cce9227e664924c891668f39c65452
+      internalID: 1432417737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1188
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4827bfa26a22d754398bf6f8f062b6a0
+      internalID: 677261482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1188
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95032f867593e842907bd49439f18d3
+      internalID: -1967200349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1188
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232cf890e7ea68945a4dda97854fc29a
+      internalID: 1525571093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1188
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6827de618e390014d9990222f33d8f0a
+      internalID: -2036350872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1188
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8eb805e2c6e62f4a830da6a33e0871e
+      internalID: 1357776113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1188
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ac92e943b048f42bfbd681b2ef5cb6
+      internalID: 281907248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 891
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e831c9850cf2afe4a854c93f18d729b5
+      internalID: -210637851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 891
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4ddda443801d04cb651bd78979eb34
+      internalID: 1905576778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 891
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d1a22359b12254aa406f5567fc002c
+      internalID: 102896402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 891
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0787aa96f5077fb42b107bf327b1eb51
+      internalID: -1599811793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 891
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a23ecda1fcb91a42a7e34116aad98de
+      internalID: -78355621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 891
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef71635d731234d40a0baa07d9381105
+      internalID: 1444758916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 891
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6978e09452bbddc4da5763413ad567c1
+      internalID: -1675196791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 594
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430b72968cfe46540a5af309f0a8e89e
+      internalID: 667234851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 594
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c017f185bc56ae34ab08c6816920af0d
+      internalID: 979732235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 594
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d9625301a1bd84dbbbc3532785e900
+      internalID: 342359827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 594
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e1fe78b96613a409b2d3cb8efb5b69
+      internalID: 225908137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 594
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec596798874ad44bbe714ad3f7240d4
+      internalID: -724515861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 594
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858cc2a40ad96bb458cf0e3fc582b6c4
+      internalID: -2073618299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 594
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b56f3fb91ae4c44ac28701c8a74687
+      internalID: -1211321173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 297
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e72b06c59364be46a38a3a727aff0ed
+      internalID: 1104053985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 297
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b0df4e4ed48d443a2cbbb33440e228
+      internalID: 1632502559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 297
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2d8933e0aca484bb947eca55bc4f91
+      internalID: -1649311599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 297
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bea4d2fca4d45040a047ef68e271352
+      internalID: -386467724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 297
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812c63060a3d6af48a00b15778eac17f
+      internalID: 1832009047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 297
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9247cbd4a163e41ad62a9e06add549
+      internalID: -2058214665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 297
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c321fc15ac1acb42b7bff8055ef1b43
+      internalID: -42434201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83fc466b57080d4888a6f53191f9b5b
+      internalID: -871288474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f5f5e7597ccef4d8b7b8a786c380fa
+      internalID: 1642764549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 0
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033a8ff1f9f3a3445b2b453d465b8f03
+      internalID: 1489559930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 0
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9d58b9b092c8747add203d08e19eda
+      internalID: -1106248435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 0
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff335c54009b884684e2b03e22944aa
+      internalID: 35995904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 0
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5633dde5d291c84ab06720227c26a77
+      internalID: -1989650533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvLoopingFireSpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 0
+        width: 498
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab2696dd107a594185363042c25f8c2
+      internalID: 798914790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c74b672bc6403d54786f8079247cc237
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EnvLoopingFireSpriteSheet_0: 1480380276
+      EnvLoopingFireSpriteSheet_1: 70567323
+      EnvLoopingFireSpriteSheet_10: 748742099
+      EnvLoopingFireSpriteSheet_100: -1649311599
+      EnvLoopingFireSpriteSheet_101: -386467724
+      EnvLoopingFireSpriteSheet_102: 1832009047
+      EnvLoopingFireSpriteSheet_103: -2058214665
+      EnvLoopingFireSpriteSheet_104: -42434201
+      EnvLoopingFireSpriteSheet_105: -871288474
+      EnvLoopingFireSpriteSheet_106: 1642764549
+      EnvLoopingFireSpriteSheet_107: 1489559930
+      EnvLoopingFireSpriteSheet_108: -1106248435
+      EnvLoopingFireSpriteSheet_109: 35995904
+      EnvLoopingFireSpriteSheet_11: -1068881260
+      EnvLoopingFireSpriteSheet_110: -1989650533
+      EnvLoopingFireSpriteSheet_111: 798914790
+      EnvLoopingFireSpriteSheet_12: -1006592445
+      EnvLoopingFireSpriteSheet_13: -590910214
+      EnvLoopingFireSpriteSheet_14: -2126482128
+      EnvLoopingFireSpriteSheet_15: -204783163
+      EnvLoopingFireSpriteSheet_16: -1892362393
+      EnvLoopingFireSpriteSheet_17: -229739422
+      EnvLoopingFireSpriteSheet_18: 1922022312
+      EnvLoopingFireSpriteSheet_19: 1566939286
+      EnvLoopingFireSpriteSheet_2: 419617636
+      EnvLoopingFireSpriteSheet_20: 345522875
+      EnvLoopingFireSpriteSheet_21: -1212530409
+      EnvLoopingFireSpriteSheet_22: 437881456
+      EnvLoopingFireSpriteSheet_23: -67153480
+      EnvLoopingFireSpriteSheet_24: -777435453
+      EnvLoopingFireSpriteSheet_25: -1434009068
+      EnvLoopingFireSpriteSheet_26: -1381641368
+      EnvLoopingFireSpriteSheet_27: 1868859158
+      EnvLoopingFireSpriteSheet_28: 248717028
+      EnvLoopingFireSpriteSheet_29: -501627262
+      EnvLoopingFireSpriteSheet_3: -1678888408
+      EnvLoopingFireSpriteSheet_30: -1042948949
+      EnvLoopingFireSpriteSheet_31: 1103778447
+      EnvLoopingFireSpriteSheet_32: 1367476579
+      EnvLoopingFireSpriteSheet_33: 1492485425
+      EnvLoopingFireSpriteSheet_34: 26141899
+      EnvLoopingFireSpriteSheet_35: 212794174
+      EnvLoopingFireSpriteSheet_36: -1053420821
+      EnvLoopingFireSpriteSheet_37: -716500100
+      EnvLoopingFireSpriteSheet_38: 79729426
+      EnvLoopingFireSpriteSheet_39: -1525743269
+      EnvLoopingFireSpriteSheet_4: -396472838
+      EnvLoopingFireSpriteSheet_40: 1448954089
+      EnvLoopingFireSpriteSheet_41: 43784794
+      EnvLoopingFireSpriteSheet_42: -881556670
+      EnvLoopingFireSpriteSheet_43: 2101094238
+      EnvLoopingFireSpriteSheet_44: -1511149889
+      EnvLoopingFireSpriteSheet_45: -775097803
+      EnvLoopingFireSpriteSheet_46: 154355646
+      EnvLoopingFireSpriteSheet_47: 1931255883
+      EnvLoopingFireSpriteSheet_48: -2040565812
+      EnvLoopingFireSpriteSheet_49: 2084843305
+      EnvLoopingFireSpriteSheet_5: 406469311
+      EnvLoopingFireSpriteSheet_50: 697045914
+      EnvLoopingFireSpriteSheet_51: -427483341
+      EnvLoopingFireSpriteSheet_52: 1223903883
+      EnvLoopingFireSpriteSheet_53: -13303038
+      EnvLoopingFireSpriteSheet_54: -1884106410
+      EnvLoopingFireSpriteSheet_55: 298612563
+      EnvLoopingFireSpriteSheet_56: 738530295
+      EnvLoopingFireSpriteSheet_57: 1240018006
+      EnvLoopingFireSpriteSheet_58: 1584904221
+      EnvLoopingFireSpriteSheet_59: -786416292
+      EnvLoopingFireSpriteSheet_6: -1468774000
+      EnvLoopingFireSpriteSheet_60: 241751143
+      EnvLoopingFireSpriteSheet_61: 431124820
+      EnvLoopingFireSpriteSheet_62: -1698359600
+      EnvLoopingFireSpriteSheet_63: -1841975416
+      EnvLoopingFireSpriteSheet_64: 1794057452
+      EnvLoopingFireSpriteSheet_65: -1562007700
+      EnvLoopingFireSpriteSheet_66: 69747072
+      EnvLoopingFireSpriteSheet_67: 1501757463
+      EnvLoopingFireSpriteSheet_68: -1476660487
+      EnvLoopingFireSpriteSheet_69: -302558928
+      EnvLoopingFireSpriteSheet_7: 760668567
+      EnvLoopingFireSpriteSheet_70: 680143683
+      EnvLoopingFireSpriteSheet_71: -192114453
+      EnvLoopingFireSpriteSheet_72: -299456547
+      EnvLoopingFireSpriteSheet_73: -902345862
+      EnvLoopingFireSpriteSheet_74: 256277846
+      EnvLoopingFireSpriteSheet_75: 1015264201
+      EnvLoopingFireSpriteSheet_76: -1607199829
+      EnvLoopingFireSpriteSheet_77: 1432417737
+      EnvLoopingFireSpriteSheet_78: 677261482
+      EnvLoopingFireSpriteSheet_79: -1967200349
+      EnvLoopingFireSpriteSheet_8: -1930685123
+      EnvLoopingFireSpriteSheet_80: 1525571093
+      EnvLoopingFireSpriteSheet_81: -2036350872
+      EnvLoopingFireSpriteSheet_82: 1357776113
+      EnvLoopingFireSpriteSheet_83: 281907248
+      EnvLoopingFireSpriteSheet_84: -210637851
+      EnvLoopingFireSpriteSheet_85: 1905576778
+      EnvLoopingFireSpriteSheet_86: 102896402
+      EnvLoopingFireSpriteSheet_87: -1599811793
+      EnvLoopingFireSpriteSheet_88: -78355621
+      EnvLoopingFireSpriteSheet_89: 1444758916
+      EnvLoopingFireSpriteSheet_9: 638091467
+      EnvLoopingFireSpriteSheet_90: -1675196791
+      EnvLoopingFireSpriteSheet_91: 667234851
+      EnvLoopingFireSpriteSheet_92: 979732235
+      EnvLoopingFireSpriteSheet_93: 342359827
+      EnvLoopingFireSpriteSheet_94: 225908137
+      EnvLoopingFireSpriteSheet_95: -724515861
+      EnvLoopingFireSpriteSheet_96: -2073618299
+      EnvLoopingFireSpriteSheet_97: -1211321173
+      EnvLoopingFireSpriteSheet_98: 1104053985
+      EnvLoopingFireSpriteSheet_99: 1632502559
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
