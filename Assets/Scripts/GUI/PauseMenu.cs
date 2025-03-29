@@ -12,16 +12,13 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
-                //ppVolume.enabled = false;
                 ResumeGame();
             } else
             {
-                //ppVolume.enabled = true;
                 PauseGame();
             }
         } 
@@ -29,8 +26,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        //PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
-        //ppVolume.enabled = false;
+        CursorManager.instance.CaptureCursor();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -38,6 +34,7 @@ public class PauseMenu : MonoBehaviour
 
     void PauseGame()
     {
+        CursorManager.instance.ReleaseCursor();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
