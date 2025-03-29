@@ -132,6 +132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 1
-  sfxVolume: 1
-  ambientVolume: 1
+  musicVolume: 0.627
+  sfxVolume: 0.67
+  ambientVolume: 0.81

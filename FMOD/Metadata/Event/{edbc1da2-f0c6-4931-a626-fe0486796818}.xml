@@ -38,7 +38,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>Fireplace</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{b6770cc5-a214-4b8e-bc5e-d7983fee345a}</destination>
@@ -143,7 +143,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 	</object>
 	<object class="EventMixerMaster" id="{ebfaca3c-6c62-4fbb-a08d-7345aecfcfc4}">
 		<property name="volume">
-			<value>-18.5</value>
+			<value>10</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{a79f98ba-cc8b-4451-b959-b90672ce775e}</destination>
@@ -217,6 +217,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 	<object class="MixerBusEffectChain" id="{4c637de4-b9aa-4d1a-8af8-d0f0b4380f3e}">
 		<relationship name="effects">
 			<destination>{7eb49c47-0d22-4e1b-a786-68161ffc4a56}</destination>
+			<destination>{f0ff1190-6a1b-4b59-b64c-a68de28539a5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7cc73ca0-2e2a-4fd8-a6d1-24e26a471bc6}" />
@@ -232,10 +233,16 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 	<object class="MixerBusEffectChain" id="{f2ebbf6e-3647-4262-8efe-b3462e6b7531}">
 		<relationship name="effects">
 			<destination>{c902fedf-e162-4562-a9c6-3aa5050a7425}</destination>
+			<destination>{dc93d0ab-ce99-4943-93e7-28657372668f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{283a790b-9723-48e3-9437-daadc9cd5e25}" />
 	<object class="MixerBusFader" id="{7eb49c47-0d22-4e1b-a786-68161ffc4a56}" />
+	<object class="GainEffect" id="{f0ff1190-6a1b-4b59-b64c-a68de28539a5}">
+		<property name="gain">
+			<value>0.5</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{b110edf6-be75-49fa-b1f7-0be908b9a32b}">
 		<relationship name="parameter">
 			<destination>{1eee7926-9ab1-4edd-93f0-61be04a652f0}</destination>
@@ -246,12 +253,17 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{c902fedf-e162-4562-a9c6-3aa5050a7425}" />
+	<object class="SpatialiserEffect" id="{dc93d0ab-ce99-4943-93e7-28657372668f}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{db798c94-c9d1-47b6-bd06-74f043e4425c}">
 		<property name="position">
 			<value>0.35000000000000003</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>10</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{cf3f6d25-204c-49e3-9254-ecfb605416ff}">
