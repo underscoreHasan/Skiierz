@@ -181,7 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawScale: 2
-  accelScale: 3.5
+  accelScale: 4
+  carveAccelScale: 1.55
   chargeCurve:
     serializedVersion: 2
     m_Curve:
@@ -208,7 +209,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   chargeTimeSecondsElapsed: 0
   chargeTimeSeconds: 0.7
-  releaseUpForce: 500
+  releaseUpForce: 200
   releaseForceSpeedScale: 0.1
   suspensionFwd: {fileID: 321369637988115592}
   suspensionRear: {fileID: 321369637988115590}
@@ -227,6 +228,19 @@ MonoBehaviour:
   jointElbowBendFactor: 40
   jointBendTarget: 0
   jointLerpFactor: 2
+  jointPelvis: {fileID: 7378817298692691635}
+  pelvisPositionNeutral: {x: 0, y: 0, z: 0}
+  footTargetL: {fileID: 321369637813557883}
+  footTargetLNeutral: {x: 0, y: 0, z: 0}
+  footTargetR: {fileID: 321369638715068406}
+  footTargetRNeutral: {x: 0, y: 0, z: 0}
+  pelvisOffsetChargeFactor: 0.5
+  pelvisOffsetAccelerationFactor: 0.1
+  pelvisOffsetStopFactor: 0.5
+  pelvisOffsetMax: 0.75
+  pelvisOffset: 0
+  pelvisOffsetLerpFactor: 0.04
+  pelvisOffsetNeutral: 0.25
 --- !u!114 &1621188033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +345,7 @@ MonoBehaviour:
   dismountTimeElapsedSeconds: 0
   lastSpawnPoint: {x: 0, y: 0, z: 0}
   lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  lastSpawnVelocity: {x: 0, y: 0, z: 0}
   playerTrail: {fileID: 6457711909609441836}
   corePhys: {fileID: 0}
   minVelocityToDie: 7.5
@@ -1538,6 +1553,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a4ee6d903690343a64a146c658eb0e, type: 3}
+--- !u!4 &321369637813557883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2074629565, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &321369638715068406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 837042224, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &640113457389290650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 907361214872652636, guid: 53a4ee6d903690343a64a146c658eb0e,

@@ -40,11 +40,18 @@ public class CameraManager : MonoBehaviour
         
         Vector3 targetCamPos = camTarget.position + targetCamOffset;
 
-        // make a raycast to ensure camera doesn't smack into ground (but can still phase through things while lerping)
+        // make a raycast to ensure camera doesn't smack into ground
         RaycastHit hit;
         bool didHit = Physics.Raycast(camTarget.position, targetCamOffset, out hit, cameraDistance);
         if (didHit) {
             targetCamPos = hit.point;
+        }
+
+        // make a raycast to ensure camera isn't smacking into ground
+        Vector3 camDisp = transform.position - camTarget.position;
+        didHit = Physics.Raycast(camTarget.position, camDisp, out hit, camDisp.magnitude);
+        if (didHit) {
+            transform.position = hit.point;
         }
 
         transform.position = Vector3.Lerp(
