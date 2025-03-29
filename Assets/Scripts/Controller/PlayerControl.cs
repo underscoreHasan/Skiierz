@@ -36,6 +36,19 @@ public class PlayerControl : MonoBehaviour
     public float jointBendTarget = 0;
     public float jointLerpFactor;
 
+    public Transform jointPelvis;
+    public Vector3 pelvisPositionNeutral;
+    public Transform footTargetL;
+    public Vector3 footTargetLNeutral;
+    public Transform footTargetR;
+    public Vector3 footTargetRNeutral;
+    public float pelvisOffsetChargeFactor;
+    public float pelvisOffsetAccelerationFactor;
+    public float pelvisOffsetMax;
+    public float pelvisOffset;
+    public float pelvisOffsetLerpFactor;
+    public float pelvisOffsetNeutral;
+
     private Rigidbody physics;
 
     private bool holdJump;
@@ -44,10 +57,19 @@ public class PlayerControl : MonoBehaviour
     private float verticalInput;
     private PlayerDownforce downforceHandler;
 
-    void Start()
+    private Vector3 lastVelocity;
+
+    private void UpdateLastVelocity() {
+        lastVelocity = 0.5f * (lastVelocity + physics.velocity);
+    }
+
+    void Awake()
     {
         physics = GetComponent<Rigidbody>();
         downforceHandler = GetComponent<PlayerDownforce>();
+        footTargetLNeutral = footTargetL.localPosition;
+        footTargetRNeutral = footTargetR.localPosition;
+        pelvisPositionNeutral = jointPelvis.localPosition;
     }
 
     void Update()
@@ -70,7 +92,26 @@ public class PlayerControl : MonoBehaviour
 
         jointElbowL.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
         jointElbowR.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
-    
+
+        float chargeFactor = Mathf.Min(1.0f, chargeTimeSecondsElapsed / chargeTimeSeconds) * pelvisOffsetChargeFactor;
+        Vector3 acceleration = (physics.velocity - lastVelocity) / Mathf.Max(0.001f, Time.deltaTime);
+        float accelerationFactor = Vector3.Dot(acceleration, transform.rotation * Vector3.up) * pelvisOffsetAccelerationFactor;
+        print(chargeFactor);
+
+        float pelvisOffsetTarget = Mathf.Clamp(pelvisOffsetNeutral + chargeFactor + accelerationFactor, 0.0f, pelvisOffsetMax);
+        pelvisOffset = Mathf.Lerp(pelvisOffset, pelvisOffsetTarget, pelvisOffsetLerpFactor);
+
+        jointPelvis.localPosition = jointPelvis.InverseTransformVector( 
+            jointPelvis.TransformVector(pelvisPositionNeutral) 
+            + transform.rotation * Vector3.right * pelvisOffset);
+
+        footTargetL.localPosition = footTargetL.InverseTransformVector(
+            footTargetL.TransformVector(footTargetLNeutral)
+            + transform.rotation * Vector3.left * pelvisOffset * 1.5f);
+
+        footTargetR.localPosition = footTargetR.InverseTransformVector(
+            footTargetR.TransformVector(footTargetRNeutral)
+            + transform.rotation * Vector3.left * pelvisOffset * 1.5f);
     }
 
     void FixedUpdate()
@@ -96,11 +137,11 @@ public class PlayerControl : MonoBehaviour
             physics.AddTorque(0, yaw * yawScale, 0, ForceMode.Acceleration);
         }
 
-
         // cant apply acceleration if in the air
         if (!(suspensionFwd.isGrounded || suspensionRear.isGrounded))
         {
             playerSound.UpdateSkiingSoundIntensity(0);
+            UpdateLastVelocity();
             return;
         }
 
@@ -129,6 +170,8 @@ public class PlayerControl : MonoBehaviour
 
             playerSound.PlayJumpSound(upFactor);
         }
+
+        UpdateLastVelocity();
     }
 }
 

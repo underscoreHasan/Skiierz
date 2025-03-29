@@ -228,6 +228,18 @@ MonoBehaviour:
   jointElbowBendFactor: 40
   jointBendTarget: 0
   jointLerpFactor: 2
+  jointPelvis: {fileID: 7378817298692691635}
+  pelvisPositionNeutral: {x: 0, y: 0, z: 0}
+  footTargetL: {fileID: 321369637813557883}
+  footTargetLNeutral: {x: 0, y: 0, z: 0}
+  footTargetR: {fileID: 321369638715068406}
+  footTargetRNeutral: {x: 0, y: 0, z: 0}
+  pelvisOffsetChargeFactor: 0.5
+  pelvisOffsetAccelerationFactor: 0.1
+  pelvisOffsetMax: 0.5
+  pelvisOffset: 0
+  pelvisOffsetLerpFactor: 0.05
+  pelvisOffsetNeutral: 0.25
 --- !u!114 &1621188033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,6 +1552,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a4ee6d903690343a64a146c658eb0e, type: 3}
+--- !u!4 &321369637813557883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2074629565, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &321369638715068406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 837042224, guid: 53a4ee6d903690343a64a146c658eb0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638976966598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &640113457389290650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 907361214872652636, guid: 53a4ee6d903690343a64a146c658eb0e,
