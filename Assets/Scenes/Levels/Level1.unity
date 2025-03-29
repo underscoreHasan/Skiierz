@@ -121867,6 +121867,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6942431379329375673, guid: 19080dd63308acf4a8977fc37433e9f9,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942431379329375673, guid: 19080dd63308acf4a8977fc37433e9f9,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731724397152412296, guid: 19080dd63308acf4a8977fc37433e9f9,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8582398602111302508, guid: 19080dd63308acf4a8977fc37433e9f9,
         type: 3}
       propertyPath: m_Name
