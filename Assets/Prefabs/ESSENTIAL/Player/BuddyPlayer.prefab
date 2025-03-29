@@ -371,7 +371,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   fadeInTime: 0.5
-  maxRagdollTime: 15
+  maxRagdollTime: 7
   ragdollTimeElapsed: 0
   trackingCam: {fileID: 0}
   lastTrackPos: {x: 0, y: 0, z: 0}
