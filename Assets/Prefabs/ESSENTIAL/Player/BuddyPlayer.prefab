@@ -236,7 +236,8 @@ MonoBehaviour:
   footTargetRNeutral: {x: 0, y: 0, z: 0}
   pelvisOffsetChargeFactor: 0.5
   pelvisOffsetAccelerationFactor: 0.1
-  pelvisOffsetMax: 0.5
+  pelvisOffsetStopFactor: 0.5
+  pelvisOffsetMax: 0.75
   pelvisOffset: 0
   pelvisOffsetLerpFactor: 0.04
   pelvisOffsetNeutral: 0.25
