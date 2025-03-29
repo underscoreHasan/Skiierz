@@ -29,6 +29,9 @@ public class CollisionHandler : MonoBehaviour
     public AnimationCurve fadeCurve;
     public float fadeInTime;
 
+    public float maxRagdollTime;
+    public float ragdollTimeElapsed;
+
     public Transform trackingCam;
     public Vector3 lastTrackPos;
     public Quaternion lastTrackRot;
@@ -93,11 +96,14 @@ public class CollisionHandler : MonoBehaviour
 
             // clear timing stuff
             minVelocityTimeElapsed = 0.0f;
+            ragdollTimeElapsed = 0.0f;
             return;
         }
 
+        ragdollTimeElapsed += Time.deltaTime;
+
         // we need to be minimally moving for some time before we can start the fade out
-        if (minVelocityTimeElapsed < minVelocityTimeRequired) {
+        if (minVelocityTimeElapsed < minVelocityTimeRequired && (ragdollTimeElapsed < maxRagdollTime)) {
             // if we are moving at minimum velocity, we can start incrementing this timer
             if (corePhys.velocity.magnitude < minVelocityToDie) {
                 minVelocityTimeElapsed += Time.deltaTime;

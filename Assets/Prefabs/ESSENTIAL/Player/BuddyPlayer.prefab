@@ -327,7 +327,7 @@ MonoBehaviour:
   dismountSideVelocity: 12.5
   dismountBumperOffsetFactor: 0.75
   hasDismounted: 0
-  respawnTimeSeconds: 5
+  respawnTimeSeconds: 1
   dismountTimeElapsedSeconds: 0
   lastSpawnPoint: {x: 0, y: 0, z: 0}
   lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -370,7 +370,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  fadeInTime: 0.5
+  fadeInTime: 0.2
+  maxRagdollTime: 15
+  ragdollTimeElapsed: 0
   trackingCam: {fileID: 0}
   lastTrackPos: {x: 0, y: 0, z: 0}
   lastTrackRot: {x: 0, y: 0, z: 0, w: 0}
@@ -1129,6 +1131,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5780659707285069264, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5780659707285069271, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
       propertyPath: m_Enabled
@@ -1239,7 +1246,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5780659707285069271, guid: 06e650fb49dc91647baeb9ca00988116, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 06e650fb49dc91647baeb9ca00988116, type: 3}
 --- !u!137 &642692615563962812 stripped
 SkinnedMeshRenderer:
@@ -1247,6 +1255,26 @@ SkinnedMeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 321369638707192616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1569101397943649930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1275409933105161634, guid: 06e650fb49dc91647baeb9ca00988116,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638707192616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &439127497
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569101397943649930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: f2cc7f4b12f2dd84f81247361d94930b, type: 3}
 --- !u!4 &1855566167150646021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2140881505315172397, guid: 06e650fb49dc91647baeb9ca00988116,
