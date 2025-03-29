@@ -327,13 +327,13 @@ MonoBehaviour:
   dismountSideVelocity: 12.5
   dismountBumperOffsetFactor: 0.75
   hasDismounted: 0
-  respawnTimeSeconds: 1
+  respawnTimeSeconds: 2
   dismountTimeElapsedSeconds: 0
   lastSpawnPoint: {x: 0, y: 0, z: 0}
   lastSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
   playerTrail: {fileID: 6457711909609441836}
   corePhys: {fileID: 0}
-  minVelocityToDie: 5
+  minVelocityToDie: 7.5
   minVelocityTimeRequired: 2
   minVelocityTimeElapsed: 0
   fadeImage: {fileID: 0}
@@ -370,7 +370,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  fadeInTime: 0.2
+  fadeInTime: 0.5
   maxRagdollTime: 15
   ragdollTimeElapsed: 0
   trackingCam: {fileID: 0}
@@ -1134,7 +1134,7 @@ PrefabInstance:
     - target: {fileID: 5780659707285069264, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
       propertyPath: m_CollisionDetection
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5780659707285069271, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}

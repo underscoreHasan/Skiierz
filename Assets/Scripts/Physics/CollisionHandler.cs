@@ -110,7 +110,6 @@ public class CollisionHandler : MonoBehaviour
             } else {
                 minVelocityTimeElapsed = 0.0f;
             }
-            print(minVelocityTimeElapsed);
         } else {
             // only once the player has been moving at a minimum velocity for some time can
             // we start to respawn

@@ -121773,48 +121773,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1290523589043990951, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630034297039853551, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6203143589872040241, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 363d413f096caa840a289e6ab04be49d,
-        type: 2}
-    - target: {fileID: 6203143589872040241, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 6237714663021980503, guid: 363d413f096caa840a289e6ab04be49d,
-        type: 2}
-    - target: {fileID: 6203143589872040241, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6203143589872040246, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6203143590014113897, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6203143590068030324, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6203143590551507948, guid: 19080dd63308acf4a8977fc37433e9f9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -121830,28 +121788,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6203143590793033296, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6203143590793033299, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 363d413f096caa840a289e6ab04be49d,
-        type: 2}
-    - target: {fileID: 6203143590793033299, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 6237714663021980503, guid: 363d413f096caa840a289e6ab04be49d,
-        type: 2}
-    - target: {fileID: 6203143590793033299, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6203143590907181486, guid: 19080dd63308acf4a8977fc37433e9f9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -121860,26 +121796,6 @@ PrefabInstance:
     - target: {fileID: 6203143590907181486, guid: 19080dd63308acf4a8977fc37433e9f9,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6203143590920321799, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6942431379329375673, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_Maskable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6942431379329375673, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7731724397152412296, guid: 19080dd63308acf4a8977fc37433e9f9,
-        type: 3}
-      propertyPath: m_BlockingMask.m_Bits
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8582398602111302508, guid: 19080dd63308acf4a8977fc37433e9f9,
