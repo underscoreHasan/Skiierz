@@ -58,6 +58,7 @@ public class PlayerControl : MonoBehaviour
     private PlayerDownforce downforceHandler;
 
     private Vector3 lastVelocity;
+    private Vector3 lastAcceleration;
 
     private void UpdateLastVelocity() {
         lastVelocity = 0.5f * (lastVelocity + physics.velocity);
@@ -94,9 +95,11 @@ public class PlayerControl : MonoBehaviour
         jointElbowR.localRotation = Quaternion.Euler(Mathf.Abs(jointBendTarget * jointElbowBendFactor), 0.0f, 0.0f);
 
         float chargeFactor = Mathf.Min(1.0f, chargeTimeSecondsElapsed / chargeTimeSeconds) * pelvisOffsetChargeFactor;
+
         Vector3 acceleration = (physics.velocity - lastVelocity) / Mathf.Max(0.001f, Time.deltaTime);
+        acceleration = Vector3.Lerp(acceleration, lastAcceleration, 0.4f);
         float accelerationFactor = Vector3.Dot(acceleration, transform.rotation * Vector3.up) * pelvisOffsetAccelerationFactor;
-        print(chargeFactor);
+        
 
         float pelvisOffsetTarget = Mathf.Clamp(pelvisOffsetNeutral + chargeFactor + accelerationFactor, 0.0f, pelvisOffsetMax);
         pelvisOffset = Mathf.Lerp(pelvisOffset, pelvisOffsetTarget, pelvisOffsetLerpFactor);
@@ -112,6 +115,8 @@ public class PlayerControl : MonoBehaviour
         footTargetR.localPosition = footTargetR.InverseTransformVector(
             footTargetR.TransformVector(footTargetRNeutral)
             + transform.rotation * Vector3.left * pelvisOffset * 1.5f);
+
+        lastAcceleration = acceleration;
     }
 
     void FixedUpdate()

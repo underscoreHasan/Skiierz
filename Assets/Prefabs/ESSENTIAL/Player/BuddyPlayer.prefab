@@ -238,7 +238,7 @@ MonoBehaviour:
   pelvisOffsetAccelerationFactor: 0.1
   pelvisOffsetMax: 0.5
   pelvisOffset: 0
-  pelvisOffsetLerpFactor: 0.05
+  pelvisOffsetLerpFactor: 0.04
   pelvisOffsetNeutral: 0.25
 --- !u!114 &1621188033
 MonoBehaviour:
