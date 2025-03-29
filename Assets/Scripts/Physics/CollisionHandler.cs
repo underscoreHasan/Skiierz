@@ -21,6 +21,8 @@ public class CollisionHandler : MonoBehaviour
     public Trail playerTrail;
 
     public Image fadeImage;
+    public AnimationCurve fadeCurve;
+    public float fadeInTime;
 
     private void Awake() {
         lastSpawnPoint = transform.position;
@@ -131,9 +133,18 @@ public class CollisionHandler : MonoBehaviour
     IEnumerator FadeCoroutine() {
         Color startColor = fadeImage.color;
 
+        // fade out
         while (hasDismounted) {
-            print("running");
-            float alpha = dismountTimeElapsedSeconds / respawnTimeSeconds;
+            float alpha = fadeCurve.Evaluate(dismountTimeElapsedSeconds / respawnTimeSeconds);
+            fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+            yield return null;
+        }
+
+        // fade back in
+        float fadeInSecondsElapsed = 0.0f;
+        while (fadeInSecondsElapsed < fadeInTime) {
+            fadeInSecondsElapsed += Time.deltaTime;
+            float alpha = 1.0f - fadeCurve.Evaluate(fadeInSecondsElapsed / fadeInTime);
             fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
             yield return null;
         }
