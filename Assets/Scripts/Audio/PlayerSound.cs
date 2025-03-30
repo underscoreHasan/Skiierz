@@ -72,7 +72,6 @@ public class PlayerSound : MonoBehaviour
     }
     public void PlayYellSound()
     {
-        Debug.Log("Play");
         yellSound.start();
     }
 
