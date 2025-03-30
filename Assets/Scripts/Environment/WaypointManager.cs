@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,14 @@ public class WaypointManager : MonoBehaviour
     List<Waypoint> waypoints = new List<Waypoint>();
     public int activeWaypointIndex = 0;
     public TimerUI timerUI;
+    public float fadeOutDelay;
+    public float fadeOutTime;
+    public AnimationCurve fadeCurve;
+    public float fadeInTime;
 
-    void Start()
+    private Image _fadeImage;
+
+    void Awake()
     {
         int index = 0;
         foreach (Transform child in transform)
@@ -22,6 +29,30 @@ public class WaypointManager : MonoBehaviour
             child.gameObject.SetActive(false);
         }
         waypoints[activeWaypointIndex].gameObject.SetActive(true);
+
+        // set fade image to full transparency
+        _fadeImage = GameObject.FindWithTag("FadeCanvas").GetComponent<Image>();
+        _fadeImage.color = Color.white;
+    }
+
+    private void Start() {
+        StartCoroutine(FadeInToLevel());
+    }
+
+    private IEnumerator FadeInToLevel() {
+        float fadeTime = 0.0f;
+        
+        while (fadeTime < fadeInTime) {
+            fadeTime += Time.deltaTime;
+            float alpha = 1.0f - fadeCurve.Evaluate(fadeTime / fadeInTime);
+            _fadeImage.color = new Color(1.0f, 1.0f, 1.0f, alpha);
+            yield return null;
+        }
+
+        _fadeImage.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+
+        // done
+        yield return 0;
     }
 
     private void HandleTrigger(Collider other, int childIndex)
@@ -55,16 +86,23 @@ public class WaypointManager : MonoBehaviour
     }
 
     private IEnumerator DelayedSceneLoad() {
-        // fade to white
+        // wait first
         float waitTime = 0.0f;
-        
-        Image fadeImage = GameObject.FindWithTag("FadeCanvas").GetComponent<Image>();
-        while (waitTime < 2.0f) {
+        while (waitTime < fadeOutDelay) {
             waitTime += Time.deltaTime;
-            fadeImage.color = new Color(1.0f, 1.0f, 1.0f, waitTime / 2.0f);
             yield return null;
         }
-        fadeImage.color = Color.white;
+
+        // begin fade to white
+        float fadeTime = 0.0f;
+        
+        while (fadeTime < fadeOutTime) {
+            fadeTime += Time.deltaTime;
+            float alpha = fadeCurve.Evaluate(fadeTime / fadeOutTime);
+            _fadeImage.color = new Color(1.0f, 1.0f, 1.0f, alpha);
+            yield return null;
+        }
+        _fadeImage.color = Color.white;
 
         int nextSceneIndex = (SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
