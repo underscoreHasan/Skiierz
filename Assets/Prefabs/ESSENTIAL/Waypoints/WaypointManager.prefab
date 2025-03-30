@@ -114,8 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeWaypointIndex: 0
   timerUI: {fileID: 0}
-  fadeOutDelay: 1
-  fadeOutTime: 2
+  fadeOutDelay: 2
+  fadeOutTime: 1
   fadeCurve:
     serializedVersion: 2
     m_Curve:
@@ -140,4 +140,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  fadeInTime: 2
+  fadeInTime: 1.5

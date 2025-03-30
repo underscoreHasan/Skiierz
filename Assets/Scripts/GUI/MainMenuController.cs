@@ -2,16 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-    public float delayBeforeSceneChange = 2.0f; // Adjust this as needed
-
-    //public void StartGame() {
-    //    PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
-    //    ppVolume.enabled = false;
-    //    StartCoroutine(DelayedSceneLoad("SlopeTestsA"));
-    //}
+    public float delayBeforeFade;
+    public float fadeTimeTotal;
 
     public void LoadLevelOne() {
         PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
@@ -25,21 +21,27 @@ public class MainMenuController : MonoBehaviour
         StartCoroutine(DelayedSceneLoad("Level2"));
     }
 
-    //public void LoadLevelThree() {
-    //    PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
-    //    ppVolume.enabled = false;
-    //    StartCoroutine(DelayedSceneLoad("TheBigJump"));
-    //}
-
-    //public void LoadLevelFour() {
-    //    PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
-    //    ppVolume.enabled = false;
-    //    StartCoroutine(DelayedSceneLoad("MovingUpInTheWorld"));
-    //}
-
     private IEnumerator DelayedSceneLoad(string scene) {
-        yield return new WaitForSeconds(delayBeforeSceneChange);
-        SceneManager.LoadScene(scene); // Replace with your actual scene name
+        // first delay
+        float waitTime = 0.0f;
+        while (waitTime < delayBeforeFade) {
+            waitTime += Time.deltaTime;
+            yield return null;
+        }
+        
+        // then fade to white
+        Image fadeImage = GameObject.FindWithTag("FadeCanvas").GetComponent<Image>();
+        float fadeTime = 0.0f;
+        while (fadeTime < fadeTimeTotal) {
+            fadeTime += Time.deltaTime;
+            float alpha = fadeTime / fadeTimeTotal;
+            fadeImage.color = new Color(1.0f, 1.0f, 1.0f, alpha);
+            yield return null;
+        }
+        fadeImage.color = Color.white;
+
+        // then load the game
+        SceneManager.LoadScene(scene);
     }
 
     public void LevelSelect() {
