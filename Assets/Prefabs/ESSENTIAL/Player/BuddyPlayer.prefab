@@ -256,11 +256,11 @@ MonoBehaviour:
   suspFwd: {fileID: 321369637988115592}
   suspRear: {fileID: 321369637988115590}
   staticFrictionFactor: 0.3
-  dynamicFrictionFactor: 0.05
+  dynamicFrictionFactor: 0.1
   sideFrictionFactor: 3
   sideTorqueFactor: 3.5
   sideTorqueMaxOrthagonality: 0.4
-  groundNormalPushFactor: 7.5
+  groundNormalPushFactor: 15
 --- !u!114 &1621188032
 MonoBehaviour:
   m_ObjectHideFlags: 0
