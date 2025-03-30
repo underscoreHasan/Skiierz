@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawScale: 2
-  accelScale: 4
+  accelScale: 3.5
   carveAccelScale: 1.55
   chargeCurve:
     serializedVersion: 2
@@ -260,7 +260,7 @@ MonoBehaviour:
   sideFrictionFactor: 3
   sideTorqueFactor: 3.5
   sideTorqueMaxOrthagonality: 0.4
-  groundNormalPushFactor: 10
+  groundNormalPushFactor: 7.5
 --- !u!114 &1621188032
 MonoBehaviour:
   m_ObjectHideFlags: 0
