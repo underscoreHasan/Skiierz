@@ -8,6 +8,7 @@ public class MainMenuController : MonoBehaviour
 {
     public float delayBeforeFade;
     public float fadeTimeTotal;
+    public AnimationCurve fadeCurve;
 
     public void LoadLevelOne() {
         PostProcessVolume ppVolume = Camera.main.gameObject.GetComponent<PostProcessVolume>();
@@ -23,18 +24,14 @@ public class MainMenuController : MonoBehaviour
 
     private IEnumerator DelayedSceneLoad(string scene) {
         // first delay
-        float waitTime = 0.0f;
-        while (waitTime < delayBeforeFade) {
-            waitTime += Time.deltaTime;
-            yield return null;
-        }
-        
+        yield return new WaitForSeconds(delayBeforeFade);
+
         // then fade to white
         Image fadeImage = GameObject.FindWithTag("FadeCanvas").GetComponent<Image>();
         float fadeTime = 0.0f;
         while (fadeTime < fadeTimeTotal) {
             fadeTime += Time.deltaTime;
-            float alpha = fadeTime / fadeTimeTotal;
+            float alpha = fadeCurve.Evaluate(fadeTime / fadeTimeTotal);
             fadeImage.color = new Color(1.0f, 1.0f, 1.0f, alpha);
             yield return null;
         }
@@ -42,10 +39,6 @@ public class MainMenuController : MonoBehaviour
 
         // then load the game
         SceneManager.LoadScene(scene);
-    }
-
-    public void LevelSelect() {
-
     }
 
     public void QuitGame()
