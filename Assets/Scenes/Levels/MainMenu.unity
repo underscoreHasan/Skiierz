@@ -22338,31 +22338,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
-        type: 3}
-      propertyPath: <music>k__BackingField.Path
-      value: event:/Music/Main Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
-        type: 3}
-      propertyPath: <music>k__BackingField.Guid.Data1
-      value: 2113472704
-      objectReference: {fileID: 0}
-    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
-        type: 3}
-      propertyPath: <music>k__BackingField.Guid.Data2
-      value: 1318167216
-      objectReference: {fileID: 0}
-    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
-        type: 3}
-      propertyPath: <music>k__BackingField.Guid.Data3
-      value: -1215662936
-      objectReference: {fileID: 0}
-    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
-        type: 3}
-      propertyPath: <music>k__BackingField.Guid.Data4
-      value: 378231091
-      objectReference: {fileID: 0}
     - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
         type: 3}
       propertyPath: m_RootOrder
@@ -22421,17 +22396,17 @@ PrefabInstance:
     - target: {fileID: 3495529352941711692, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
         type: 3}
       propertyPath: sfxVolume
-      value: 0.689
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3495529352941711692, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
         type: 3}
       propertyPath: musicVolume
-      value: 0.742
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3495529352941711692, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
         type: 3}
       propertyPath: ambientVolume
-      value: 0.164
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3495529352941711693, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
         type: 3}
