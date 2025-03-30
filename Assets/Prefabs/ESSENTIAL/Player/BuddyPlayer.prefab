@@ -1369,6 +1369,31 @@ SkinnedMeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 321369638707192616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4901561104746631379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4643330105781236731, guid: 06e650fb49dc91647baeb9ca00988116,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638707192616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1767199694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901561104746631379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5767e69fc2450164599d3cc3955f4ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSound: {fileID: 1572499978333871819}
+  phys: {fileID: 0}
+  collisionVelocityScreamThreshold: 15
+  minTimeToNextScream: 0.5
+  maxTimeToNextScream: 1
+  timeNeededToNextScream: 0
+  timeSinceLastScream: 0
 --- !u!4 &8594200045598294316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8300416222167867908, guid: 06e650fb49dc91647baeb9ca00988116,
