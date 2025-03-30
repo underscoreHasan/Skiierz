@@ -165,7 +165,7 @@ MonoBehaviour:
   suspensionFwd: {fileID: 321369637988115592}
   suspensionCenter: {fileID: 321369637988115591}
   suspensionRear: {fileID: 321369637988115590}
-  downForceFactor: 10
+  downForceFactor: 15
   timeOffGroundToDisableDFSeconds: 0.5
   _jumpPauseTimer: 0
 --- !u!114 &1621188034
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawScale: 2
-  accelScale: 4
+  accelScale: 3.5
   carveAccelScale: 1.55
   chargeCurve:
     serializedVersion: 2
@@ -260,7 +260,7 @@ MonoBehaviour:
   sideFrictionFactor: 3
   sideTorqueFactor: 3.5
   sideTorqueMaxOrthagonality: 0.4
-  groundNormalPushFactor: 10
+  groundNormalPushFactor: 7.5
 --- !u!114 &1621188032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321369638514587964}
   serializedVersion: 2
-  m_Mass: 200
+  m_Mass: 600
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -928,6 +928,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 38353879234637941, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
+      propertyPath: m_Mass
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 38353879234637941, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -935,6 +940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 612947544862312024, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
+      propertyPath: m_Mass
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 612947544862312024, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
@@ -975,6 +985,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312105109316726964, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
+      propertyPath: m_Mass
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 1312105109316726964, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
@@ -1103,6 +1118,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4743040358398709977, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
+      propertyPath: m_Mass
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743040358398709977, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -1110,6 +1130,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762302936334511272, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
+      propertyPath: m_Mass
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4762302936334511272, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
@@ -1130,6 +1155,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435085451145272780, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
+      propertyPath: m_Mass
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5435085451145272780, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
@@ -1173,6 +1203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6283075419785701615, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
+      propertyPath: m_Mass
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283075419785701615, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -1188,6 +1223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6821022024510960439, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
+      propertyPath: m_Mass
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821022024510960439, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -1198,6 +1238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965204145284076089, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
+      propertyPath: m_Mass
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965204145284076089, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -1205,6 +1250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556985021512564096, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
+      propertyPath: m_Mass
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7556985021512564096, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
@@ -1250,6 +1300,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930137032098340346, guid: 06e650fb49dc91647baeb9ca00988116,
+        type: 3}
+      propertyPath: m_Mass
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8930137032098340346, guid: 06e650fb49dc91647baeb9ca00988116,
         type: 3}
@@ -1314,6 +1369,31 @@ SkinnedMeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 321369638707192616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4901561104746631379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4643330105781236731, guid: 06e650fb49dc91647baeb9ca00988116,
+    type: 3}
+  m_PrefabInstance: {fileID: 321369638707192616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1767199694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901561104746631379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5767e69fc2450164599d3cc3955f4ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSound: {fileID: 1572499978333871819}
+  phys: {fileID: 0}
+  collisionVelocityScreamThreshold: 15
+  minTimeToNextScream: 0.5
+  maxTimeToNextScream: 1
+  timeNeededToNextScream: 0
+  timeSinceLastScream: 0
 --- !u!4 &8594200045598294316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8300416222167867908, guid: 06e650fb49dc91647baeb9ca00988116,
