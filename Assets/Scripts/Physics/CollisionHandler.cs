@@ -102,7 +102,7 @@ public class CollisionHandler : MonoBehaviour
             trackingCam.position = lastTrackPos;
             trackingCam.rotation = lastTrackRot;
             phys.velocity = lastSpawnVelocity;
-            lastSpawnVelocity *= 0.75f; // to prevent respawn deathloop, slow down respawn velocity each respawn
+            lastSpawnVelocity *= 0.4f; // to prevent respawn deathloop, slow down respawn velocity each respawn
 
             hasDismounted = false;
 
