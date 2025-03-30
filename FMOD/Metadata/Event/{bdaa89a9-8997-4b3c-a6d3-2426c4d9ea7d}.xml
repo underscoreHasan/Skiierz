@@ -83,7 +83,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<destination>{d98f535e-30d5-4a8d-b5a1-9104035d5354}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{3e1d1653-8bd5-4dbc-865e-cba8e8ded970}</destination>
+			<destination>{d4af9212-4b35-4f75-9521-072fb353da0a}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{a57bc95c-c1ca-43b6-a833-f777f23fc13e}" />
@@ -102,9 +102,6 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{66b123c7-d7df-417c-a19a-bdd478f26d30}">
-		<property name="volume">
-			<value>10</value>
-		</property>
 		<relationship name="modulators">
 			<destination>{df5a22d4-e6dd-4990-ab11-b5135bc9af35}</destination>
 		</relationship>
@@ -145,9 +142,6 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{fffe1ad8-8e03-4037-81ec-65a9e42911e4}">
-		<property name="volume">
-			<value>10</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -232,31 +226,26 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		<relationship name="effects">
 			<destination>{97176420-d672-4e2b-9809-ef3b9d735d49}</destination>
 			<destination>{9b2e6a87-0ef0-4b82-b042-2c5cc278fc46}</destination>
-			<destination>{35a953ba-ffc2-4e6a-8cc6-4c6748b49a07}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{bf5f89ff-8137-4a8f-8176-a39f30af3c42}" />
 	<object class="GainEffect" id="{3faabf23-bec9-4c55-bdba-56d913b5fe82}">
-		<property name="gain">
-			<value>10</value>
-		</property>
 		<relationship name="automators">
 			<destination>{2ee2c243-a540-48bc-9f79-5bf35497e191}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{15b1704c-ae16-45e0-b065-ad8ad42bcf5b}" />
-	<object class="GainEffect" id="{257457e0-8e58-433e-b0c8-3d6dcd868871}" />
+	<object class="GainEffect" id="{257457e0-8e58-433e-b0c8-3d6dcd868871}">
+		<property name="gain">
+			<value>-8</value>
+		</property>
+	</object>
 	<object class="GainEffect" id="{97176420-d672-4e2b-9809-ef3b9d735d49}">
 		<property name="gain">
 			<value>10</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{9b2e6a87-0ef0-4b82-b042-2c5cc278fc46}" />
-	<object class="GainEffect" id="{35a953ba-ffc2-4e6a-8cc6-4c6748b49a07}">
-		<property name="gain">
-			<value>10</value>
-		</property>
-	</object>
 	<object class="Automator" id="{2ee2c243-a540-48bc-9f79-5bf35497e191}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>gain</value>
