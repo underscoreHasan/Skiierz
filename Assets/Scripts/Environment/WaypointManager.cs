@@ -49,7 +49,7 @@ public class WaypointManager : MonoBehaviour
             yield return null;
         }
 
-        _fadeImage.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+        _fadeImage.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
 
         // done
         yield return 0;
