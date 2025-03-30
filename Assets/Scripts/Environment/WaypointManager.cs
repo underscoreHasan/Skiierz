@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WaypointManager : MonoBehaviour
 {
@@ -54,7 +55,17 @@ public class WaypointManager : MonoBehaviour
     }
 
     private IEnumerator DelayedSceneLoad() {
-        yield return new WaitForSeconds(2.0f);
+        // fade to white
+        float waitTime = 0.0f;
+        
+        Image fadeImage = GameObject.FindWithTag("FadeCanvas").GetComponent<Image>();
+        while (waitTime < 2.0f) {
+            waitTime += Time.deltaTime;
+            fadeImage.color = new Color(1.0f, 1.0f, 1.0f, waitTime / 2.0f);
+            yield return null;
+        }
+        fadeImage.color = Color.white;
+
         int nextSceneIndex = (SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
     }
