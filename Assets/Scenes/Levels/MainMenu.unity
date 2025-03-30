@@ -22338,6 +22338,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Path
+      value: event:/Music/Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data1
+      value: 2113472704
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data2
+      value: 1318167216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data3
+      value: -1215662936
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data4
+      value: 378231091
+      objectReference: {fileID: 0}
     - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
         type: 3}
       propertyPath: m_RootOrder
