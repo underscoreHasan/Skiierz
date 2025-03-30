@@ -129,7 +129,7 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 	</object>
 	<object class="EventMixerMaster" id="{6cb9af95-21c0-40ae-8353-15546c6004ac}">
 		<property name="volume">
-			<value>-16.5</value>
+			<value>10</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{a237ef80-1624-451e-bad2-9ebce4e840db}</destination>
@@ -168,6 +168,9 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{7689018f-94ae-41dc-980a-137cac4d4c04}">
+		<property name="isCutoff">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>2000</value>
 		</property>
@@ -206,6 +209,9 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 			<destination>{555f90e6-66b9-4847-b9a0-ffac916e3a22}</destination>
 			<destination>{2ac5a2b8-7278-4283-8dce-8efcd3aefc76}</destination>
 			<destination>{efd9541d-7543-4a05-be5e-8fbecbeef346}</destination>
+			<destination>{57038dce-acba-428a-a4fe-50c60bade146}</destination>
+			<destination>{40072a3b-7c4a-422d-8fec-dcfa483f35c6}</destination>
+			<destination>{6c29f490-8437-48b0-b215-2838d0cb7255}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{dacd16ce-9ef3-4edb-a8cf-7a6ccc0fcd2b}" />
@@ -276,6 +282,17 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 			<destination>{028d38fd-417b-0bad-290b-a30ea50da357}</destination>
 		</relationship>
 	</object>
+	<object class="GainEffect" id="{57038dce-acba-428a-a4fe-50c60bade146}">
+		<property name="gain">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{40072a3b-7c4a-422d-8fec-dcfa483f35c6}">
+		<property name="gain">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{6c29f490-8437-48b0-b215-2838d0cb7255}" />
 	<object class="AutomationCurve" id="{7a568198-d870-4b5a-9b45-46c03fd27d94}">
 		<relationship name="parameter">
 			<destination>{27917f63-d316-4f46-95a0-a271283fb8ad}</destination>
@@ -333,7 +350,7 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 			<value>650</value>
 		</property>
 		<property name="value">
-			<value>-13</value>
+			<value>10</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{65fca2e5-12e4-405e-b67f-34e91154aca2}">
@@ -341,7 +358,7 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 			<value>11.065006915629322</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-19</value>
 		</property>
 		<property name="curveShape">
 			<value>0.0449466407</value>
@@ -352,7 +369,7 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 			<value>400</value>
 		</property>
 		<property name="value">
-			<value>-27</value>
+			<value>-1.89999962</value>
 		</property>
 	</object>
 	<object class="Automator" id="{5b168165-def4-4162-8f30-6cbcb54d9c26}">

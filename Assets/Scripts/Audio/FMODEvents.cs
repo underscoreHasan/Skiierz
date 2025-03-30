@@ -17,6 +17,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Land")]
     [field: SerializeField] public EventReference land { get; private set; }
 
+    [field: Header("Yell")]
+    [field: SerializeField] public EventReference yell { get; private set; }
+
     [field: Header("Ambience")]
     [field: SerializeField] public EventReference ambience { get; private set; }
 

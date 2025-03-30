@@ -72,6 +72,13 @@ MonoBehaviour:
       Data3: 1685173410
       Data4: -1981791828
     Path: event:/Character/Landing
+  <yell>k__BackingField:
+    Guid:
+      Data1: -1112897111
+      Data2: 1262258583
+      Data3: 639947686
+      Data4: 2112543172
+    Path: event:/Character/Hurt
   <ambience>k__BackingField:
     Guid:
       Data1: 1198788837
@@ -132,6 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 1
-  sfxVolume: 1
-  ambientVolume: 1
+  musicVolume: 0.748
+  sfxVolume: 0.67
+  ambientVolume: 0.81

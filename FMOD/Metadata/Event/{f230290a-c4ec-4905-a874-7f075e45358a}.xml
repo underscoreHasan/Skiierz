@@ -127,7 +127,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	</object>
 	<object class="EventMixerMaster" id="{f534253c-fb3d-4ed2-9fc6-78e3d703e761}">
 		<property name="volume">
-			<value>-6</value>
+			<value>10</value>
 		</property>
 		<relationship name="automators">
 			<destination>{8f43ee58-df69-4e05-abe3-d3dbd2561862}</destination>
@@ -162,6 +162,9 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{fab04dd9-d9f3-427b-985b-fcd31a9e0d6f}">
+		<property name="isCutoff">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>8</value>
 		</property>
@@ -177,7 +180,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	</object>
 	<object class="EventMixerGroup" id="{d073d58e-df69-4481-ae5c-aba7388a393f}">
 		<property name="volume">
-			<value>-21.5</value>
+			<value>10</value>
 		</property>
 		<property name="name">
 			<value>Rolling</value>
@@ -227,6 +230,9 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		<relationship name="effects">
 			<destination>{0ace7bae-3860-4383-8668-26f25d984a51}</destination>
 			<destination>{3a577217-4ece-48ca-8880-2aee998f023e}</destination>
+			<destination>{612ffab7-5563-4d73-9478-b10f84c1e3ef}</destination>
+			<destination>{cd756256-1b9b-4979-9c51-adfd88cfb084}</destination>
+			<destination>{3f635680-c8df-426f-b0ab-1157bef88d35}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d0414605-1100-4e76-b163-8a1d44c0b533}" />
@@ -244,7 +250,13 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>170.25647</value>
+			<value>484.359192</value>
+		</property>
+		<property name="peakValue">
+			<value>-0.577777863</value>
+		</property>
+		<property name="holdTime">
+			<value>2615.38501</value>
 		</property>
 		<property name="releaseTime">
 			<value>100</value>
@@ -277,6 +289,17 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<destination>{028d38fd-417b-0bad-290b-a30ea50da357}</destination>
 		</relationship>
 	</object>
+	<object class="GainEffect" id="{612ffab7-5563-4d73-9478-b10f84c1e3ef}">
+		<property name="gain">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{cd756256-1b9b-4979-9c51-adfd88cfb084}">
+		<property name="gain">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{3f635680-c8df-426f-b0ab-1157bef88d35}" />
 	<object class="MixerBusFader" id="{3f7fec79-3e81-429c-936d-381dd6a53698}" />
 	<object class="AutomationPoint" id="{9b4736ab-559d-4730-bea2-182f57f3dc7f}">
 		<property name="position">

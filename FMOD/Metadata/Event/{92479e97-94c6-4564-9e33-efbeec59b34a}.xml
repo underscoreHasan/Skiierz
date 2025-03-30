@@ -83,6 +83,9 @@ Recordings by David at Track Time Audio.</value>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{accda771-9c72-4199-8492-478631c3f921}">
+		<property name="volume">
+			<value>3.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{ad18679f-d1de-4453-85cf-cfe4498abec6}</destination>
 		</relationship>
@@ -111,6 +114,9 @@ Recordings by David at Track Time Audio.</value>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{4fd1c63b-08aa-4cf5-bdaa-64bd803b7d12}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="name">
 			<value>Okay</value>
 		</property>

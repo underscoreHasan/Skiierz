@@ -22331,6 +22331,115 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403389867}
   m_Mesh: {fileID: 1498232265090716430, guid: 320559fcaf881d24491c3fc164393e76, type: 3}
+--- !u!1001 &405357643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Path
+      value: event:/Music/Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data1
+      value: 2113472704
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data2
+      value: 1318167216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data3
+      value: -1215662936
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352875619635, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data4
+      value: 378231091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -147.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -96.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711539, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711692, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: sfxVolume
+      value: 0.689
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711692, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: musicVolume
+      value: 0.742
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711692, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: ambientVolume
+      value: 0.164
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495529352941711693, guid: 6fb572ae25046462dbafb5bbd0ec6ccd,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fb572ae25046462dbafb5bbd0ec6ccd, type: 3}
 --- !u!1 &405569990
 GameObject:
   m_ObjectHideFlags: 0
@@ -24631,11 +24740,11 @@ GameObject:
   m_Component:
   - component: {fileID: 447994027}
   - component: {fileID: 447994026}
-  - component: {fileID: 447994025}
   - component: {fileID: 447994029}
   - component: {fileID: 447994028}
   - component: {fileID: 447994030}
   - component: {fileID: 447994031}
+  - component: {fileID: 447994032}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -24643,14 +24752,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &447994025
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447994024}
-  m_Enabled: 1
 --- !u!20 &447994026
 Camera:
   m_ObjectHideFlags: 0
@@ -24821,6 +24922,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraAnimator: {fileID: 447994030}
   animationName: StartAnimation
+--- !u!114 &447994032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447994024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &448040892
 GameObject:
   m_ObjectHideFlags: 0
@@ -50976,6 +51091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 961173028}
+  - component: {fileID: 961173029}
   m_Layer: 0
   m_Name: FireGif
   m_TagString: Untagged
@@ -51001,6 +51117,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961173029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961173027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -306438750
+      Data2: 1228009670
+      Data3: 83764902
+      Data4: 409500038
+    Path: event:/Ambience/Fireplace
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 70
 --- !u!1 &961618958
 GameObject:
   m_ObjectHideFlags: 0

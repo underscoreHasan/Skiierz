@@ -118,7 +118,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 	</object>
 	<object class="EventMixerMaster" id="{d88fbfa0-f6f7-4b2d-b0d2-3297fb2fa719}">
 		<property name="volume">
-			<value>-24.5</value>
+			<value>10</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{939a2936-db57-41b7-827d-70fad02b4be9}</destination>
@@ -158,6 +158,9 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d45772c3-4d9d-4e46-8897-f8418999b8c5}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="name">
 			<value>Collision</value>
 		</property>
@@ -183,6 +186,9 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		<relationship name="effects">
 			<destination>{51bab831-4ba8-4216-83ab-abbf70ce9095}</destination>
 			<destination>{d951ff5b-e941-4b5c-b8f5-5c142a2e431c}</destination>
+			<destination>{a8460c23-0b68-4199-9d7d-90d771d387e6}</destination>
+			<destination>{92b12772-e23b-49b0-91a3-d8699c0d762b}</destination>
+			<destination>{c7507fad-5818-4d26-9953-33dbea8c000c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7f9c15a0-2efc-4dc9-9dbd-e2d61799dfc4}" />
@@ -201,6 +207,17 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{d951ff5b-e941-4b5c-b8f5-5c142a2e431c}" />
+	<object class="GainEffect" id="{a8460c23-0b68-4199-9d7d-90d771d387e6}">
+		<property name="gain">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{92b12772-e23b-49b0-91a3-d8699c0d762b}">
+		<property name="gain">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{c7507fad-5818-4d26-9953-33dbea8c000c}" />
 	<object class="MixerBusFader" id="{3da8f2a6-4ad9-4ec6-8346-44da9a93498e}" />
 	<object class="DistortionEffect" id="{b03701ce-668f-42f7-ac95-de5ff2e04b99}">
 		<relationship name="automators">
@@ -271,7 +288,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<value>2.5423728813559321</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>10</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{ac6c5698-a46e-44ba-a0c1-7a5bdd81ee6c}">
@@ -279,7 +296,7 @@ https://www.fmod.com/docs/studio/authoring-events.html#automation-and-modulation
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>10</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.304672807</value>

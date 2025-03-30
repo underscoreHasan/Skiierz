@@ -39,7 +39,8 @@ public class CollisionHandler : MonoBehaviour
     public Vector3 lastTrackPos;
     public Quaternion lastTrackRot;
 
-    private void Awake() {
+    private void Awake()
+    {
 
         trackingCam = GameObject.FindWithTag("MainCamera").transform;
         lastSpawnVelocity = Vector3.zero;
@@ -54,23 +55,30 @@ public class CollisionHandler : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision) {
+    private void OnCollisionEnter(Collision collision)
+    {
         HandleCollision(collision.relativeVelocity.magnitude, phys.velocity, dismountSideVelocity);
     }
 
-    void FixedUpdate() {
-        if (hasDismounted) {
+    void FixedUpdate()
+    {
+        if (hasDismounted)
+        {
             DismountedLogic();
-        } else {
+        }
+        else
+        {
             NonDismountedLogic();
         }
     }
 
-    void DismountedLogic() {
+    void DismountedLogic()
+    {
 
         // WE ARE OUT OF TIME
-        if (dismountTimeElapsedSeconds > respawnTimeSeconds) {
-            
+        if (dismountTimeElapsedSeconds > respawnTimeSeconds)
+        {
+
             dismountTimeElapsedSeconds = 0.0f;
 
             // enable all player physics and controls
@@ -110,29 +118,38 @@ public class CollisionHandler : MonoBehaviour
         ragdollTimeElapsed += Time.deltaTime;
 
         // we need to be minimally moving for some time before we can start the fade out
-        if (minVelocityTimeElapsed < minVelocityTimeRequired && (ragdollTimeElapsed < maxRagdollTime)) {
+        if (minVelocityTimeElapsed < minVelocityTimeRequired && (ragdollTimeElapsed < maxRagdollTime))
+        {
             // if we are moving at minimum velocity, we can start incrementing this timer
-            if (corePhys.velocity.magnitude < minVelocityToDie) {
+            if (corePhys.velocity.magnitude < minVelocityToDie)
+            {
                 minVelocityTimeElapsed += Time.deltaTime;
-            } else {
+            }
+            else
+            {
                 minVelocityTimeElapsed = 0.0f;
             }
-        } else {
+        }
+        else
+        {
             // only once the player has been moving at a minimum velocity for some time can
             // we start to respawn
             dismountTimeElapsedSeconds += Time.deltaTime;
         }
     }
 
-    void NonDismountedLogic() {
-        if (!bumperFwd.isGrounded && !bumperRear.isGrounded) {
+    void NonDismountedLogic()
+    {
+        if (!bumperFwd.isGrounded && !bumperRear.isGrounded)
+        {
             return;
         }
 
         // even if the bumpers are being touched, they need to satisfy a certain offset
         // to be considered as a proper collision
         if (bumperFwd.absOffset <= bumperFwd.maxOffset * dismountBumperOffsetFactor &&
-            bumperRear.absOffset <= bumperRear.maxOffset * dismountBumperOffsetFactor) {
+            bumperRear.absOffset <= bumperRear.maxOffset * dismountBumperOffsetFactor)
+        {
             return;
         }
 
@@ -147,7 +164,8 @@ public class CollisionHandler : MonoBehaviour
     public void HandleCollision(float collisionVelocity, Vector3 ourVelocity, float threshold)
     {
         // can't DOUBLE DISMOUNT
-        if (hasDismounted) {
+        if (hasDismounted)
+        {
             return;
         }
 
@@ -165,6 +183,7 @@ public class CollisionHandler : MonoBehaviour
             GetComponent<RagdollHandler>().ToggleRagdoll(ourVelocity);
 
             // disable sound
+            playerSound.PlayYellSound();
             playerSound.ClearSounds();
             playerSound.enabled = false;
 
@@ -175,15 +194,18 @@ public class CollisionHandler : MonoBehaviour
         }
     }
 
-    void FadeRespawnImage() {
+    void FadeRespawnImage()
+    {
         StartCoroutine(FadeCoroutine());
     }
 
-    IEnumerator FadeCoroutine() {
+    IEnumerator FadeCoroutine()
+    {
         Color startColor = fadeImage.color;
 
         // fade out
-        while (hasDismounted) {
+        while (hasDismounted)
+        {
             float alpha = fadeCurve.Evaluate(dismountTimeElapsedSeconds / respawnTimeSeconds);
             fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
             yield return null;
@@ -191,7 +213,8 @@ public class CollisionHandler : MonoBehaviour
 
         // fade back in
         float fadeInSecondsElapsed = 0.0f;
-        while (fadeInSecondsElapsed < fadeInTime) {
+        while (fadeInSecondsElapsed < fadeInTime)
+        {
             fadeInSecondsElapsed += Time.deltaTime;
             float alpha = 1.0f - fadeCurve.Evaluate(fadeInSecondsElapsed / fadeInTime);
             fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
